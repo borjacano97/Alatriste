@@ -31,19 +31,6 @@
     </description>
     <voice name="" synthesizeAlways="no" />
   </player>
-  <scene id="MapaMadrid" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="background" uri="assets/special/EmptyBackground.png" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
-    <objects>
-      <object-ref idTarget="Phone" x="759" y="107" scale="0.1936811" glow="no" layer="0" hasInfluenceArea="no" />
-    </objects>
-  </scene>
   <scene id="MercadoMadrid" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
@@ -66,6 +53,16 @@
     <objects>
       <object-ref idTarget="Twitter" x="54" y="391" scale="0.03697638" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
+  </scene>
+  <scene id="Sol" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/Puerta del Sol.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
   </scene>
   <object id="Phone" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -98,4 +95,65 @@
       </detailed>
     </description>
   </object>
+  <map-scene id="Principal" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.406212083724 -3.71658656835326 0.0174073059629478 0.0230240821838374" center="(40.4137032502353, -3.70154474019759)" zoom="16" start="no" />
+  <geo-element id="MercadoDeAbastos">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="5">
+        <Polygon>
+          <exterior>
+            <LinearRing>
+              <posList>40.4150623953256 -3.70663046836854 40.414997046563 -3.70805203914644 40.415744469247 -3.70811104774476 40.4158077751585 -3.70670825242998 40.4150664796211 -3.70663046836854</posList>
+            </LinearRing>
+          </exterior>
+        </Polygon>
+      </geometry>
+    </geometries>
+    <actions>
+      <enter-action>
+        <effect>
+          <trigger-zoned-scene idTarget="MercadoMadrid" x="330" y="251" zoneId="MercadoDeAbastos" transitionTime="0" transitionType="0" guid="361445fd-8179-4183-b335-2beced21590f" />
+          <condition />
+        </effect>
+        <only-from-outside>False</only-from-outside>
+      </enter-action>
+    </actions>
+  </geo-element>
+  <geo-element id="PuertaDeSol">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="5">
+        <Polygon>
+          <exterior>
+            <LinearRing>
+              <posList>40.417200490173 -3.70333403348958 40.417175985142 -3.70305776596105 40.417053460009 -3.70269834995305 40.4171106384322 -3.70244622230564 40.4169819869146 -3.7023657560352 40.4168880507255 -3.70233625173604 40.416783903931 -3.70234161615408 40.4167144726451 -3.70238453149832 40.4165408941168 -3.70458126068152 40.4166327886876 -3.7045973539356 40.4167553145758 -3.70460808277164 40.4168778402626 -3.7045973539356 40.4168921349103 -3.70441228151359 40.4169758606427 -3.70424330234563 40.4170350812198 -3.70411187410391 40.4170963438408 -3.70398044586215 40.4171535222177 -3.70382755994834 40.41719844809 -3.70355397462882</posList>
+            </LinearRing>
+          </exterior>
+        </Polygon>
+      </geometry>
+    </geometries>
+    <actions>
+      <enter-action>
+        <effect>
+          <trigger-zoned-scene idTarget="Sol" x="400" y="450" zoneId="MercadoDeAbastos" transitionTime="0" transitionType="0" guid="0ed02eab-3ef7-41c6-8115-f5428a6b3d23" />
+          <condition />
+        </effect>
+        <only-from-outside>True</only-from-outside>
+      </enter-action>
+    </actions>
+  </geo-element>
 </eAdventure>
