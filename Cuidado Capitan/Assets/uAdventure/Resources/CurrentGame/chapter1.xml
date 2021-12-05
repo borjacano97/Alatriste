@@ -31,7 +31,7 @@
     </description>
     <voice name="" synthesizeAlways="no" />
   </player>
-  <scene id="MercadoMadrid" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="MercadoMadrid" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -95,7 +95,11 @@
       </detailed>
     </description>
   </object>
-  <map-scene id="Principal" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.406212083724 -3.71658656835326 0.0174073059629478 0.0230240821838374" center="(40.4137032502353, -3.70154474019759)" zoom="16" start="no" />
+  <map-scene id="Principal" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.406212083724 -3.71658656835326 0.0174073059629478 0.0230240821838374" center="(40.4169196211768, -3.70324257850295)" zoom="19" start="yes">
+    <map-element targetId="MercadoDeAbastos" layer="0">
+      <condition />
+    </map-element>
+  </map-scene>
   <geo-element id="MercadoDeAbastos">
     <description>
       <name>
@@ -119,7 +123,7 @@
     <actions>
       <enter-action>
         <effect>
-          <trigger-zoned-scene idTarget="MercadoMadrid" x="330" y="251" zoneId="MercadoDeAbastos" transitionTime="0" transitionType="0" guid="361445fd-8179-4183-b335-2beced21590f" />
+          <trigger-zoned-scene idTarget="MercadoMadrid" x="330" y="251" zoneId="MercadoDeAbastos" transitionTime="235" transitionType="5" guid="361445fd-8179-4183-b335-2beced21590f" />
           <condition />
         </effect>
         <only-from-outside>False</only-from-outside>
@@ -149,7 +153,7 @@
     <actions>
       <enter-action>
         <effect>
-          <trigger-zoned-scene idTarget="Sol" x="400" y="450" zoneId="MercadoDeAbastos" transitionTime="0" transitionType="0" guid="0ed02eab-3ef7-41c6-8115-f5428a6b3d23" />
+          <trigger-zoned-scene idTarget="Sol" x="400" y="450" zoneId="MercadoDeAbastos" transitionTime="256" transitionType="5" guid="0ed02eab-3ef7-41c6-8115-f5428a6b3d23" />
           <condition />
         </effect>
         <only-from-outside>True</only-from-outside>
