@@ -62,6 +62,47 @@
     </description>
     <voice name="" synthesizeAlways="no" />
   </character>
+  <character id="I.Balboa" behaviour="normal">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/BalboaTalk.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="ConversacionBalboa" guid="92fcfb2c-3d7a-4d46-bd1e-475572f389bb" />
+          <condition />
+          <trigger-last-scene guid="1e5ab054-a878-4a63-bb3b-7d21149ee24b" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
   <scene id="MercadoMadrid" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
@@ -87,6 +128,7 @@
           <inactive flag="DescargadaApp" />
         </condition>
       </object-ref>
+      <object-ref idTarget="BotonMovil" x="-248" y="124" scale="0.06196224" glow="no" layer="1" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="Sol" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -98,6 +140,9 @@
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <characters>
+      <character-ref idTarget="I.Balboa" x="111" y="443" scale="0.5877753" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+    </characters>
   </scene>
   <scene id="TwitterScene" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -128,7 +173,7 @@
     <actions>
       <use needsGoTo="yes" keepDistance="35" not-effects="no">
         <effect>
-          <trigger-scene idTarget="PhoneScene" x="113" y="357" transitionTime="0" transitionType="0" guid="d402e291-8969-4968-8c87-a0bab30ff4fd" />
+          <trigger-scene idTarget="PhoneScene" x="113" y="357" transitionTime="88" transitionType="5" guid="d402e291-8969-4968-8c87-a0bab30ff4fd" />
           <condition />
         </effect>
       </use>
@@ -153,7 +198,7 @@
     <actions>
       <use needsGoTo="yes" keepDistance="35" not-effects="no">
         <effect>
-          <trigger-scene idTarget="TwitterScene" x="456" y="444" transitionTime="0" transitionType="0" guid="74619176-2a5d-414b-8388-53b657e15282" />
+          <trigger-scene idTarget="TwitterScene" x="456" y="444" transitionTime="41" transitionType="5" guid="74619176-2a5d-414b-8388-53b657e15282" />
           <condition />
         </effect>
       </use>
@@ -208,7 +253,54 @@
       </use>
     </actions>
   </object>
-  <map-scene id="Principal" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.406212083724 -3.71658656835326 0.0174073059629478 0.0230240821838374" center="(40.416819558619, -3.70333109140137)" zoom="19" start="yes">
+  <object id="BotonMovil" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/BotonMovil.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-scene idTarget="Principal" x="330" y="251" transitionTime="56" transitionType="5" guid="d7a86ffb-e1d3-45ac-8491-bc0dd569ac22" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <object id="Balboa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/InigoBalboa.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <condition>
+          <active flag="DescargadaApp" />
+        </condition>
+        <effect>
+          <trigger-scene idTarget="Sol" x="513" y="433" transitionTime="0" transitionType="0" guid="dba7c0e7-2cc6-4e3e-8672-07b193130bc9" />
+          <condition />
+        </effect>
+      </examine>
+    </actions>
+  </object>
+  <map-scene id="Principal" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.406212083724 -3.71658656835326 0.0174073059629478 0.0230240821838374" center="(40.416880821425, -3.7031191968897)" zoom="19" start="yes">
     <map-element targetId="MercadoDeAbastos" layer="0">
       <condition />
     </map-element>
@@ -234,6 +326,18 @@
     </map-element>
     <map-element targetId="TextoInicio" layer="0">
       <condition />
+    </map-element>
+    <map-element targetId="Balboa" layer="0">
+      <condition />
+      <ext-elem-ref scale="0.2257682" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.416748046875, -3.7036771774292)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">25.15</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="Hint">False</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+        <actions />
+      </ext-elem-ref>
     </map-element>
   </map-scene>
   <geo-element id="MercadoDeAbastos">
@@ -324,4 +428,68 @@ avanzando, puede ser importante.</speak-player>
       </exit-action>
     </actions>
   </geo-element>
+  <graph-conversation id="ConversacionBalboa">
+    <dialogue-node nodeindex="0" editor-x="53" editor-y="48">
+      <speak-player>
+        <resources name="No name" />
+        <text>Buenas </text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="1" editor-x="98" editor-y="324">
+      <speak-char idTarget="Alatriste">
+        <resources name="No name" />
+        <text>sfegfwgegre</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="2" />
+    </dialogue-node>
+    <dialogue-node nodeindex="2" editor-x="654" editor-y="304">
+      <speak-player>
+        <resources name="No name" />
+        <text>sgsfssdfsdf</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="645" editor-y="56">
+      <speak-player>
+        <resources name="No name" />
+        <text>wfwfwfwfwfw</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <option-node nodeindex="4" question="fsvdvbdbfdbfgfdgdfdsfgdfgfghdgfhfgdxsfgd" preListening="yes" editor-x="1202" editor-y="56" x="1202" y="56">
+      <speak-player>
+        <text>dcsdcscs</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="5" />
+      <speak-player>
+        <text>fsfsfsfsdfsfdsdfsfds</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="6" />
+    </option-node>
+    <dialogue-node nodeindex="5" editor-x="1583" editor-y="332">
+      <speak-player>
+        <resources name="No name" />
+        <text>a</text>
+      </speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+    <dialogue-node nodeindex="6" editor-x="1610" editor-y="535">
+      <speak-player>
+        <resources name="No name" />
+        <text>b</text>
+      </speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
 </eAdventure>
