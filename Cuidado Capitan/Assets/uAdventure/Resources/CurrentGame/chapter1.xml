@@ -31,6 +31,37 @@
     </description>
     <voice name="" synthesizeAlways="no" />
   </player>
+  <character id="Alatriste" behaviour="normal">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/Capitan.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </character>
   <scene id="MercadoMadrid" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
@@ -64,6 +95,16 @@
     </name>
     <default-initial-position x="400" y="450" />
   </scene>
+  <scene id="TwitterScene" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/TwitterPerez.PNG" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+  </scene>
   <object id="Phone" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/phone.png" />
@@ -78,7 +119,12 @@
       </detailed>
     </description>
     <actions>
-      <use needsGoTo="yes" keepDistance="35" not-effects="no" />
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-scene idTarget="PhoneScene" x="113" y="357" transitionTime="0" transitionType="0" guid="d402e291-8969-4968-8c87-a0bab30ff4fd" />
+          <condition />
+        </effect>
+      </use>
     </actions>
   </object>
   <object id="Twitter" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
@@ -94,10 +140,60 @@
       <detailed>
       </detailed>
     </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-scene idTarget="TwitterScene" x="456" y="444" transitionTime="0" transitionType="0" guid="74619176-2a5d-414b-8388-53b657e15282" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
   </object>
-  <map-scene id="Principal" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.406212083724 -3.71658656835326 0.0174073059629478 0.0230240821838374" center="(40.4169196211768, -3.70324257850295)" zoom="19" start="yes">
+  <object id="Prueba" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/CapitanAlatriste.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <trigger-zoned-scene idTarget="MercadoMadrid" x="330" y="251" zoneId="MercadoDeAbastos" transitionTime="16" transitionType="0" guid="d874b3f5-2d63-4211-adc1-b2da67cd6703" />
+          <condition />
+        </effect>
+      </examine>
+    </actions>
+  </object>
+  <map-scene id="Principal" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.406212083724 -3.71658656835326 0.0174073059629478 0.0230240821838374" center="(40.415528942512, -3.7064531826943)" zoom="19" start="yes">
     <map-element targetId="MercadoDeAbastos" layer="0">
       <condition />
+    </map-element>
+    <map-element targetId="Phone" layer="0">
+      <condition />
+      <ext-elem-ref scale="0.1902296" orientation="2" transformManager="uAdventure.Geo.ScreenDescriptor">
+        <param name="Position">(768.0589, 114.3933)</param>
+        <param name="Rotation">0</param>
+        <actions />
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="Prueba" layer="0">
+      <condition />
+      <ext-elem-ref scale="0.1008568" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4153709411621, -3.70736503601074)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">38.56</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="Hint">False</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+        <actions />
+      </ext-elem-ref>
     </map-element>
   </map-scene>
   <geo-element id="MercadoDeAbastos">
@@ -114,21 +210,13 @@
         <Polygon>
           <exterior>
             <LinearRing>
-              <posList>40.4150623953256 -3.70663046836854 40.414997046563 -3.70805203914644 40.415744469247 -3.70811104774476 40.4158077751585 -3.70670825242998 40.4150664796211 -3.70663046836854</posList>
+              <posList>40.4150603531862 -3.70663315057754 40.4149950044236 -3.70805472135544 40.4157424271076 -3.70811372995376 40.4158057330191 -3.70671093463898 40.4150644374817 -3.70663315057754</posList>
             </LinearRing>
           </exterior>
         </Polygon>
       </geometry>
     </geometries>
-    <actions>
-      <enter-action>
-        <effect>
-          <trigger-zoned-scene idTarget="MercadoMadrid" x="330" y="251" zoneId="MercadoDeAbastos" transitionTime="235" transitionType="5" guid="361445fd-8179-4183-b335-2beced21590f" />
-          <condition />
-        </effect>
-        <only-from-outside>False</only-from-outside>
-      </enter-action>
-    </actions>
+    <actions />
   </geo-element>
   <geo-element id="PuertaDeSol">
     <description>
