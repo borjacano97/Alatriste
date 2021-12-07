@@ -82,17 +82,9 @@
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="DescargaAplicacion" x="-2147483648" y="-2147483648" scale="1" glow="no" layer="1" hasInfluenceArea="no">
-        <condition>
-          <either>
-            <active flag="IntroDone" />
-            <inactive flag="fwfsfwsf" />
-          </either>
-        </condition>
-      </object-ref>
       <object-ref idTarget="Twitter" x="54" y="397" scale="0.04319234" glow="no" layer="0" hasInfluenceArea="no">
         <condition>
-          <inactive flag="fwfsfwsf" />
+          <inactive flag="DescargadaApp" />
         </condition>
       </object-ref>
     </objects>
@@ -192,7 +184,7 @@
   <object id="DescargaAplicacion" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
       <condition>
-        <inactive flag="fwfsfwsf" />
+        <inactive flag="DescargadaApp" />
       </condition>
       <asset type="image" uri="assets/image/BotonDescarga.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
@@ -210,7 +202,7 @@
         <effect>
           <trigger-scene idTarget="PhoneScene" x="113" y="357" transitionTime="0" transitionType="0" guid="d57250fd-55a1-46d5-8058-6990d4e5e2e2" />
           <condition />
-          <activate flag="fwfsfwsf" guid="d644a9b6-f0e8-401b-a1b5-b8e724d0cea6" />
+          <activate flag="DescargadaApp" guid="d644a9b6-f0e8-401b-a1b5-b8e724d0cea6" />
           <condition />
         </effect>
       </use>
