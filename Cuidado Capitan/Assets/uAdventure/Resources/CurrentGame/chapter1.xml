@@ -82,7 +82,19 @@
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="Twitter" x="54" y="391" scale="0.03697638" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="DescargaAplicacion" x="-2147483648" y="-2147483648" scale="1" glow="no" layer="1" hasInfluenceArea="no">
+        <condition>
+          <either>
+            <active flag="IntroDone" />
+            <inactive flag="fwfsfwsf" />
+          </either>
+        </condition>
+      </object-ref>
+      <object-ref idTarget="Twitter" x="54" y="397" scale="0.04319234" glow="no" layer="0" hasInfluenceArea="no">
+        <condition>
+          <inactive flag="fwfsfwsf" />
+        </condition>
+      </object-ref>
     </objects>
   </scene>
   <scene id="Sol" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -104,6 +116,9 @@
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <objects>
+      <object-ref idTarget="DescargaAplicacion" x="372" y="349" scale="1" glow="no" layer="0" hasInfluenceArea="no" />
+    </objects>
   </scene>
   <object id="Phone" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -129,6 +144,9 @@
   </object>
   <object id="Twitter" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
+      <condition>
+        <inactive flag="fwfsfwsf" />
+      </condition>
       <asset type="image" uri="assets/image/580b57fcd9996e24bc43c53e.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
@@ -171,7 +189,34 @@
       </examine>
     </actions>
   </object>
-  <map-scene id="Principal" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.406212083724 -3.71658656835326 0.0174073059629478 0.0230240821838374" center="(40.415528942512, -3.7064531826943)" zoom="19" start="yes">
+  <object id="DescargaAplicacion" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <condition>
+        <inactive flag="fwfsfwsf" />
+      </condition>
+      <asset type="image" uri="assets/image/BotonDescarga.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-scene idTarget="PhoneScene" x="113" y="357" transitionTime="0" transitionType="0" guid="d57250fd-55a1-46d5-8058-6990d4e5e2e2" />
+          <condition />
+          <activate flag="fwfsfwsf" guid="d644a9b6-f0e8-401b-a1b5-b8e724d0cea6" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <map-scene id="Principal" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.406212083724 -3.71658656835326 0.0174073059629478 0.0230240821838374" center="(40.416819558619, -3.70333109140137)" zoom="19" start="yes">
     <map-element targetId="MercadoDeAbastos" layer="0">
       <condition />
     </map-element>
@@ -194,6 +239,9 @@
         <param name="RevealParticleTexture">leaf_particle.png</param>
         <actions />
       </ext-elem-ref>
+    </map-element>
+    <map-element targetId="TextoInicio" layer="0">
+      <condition />
     </map-element>
   </map-scene>
   <geo-element id="MercadoDeAbastos">
@@ -246,6 +294,42 @@
         </effect>
         <only-from-outside>True</only-from-outside>
       </enter-action>
+    </actions>
+  </geo-element>
+  <geo-element id="TextoInicio">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="0">
+        <Point>
+          <pos>20.1590982706466 -21.0498046874997</pos>
+        </Point>
+      </geometry>
+    </geometries>
+    <actions>
+      <exit-action>
+        <condition>
+          <inactive flag="IntroDone" />
+        </condition>
+        <effect>
+          <speak-player guid="cdd98533-a86d-4e6f-a2de-b6e1614ac663">Bienvenido a este juego.</speak-player>
+          <condition />
+          <speak-player guid="2a04260f-7596-4d6a-91c6-fa253aa0d91a">Te ha vibrado tu movil (este se encuentra
+en la parte superior de la pantalla) 
+deberias echar un vistazo antes de seguir
+avanzando, puede ser importante.</speak-player>
+          <condition />
+          <activate flag="IntroDone" guid="53a97add-8d0b-42b2-995f-a5268f26b746" />
+          <condition />
+        </effect>
+        <only-from-inside>False</only-from-inside>
+      </exit-action>
     </actions>
   </geo-element>
 </eAdventure>
