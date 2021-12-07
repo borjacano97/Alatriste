@@ -99,6 +99,47 @@
           <condition />
           <trigger-last-scene guid="1e5ab054-a878-4a63-bb3b-7d21149ee24b" />
           <condition />
+          <activate flag="Hablado1aVezBalboa" guid="ec98c766-75af-4267-b837-954cbde9f14f" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
+  <character id="LuisAlquezar" behaviour="normal">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/LuisA.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="Mercado1" guid="a7a58f14-16a5-4ad9-8ccc-cca2ee0bed97" />
+          <condition />
         </effect>
       </talk-to>
     </actions>
@@ -112,6 +153,9 @@
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <characters>
+      <character-ref idTarget="LuisAlquezar" x="562" y="284" scale="0.4219108" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+    </characters>
   </scene>
   <scene id="PhoneScene" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -292,6 +336,7 @@
       <examine needsGoTo="no" keepDistance="0" not-effects="no">
         <condition>
           <active flag="DescargadaApp" />
+          <inactive flag="Hablado1aVezBalboa" />
         </condition>
         <effect>
           <trigger-scene idTarget="Sol" x="513" y="433" transitionTime="0" transitionType="0" guid="dba7c0e7-2cc6-4e3e-8672-07b193130bc9" />
@@ -300,7 +345,32 @@
       </examine>
     </actions>
   </object>
-  <map-scene id="Principal" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.406212083724 -3.71658656835326 0.0174073059629478 0.0230240821838374" center="(40.416880821425, -3.7031191968897)" zoom="19" start="yes">
+  <object id="LuisAlquezarMapa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/LuisDeAlquezar.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <condition>
+          <active flag="Hablado1aVezBalboa" />
+        </condition>
+        <effect>
+          <trigger-scene idTarget="MercadoMadrid" x="330" y="251" transitionTime="0" transitionType="0" guid="4e37cc77-90b9-413f-8c06-20255a4e4a10" />
+          <condition />
+        </effect>
+      </examine>
+    </actions>
+  </object>
+  <map-scene id="Principal" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.406212083724 -3.71658656835326 0.0174073059629478 0.0230240821838374" center="(40.4167582957545, -3.70303873061919)" zoom="19" start="yes">
     <map-element targetId="MercadoDeAbastos" layer="0">
       <condition />
     </map-element>
@@ -309,18 +379,6 @@
       <ext-elem-ref scale="0.1902296" orientation="2" transformManager="uAdventure.Geo.ScreenDescriptor">
         <param name="Position">(768.0589, 114.3933)</param>
         <param name="Rotation">0</param>
-        <actions />
-      </ext-elem-ref>
-    </map-element>
-    <map-element targetId="Prueba" layer="0">
-      <condition />
-      <ext-elem-ref scale="0.1008568" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4153709411621, -3.70736503601074)</param>
-        <param name="Rotation">0</param>
-        <param name="InteractionRange">38.56</param>
-        <param name="RevealOnlyOnRange">True</param>
-        <param name="Hint">False</param>
-        <param name="RevealParticleTexture">leaf_particle.png</param>
         <actions />
       </ext-elem-ref>
     </map-element>
@@ -333,6 +391,18 @@
         <param name="Position">(40.416748046875, -3.7036771774292)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">25.15</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="Hint">False</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+        <actions />
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="LuisAlquezarMapa" layer="0">
+      <condition />
+      <ext-elem-ref scale="0.3183869" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4152946472168, -3.70741081237793)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">25</param>
         <param name="RevealOnlyOnRange">True</param>
         <param name="Hint">False</param>
         <param name="RevealParticleTexture">leaf_particle.png</param>
@@ -489,6 +559,11 @@ avanzando, puede ser importante.</speak-player>
         <text>b</text>
       </speak-player>
       <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="Mercado1">
+    <dialogue-node nodeindex="0" editor-x="82" editor-y="100">
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
