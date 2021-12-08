@@ -144,6 +144,285 @@
       </talk-to>
     </actions>
   </character>
+  <character id="LaLebrijana" behaviour="normal">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/LebrijanaAnim.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </character>
+  <character id="Malatesta" behaviour="normal">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/MalatestaAnim.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </character>
+  <character id="MariaDeCastro" behaviour="normal">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/MariaDeCastroAnim.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </character>
+  <character id="MariaMalatesta" behaviour="normal">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/MariaMalatestaAnim.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </character>
+  <character id="Quevedo" behaviour="normal">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/QuevedoAnim.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </character>
+  <character id="Guadalmedina" behaviour="normal">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/GuadalmedinaAnim.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </character>
+  <character id="FelipeVI" behaviour="normal">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/FelipeVIAnim.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </character>
+  <character id="Bragado" behaviour="normal">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/BragadoAnim.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </character>
+  <character id="LopeBalboa" behaviour="normal">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/LopeBalboaAnim.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </character>
   <scene id="MercadoMadrid" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
@@ -200,6 +479,16 @@
     <objects>
       <object-ref idTarget="DescargaAplicacion" x="372" y="349" scale="1" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
+  </scene>
+  <scene id="MapaDibujado" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/mapaDibuajdo.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
   </scene>
   <object id="Phone" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -319,7 +608,7 @@
       </use>
     </actions>
   </object>
-  <object id="Balboa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+  <object id="IBalboaMapa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/InigoBalboa.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
@@ -385,7 +674,7 @@
     <map-element targetId="TextoInicio" layer="0">
       <condition />
     </map-element>
-    <map-element targetId="Balboa" layer="0">
+    <map-element targetId="IBalboaMapa" layer="0">
       <condition />
       <ext-elem-ref scale="0.2257682" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
         <param name="Position">(40.416748046875, -3.7036771774292)</param>
