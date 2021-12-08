@@ -101,6 +101,10 @@
           <condition />
           <activate flag="Hablado1aVezBalboa" guid="ec98c766-75af-4267-b837-954cbde9f14f" />
           <condition />
+          <navigate navigation-type="Ordered" guid="33b4a7d3-d263-4ff8-bb53-9430ac4de06b">
+            <step locks="False">LaLebrijanaMapa</step>
+          </navigate>
+          <condition />
         </effect>
       </talk-to>
     </actions>
@@ -174,6 +178,16 @@
       </detailed>
     </description>
     <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="TabernaDelTurco" guid="cc50cf0c-50d2-452a-8b0a-a8bacf9b6582" />
+          <condition />
+          <trigger-last-scene guid="1cbf7ee8-a1fc-46e9-b535-391c6db0ac0d" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
   </character>
   <character id="Malatesta" behaviour="normal">
     <resources name="No name">
@@ -423,7 +437,57 @@
     </description>
     <voice name="" synthesizeAlways="no" />
   </character>
-  <scene id="MercadoMadrid" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <character id="Toscano" behaviour="normal">
+    <resources name="No name">
+      <condition>
+        <active flag="DescargadaApp" />
+      </condition>
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/special/EmptyAnimation" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="Mercado1" guid="bf95cb0b-069a-471a-a808-e5ca55b790ca" />
+          <condition />
+          <activate flag="HabladoMercadoInicio" guid="900e7957-267c-40e8-acc0-18866127a82a" />
+          <condition />
+          <trigger-last-scene guid="96ae9937-ddca-4e72-8f96-ba053cc3a366" />
+          <condition />
+          <navigate navigation-type="Ordered" guid="ef6e4b93-e03b-44bf-829f-ca7b9a5be4c2">
+            <step locks="False">MercadoDeAbastos</step>
+          </navigate>
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
+  <scene id="MercadoMadrid" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -433,10 +497,10 @@
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="LuisAlquezar" x="562" y="284" scale="0.4219108" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="I.Balboa" x="81" y="297" scale="0.3211807" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
-  <scene id="PhoneScene" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="PhoneScene" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -446,15 +510,20 @@
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="Twitter" x="54" y="397" scale="0.04319234" glow="no" layer="0" hasInfluenceArea="no">
+      <object-ref idTarget="Twitter" x="54" y="397" scale="0.04319234" glow="no" layer="1" hasInfluenceArea="no">
         <condition>
           <inactive flag="DescargadaApp" />
         </condition>
       </object-ref>
-      <object-ref idTarget="BotonMovil" x="-248" y="124" scale="0.06196224" glow="no" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="BotonMovil" x="-248" y="124" scale="0.06196224" glow="no" layer="2" hasInfluenceArea="no" />
+      <object-ref idTarget="IconoDescargado" x="124" y="315" scale="0.0707721" glow="no" layer="0" hasInfluenceArea="no">
+        <condition>
+          <active flag="DescargadaApp" />
+        </condition>
+      </object-ref>
     </objects>
   </scene>
-  <scene id="Sol" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Sol" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -464,10 +533,10 @@
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="I.Balboa" x="111" y="443" scale="0.5877753" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Toscano" x="213" y="516" scale="4.605206" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
-  <scene id="TwitterScene" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="TwitterScene" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -480,7 +549,7 @@
       <object-ref idTarget="DescargaAplicacion" x="372" y="349" scale="1" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
-  <scene id="MapaDibujado" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="MapaDibujado" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -489,6 +558,22 @@
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <objects>
+      <object-ref idTarget="BotonMovil" x="98" y="132" scale="0.141208" glow="no" layer="0" hasInfluenceArea="no" />
+    </objects>
+  </scene>
+  <scene id="Taberna" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/Wilhelm_Gail_Picadores_in_einer_spanischen_Taverne_1842.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <characters>
+      <character-ref idTarget="LaLebrijana" x="1048" y="981" scale="1.595091" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+    </characters>
   </scene>
   <object id="Phone" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -582,6 +667,10 @@
           <condition />
           <activate flag="DescargadaApp" guid="d644a9b6-f0e8-401b-a1b5-b8e724d0cea6" />
           <condition />
+          <navigate navigation-type="Ordered" guid="1de2b398-ea76-4bcc-868a-1ad391db48be">
+            <step locks="False">PuertaDeSol</step>
+          </navigate>
+          <condition />
         </effect>
       </use>
     </actions>
@@ -610,6 +699,9 @@
   </object>
   <object id="IBalboaMapa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
+      <condition>
+        <active flag="HabladoMercadoInicio" />
+      </condition>
       <asset type="image" uri="assets/image/InigoBalboa.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
@@ -628,7 +720,7 @@
           <inactive flag="Hablado1aVezBalboa" />
         </condition>
         <effect>
-          <trigger-scene idTarget="Sol" x="513" y="433" transitionTime="0" transitionType="0" guid="dba7c0e7-2cc6-4e3e-8672-07b193130bc9" />
+          <trigger-scene idTarget="MercadoMadrid" x="330" y="251" transitionTime="0" transitionType="0" guid="dba7c0e7-2cc6-4e3e-8672-07b193130bc9" />
           <condition />
         </effect>
       </examine>
@@ -661,6 +753,9 @@
   </object>
   <object id="LaLebrijanaMapa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
+      <condition>
+        <active flag="Hablado1aVezBalboa" />
+      </condition>
       <asset type="image" uri="assets/image/lebrijana.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
@@ -672,6 +767,14 @@
       <detailed>
       </detailed>
     </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <trigger-scene idTarget="Taberna" x="640" y="741" transitionTime="0" transitionType="0" guid="a175c9d8-a43e-422a-9f16-aba6f2bdb100" />
+          <condition />
+        </effect>
+      </examine>
+    </actions>
   </object>
   <object id="MalatestaMapa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -785,7 +888,79 @@
       </detailed>
     </description>
   </object>
-  <map-scene id="Principal" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.406212083724 -3.71658656835326 0.0174073059629478 0.0230240821838374" center="(40.4167582957545, -3.70303873061919)" zoom="19" start="yes">
+  <object id="IconoDescargado" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <condition>
+        <active flag="DescargadaApp" />
+      </condition>
+      <asset type="image" uri="assets/image/MagicalApp.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="DescargadaApp" />
+        </condition>
+        <effect>
+          <show-text x="250" y="300" frontColor="#FFFFFFFF" borderColor="#000000FF" uri="" guid="8438bb19-9de9-47f2-b3b0-30a92723bef9">Bienvenido a la aplicacion de 
+linkado de libros.</show-text>
+          <condition />
+          <show-text x="250" y="300" frontColor="#FFFFFFFF" borderColor="#000000FF" uri="" guid="5241b0aa-9e0f-49b1-bc15-6eeb63cd6c1d">Sincronizando datos.</show-text>
+          <condition />
+          <show-text x="250" y="300" frontColor="#FFFFFFFF" borderColor="#000000FF" uri="" guid="03ac59b3-806b-4577-baf8-4a0d8aa882d2">...</show-text>
+          <condition />
+          <show-text x="250" y="300" frontColor="#FFFFFFFF" borderColor="#000000FF" uri="" guid="a403a0ec-ee35-422b-b712-e9cd565f0dce">...</show-text>
+          <condition />
+          <show-text x="250" y="300" frontColor="#FFFFFFFF" borderColor="#000000FF" uri="" guid="23033e67-ae93-49c0-9e4f-6d42fa3ffd11">...</show-text>
+          <condition />
+          <show-text x="250" y="300" frontColor="#FFFFFFFF" borderColor="#000000FF" uri="" guid="d94f49e0-2db3-4504-8c6d-83b19edee916">Sincronizacion completada.</show-text>
+          <condition />
+          <show-text x="250" y="300" frontColor="#FFFFFFFF" borderColor="#000000FF" uri="" guid="334fbcb3-8af7-4aa1-a81c-7affc5e1581c">El punto más cercano respecto a tu ubicacion
+con el libro introducido a sido marcado, por favor
+dirijase a la ubicacion marcada.</show-text>
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <object id="ToscanoMapa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <condition>
+        <active flag="DescargadaApp" />
+      </condition>
+      <asset type="image" uri="assets/special/EmptyImage.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <condition>
+          <active flag="DescargadaApp" />
+          <inactive flag="HabladoMercadoInicio" />
+        </condition>
+        <effect>
+          <trigger-scene idTarget="Sol" x="513" y="433" transitionTime="0" transitionType="0" guid="7783e302-5f8d-44fc-a4d3-0d6c3ab42ec3" />
+          <condition />
+        </effect>
+      </examine>
+    </actions>
+  </object>
+  <map-scene id="Principal" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.406212083724 -3.71658656835326 0.0174073059629478 0.0230240821838374" center="(40.4167766746164, -3.70327208280144)" zoom="17" start="yes">
     <map-element targetId="MercadoDeAbastos" layer="0">
       <condition />
     </map-element>
@@ -801,9 +976,11 @@
       <condition />
     </map-element>
     <map-element targetId="IBalboaMapa" layer="0">
-      <condition />
+      <condition>
+        <active flag="HabladoMercadoInicio" />
+      </condition>
       <ext-elem-ref scale="0.2257682" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.416748046875, -3.7036771774292)</param>
+        <param name="Position">(40.4153747558594, -3.70723104476929)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">25.15</param>
         <param name="RevealOnlyOnRange">True</param>
@@ -812,10 +989,26 @@
         <actions />
       </ext-elem-ref>
     </map-element>
-    <map-element targetId="LuisAlquezarMapa" layer="0">
-      <condition />
-      <ext-elem-ref scale="0.3183869" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4152946472168, -3.70741081237793)</param>
+    <map-element targetId="LaLebrijanaMapa" layer="0">
+      <condition>
+        <active flag="Hablado1aVezBalboa" />
+      </condition>
+      <ext-elem-ref scale="0.2758484" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4127655029297, -3.70782923698425)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">25</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="Hint">False</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+        <actions />
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="ToscanoMapa" layer="0">
+      <condition>
+        <active flag="DescargadaApp" />
+      </condition>
+      <ext-elem-ref scale="1.719825" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4167785644531, -3.70387148857117)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">25</param>
         <param name="RevealOnlyOnRange">True</param>
@@ -839,13 +1032,25 @@
         <Polygon>
           <exterior>
             <LinearRing>
-              <posList>40.4150603531862 -3.70663315057754 40.4149950044236 -3.70805472135544 40.4157424271076 -3.70811372995376 40.4158057330191 -3.70671093463898 40.4150644374817 -3.70663315057754</posList>
+              <posList>40.4150644374653 -3.7066251039505 40.4149990887027 -3.7080466747284 40.4157465113867 -3.70810568332672 40.4158098172982 -3.70670288801194 40.4150685217608 -3.7066251039505</posList>
             </LinearRing>
           </exterior>
         </Polygon>
       </geometry>
     </geometries>
-    <actions />
+    <actions>
+      <enter-action>
+        <condition>
+          <active flag="HabladoMercadoInicio" />
+        </condition>
+        <effect>
+          <speak-char idTarget="Toscano" guid="5e671491-930a-47d0-94b4-cb87a7836422">
+          </speak-char>
+          <condition />
+        </effect>
+        <only-from-outside>False</only-from-outside>
+      </enter-action>
+    </actions>
   </geo-element>
   <geo-element id="PuertaDeSol">
     <description>
@@ -861,7 +1066,7 @@
         <Polygon>
           <exterior>
             <LinearRing>
-              <posList>40.417200490173 -3.70333403348958 40.417175985142 -3.70305776596105 40.417053460009 -3.70269834995305 40.4171106384322 -3.70244622230564 40.4169819869146 -3.7023657560352 40.4168880507255 -3.70233625173604 40.416783903931 -3.70234161615408 40.4167144726451 -3.70238453149832 40.4165408941168 -3.70458126068152 40.4166327886876 -3.7045973539356 40.4167553145758 -3.70460808277164 40.4168778402626 -3.7045973539356 40.4168921349103 -3.70441228151359 40.4169758606427 -3.70424330234563 40.4170350812198 -3.70411187410391 40.4170963438408 -3.70398044586215 40.4171535222177 -3.70382755994834 40.41719844809 -3.70355397462882</posList>
+              <posList>40.4169819868852 -3.70379537329461 40.4168267879293 -3.70377659783149 40.4168145354248 -3.70391070844596 40.4169636081076 -3.70392411949104</posList>
             </LinearRing>
           </exterior>
         </Polygon>
@@ -914,72 +1119,157 @@ avanzando, puede ser importante.</speak-player>
     </actions>
   </geo-element>
   <graph-conversation id="ConversacionBalboa">
-    <dialogue-node nodeindex="0" editor-x="53" editor-y="48">
+    <dialogue-node nodeindex="0" editor-x="207" editor-y="62" editor-collapsed="yes">
       <speak-player>
         <resources name="No name" />
-        <text>Buenas </text>
+        <text>Buenas me dijeron que podia encontrarte aqui. Estoy buscando al Capitan Alatriste.</text>
       </speak-player>
       <condition />
-      <child nodeindex="1" />
-    </dialogue-node>
-    <dialogue-node nodeindex="1" editor-x="98" editor-y="324">
-      <speak-char idTarget="Alatriste">
+      <speak-char idTarget="I.Balboa">
         <resources name="No name" />
-        <text>sfegfwgegre</text>
+        <text>¿Qué asuntos tienes con el?</text>
       </speak-char>
       <condition />
-      <child nodeindex="2" />
-    </dialogue-node>
-    <dialogue-node nodeindex="2" editor-x="654" editor-y="304">
       <speak-player>
         <resources name="No name" />
-        <text>sgsfssdfsdf</text>
+        <text>Soy un viejo concocido suyo. Vengo a avisarle de una emboscada.</text>
       </speak-player>
       <condition />
-      <child nodeindex="3" />
-    </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="645" editor-y="56">
+      <speak-char idTarget="I.Balboa">
+        <resources name="No name" />
+        <text>¿Como se que dices la verdad? No recuerdo que me haya halbado de ti en ningun momento.</text>
+      </speak-char>
+      <condition />
       <speak-player>
         <resources name="No name" />
-        <text>wfwfwfwfwfw</text>
+        <text>¿Que puedo hacer para demostrarte que estoy de su parte?</text>
       </speak-player>
       <condition />
-      <child nodeindex="4" />
-    </dialogue-node>
-    <option-node nodeindex="4" question="fsvdvbdbfdbfgfdgdfdsfgdfgfghdgfhfgdxsfgd" preListening="yes" editor-x="1202" editor-y="56" x="1202" y="56">
-      <speak-player>
-        <text>dcsdcscs</text>
+      <speak-char idTarget="I.Balboa">
         <resources name="No name" />
+        <text>Ahora mismo estoy haciendo unos recados acompañame mientras los hago y asi podras demostrarme tus verdaderas intenciones.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Vale que tenemos que hacer.</text>
       </speak-player>
       <condition />
-      <child nodeindex="5" />
-      <speak-player>
-        <text>fsfsfsfsdfsfdsdfsfds</text>
+      <speak-char idTarget="I.Balboa">
         <resources name="No name" />
-      </speak-player>
-      <condition />
-      <child nodeindex="6" />
-    </option-node>
-    <dialogue-node nodeindex="5" editor-x="1583" editor-y="332">
-      <speak-player>
-        <resources name="No name" />
-        <text>a</text>
-      </speak-player>
-      <condition />
-      <end-conversation />
-    </dialogue-node>
-    <dialogue-node nodeindex="6" editor-x="1610" editor-y="535">
-      <speak-player>
-        <resources name="No name" />
-        <text>b</text>
-      </speak-player>
+        <text>Primero vayamos a ver a una amiga del capitan.</text>
+      </speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="Mercado1">
-    <dialogue-node nodeindex="0" editor-x="82" editor-y="100">
+    <dialogue-node nodeindex="0" editor-x="167" editor-y="84" editor-collapsed="yes">
+      <speak-player>
+        <resources name="No name" />
+        <text>Hola buenas. ¿No conocera por casualidad al capitan Alatriste?</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="1" editor-x="434" editor-y="29" editor-collapsed="yes">
+      <speak-char idTarget="Toscano">
+        <resources name="No name" />
+        <text>¿Quien pregunta?</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="2" />
+    </dialogue-node>
+    <option-node nodeindex="2" preListening="yes" editor-x="711" editor-y="41" editor-collapsed="yes" x="711" y="41">
+      <speak-player>
+        <text>No importa, es de vida o muerte.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>
+        <text>Un viejo amigo del capitan.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </option-node>
+    <dialogue-node nodeindex="3" editor-x="982" editor-y="34" editor-collapsed="yes">
+      <speak-char idTarget="Toscano">
+        <resources name="No name" />
+        <text>Si es de vida o muerte tu deberias saber es menester de sacerdote.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="5" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="619" editor-y="301" editor-collapsed="yes">
+      <speak-char idTarget="Toscano">
+        <resources name="No name" />
+        <text>¿Amigo de que?</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="5" />
+    </dialogue-node>
+    <dialogue-node nodeindex="5" editor-x="1124" editor-y="295" editor-collapsed="yes">
+      <speak-player>
+        <resources name="No name" />
+        <text>Soy antiguo compañero de armas y jarras.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="6" />
+    </dialogue-node>
+    <dialogue-node nodeindex="6" editor-x="1539" editor-y="293" editor-collapsed="yes">
+      <speak-char idTarget="Toscano">
+        <resources name="No name" />
+        <text>Haberlo dicho antes. Llevo sin verlo varios dias, el muy rufian me debe el ultimo baño todavia.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Toscano">
+        <resources name="No name" />
+        <text>Mas bien creo que puedas encontrar al zagal que el cuida a esta hora andara de recados en el Mercado de San Migel.</text>
+      </speak-char>
+      <condition />
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
+  <graph-conversation id="TabernaDelTurco">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50" editor-collapsed="yes">
+      <speak-player>
+        <resources name="No name" />
+        <text>Hola buenas estamos buscando a la Lebrijana.</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="LaLebrijana">
+        <resources name="No name" />
+        <text>¿Que menesteres requieres?</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="I.Balboa">
+        <resources name="No name" />
+        <text>Hemos venido a traerte los sacos de harina que necesitabas.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>¿Por algun casual esta aqui Alatriste?</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Fin de la demostracion de concepto.</text>
+      </speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <book id="Bestiario" xNextPage="704,5052" yNextPage="508,2474" xPreviousPage="18,75259" yPreviousPage="507">
+    <resources name="No name">
+      <asset type="background" uri="assets/special/DefaultBook.jpg" />
+      <asset type="arrowLeftNormal" uri="assets/special/DefaultLeftNormalArrow.png" />
+      <asset type="arrowLeftOver" uri="assets/special/DefaultLeftOverArrow.png" />
+      <asset type="arrowRightNormal" uri="assets/special/DefaultLeftNormalArrow.png" />
+      <asset type="arrowRightOver" uri="assets/special/DefaultLeftOverArrow.png" />
+    </resources>
+    <text />
+  </book>
 </eAdventure>
