@@ -61,6 +61,15 @@
       </detailed>
     </description>
     <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Created with target conversation: ConversacionCorral</documentation>
+        <effect>
+          <trigger-conversation idTarget="ConversacionCorral" guid="cd37c440-94f9-45c9-b684-5c9c57fa7f80" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
   </character>
   <character id="I.Balboa" behaviour="normal">
     <resources name="No name">
@@ -94,6 +103,9 @@
     <voice name="" synthesizeAlways="no" />
     <actions>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <inactive flag="Hablado1aVezBalboa" />
+        </condition>
         <effect>
           <trigger-conversation idTarget="ConversacionBalboa" guid="92fcfb2c-3d7a-4d46-bd1e-475572f389bb" />
           <condition />
@@ -142,7 +154,7 @@
     <actions>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
         <effect>
-          <trigger-conversation idTarget="Mercado1" guid="a7a58f14-16a5-4ad9-8ccc-cca2ee0bed97" />
+          <trigger-conversation idTarget="ConversacionSol" guid="a7a58f14-16a5-4ad9-8ccc-cca2ee0bed97" />
           <condition />
         </effect>
       </talk-to>
@@ -185,11 +197,17 @@
           <condition />
           <trigger-last-scene guid="1cbf7ee8-a1fc-46e9-b535-391c6db0ac0d" />
           <condition />
+          <activate flag="HabladoLebrijana" guid="eeb7bc51-8c19-46d1-9a97-0f8f80d8eb50" />
+          <condition />
+          <navigate navigation-type="Ordered" guid="66800126-dc85-462c-bd6c-e244554e215a">
+            <step locks="False">QuevedoMapa</step>
+          </navigate>
+          <condition />
         </effect>
       </talk-to>
     </actions>
   </character>
-  <character id="Malatesta" behaviour="normal">
+  <character id="Saldaña" behaviour="normal">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
       <asset type="standdown" uri="assets/animation/MalatestaAnim.eaa.xml" />
@@ -219,6 +237,23 @@
       </detailed>
     </description>
     <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Created with target conversation: ConversacioCarcel</documentation>
+        <effect>
+          <trigger-conversation idTarget="ConversacioCarcel" guid="d3193334-8c90-49be-8c2f-b302b2f03071" />
+          <condition />
+          <activate flag="HabladoSaldaña" guid="dec88e8b-decd-4dc0-b7ed-55dd9a1b7e21" />
+          <condition />
+          <trigger-last-scene guid="df20ab0d-bbd8-4428-b56d-83a54fa8038b" />
+          <condition />
+          <navigate navigation-type="Ordered" guid="7d2b0989-3783-4ebb-b099-26c84d3987f8">
+            <step locks="False">LopeBalboaMapa</step>
+          </navigate>
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
   </character>
   <character id="MariaDeCastro" behaviour="normal">
     <resources name="No name">
@@ -312,6 +347,23 @@
       </detailed>
     </description>
     <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Created with target conversation: Mentider</documentation>
+        <effect>
+          <trigger-conversation idTarget="ConversacionMentidero" guid="04eaef0b-2360-428c-b631-df8d6a3b707e" />
+          <condition />
+          <activate flag="HabladoQuevedo" guid="cda66751-5856-46b6-9ef2-e0855ea5b9e6" />
+          <condition />
+          <trigger-last-scene guid="36eb1578-85b2-4080-8221-fa06b9302a23" />
+          <condition />
+          <navigate navigation-type="Ordered" guid="559581f3-9ec6-495d-aa6e-b876b2f21876">
+            <step locks="False">MalatestaMapa</step>
+          </navigate>
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
   </character>
   <character id="Guadalmedina" behaviour="normal">
     <resources name="No name">
@@ -343,6 +395,23 @@
       </detailed>
     </description>
     <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Created with target conversation: ConversacionAlcazarReal</documentation>
+        <effect>
+          <trigger-conversation idTarget="ConversacionAlcazarReal" guid="1dc3a546-2994-4f1c-88b0-7676d71bead2" />
+          <condition />
+          <activate flag="HabladoGuadalmedina" guid="264265d6-5e45-4d67-9241-669b7b445311" />
+          <condition />
+          <trigger-last-scene guid="0892c304-08bb-448e-a0e8-6d2e98b3b7fa" />
+          <condition />
+          <navigate navigation-type="Ordered" guid="dc6e7e94-77dc-487a-9530-e840a8fe7ebc">
+            <step locks="False">Alatriste1</step>
+          </navigate>
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
   </character>
   <character id="FelipeVI" behaviour="normal">
     <resources name="No name">
@@ -406,7 +475,7 @@
     </description>
     <voice name="" synthesizeAlways="no" />
   </character>
-  <character id="LopeBalboa" behaviour="normal">
+  <character id="Domine" behaviour="normal">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
       <asset type="standdown" uri="assets/animation/LopeBalboaAnim.eaa.xml" />
@@ -436,6 +505,23 @@
       </detailed>
     </description>
     <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Created with target conversation: ConversacionParroquia</documentation>
+        <effect>
+          <trigger-conversation idTarget="ConversacionParroquia" guid="6dd8af0f-089e-4472-9c98-a8b05c89d98e" />
+          <condition />
+          <activate flag="HabladoDomine" guid="f4f4dae0-486a-4473-a848-22169b49f837" />
+          <condition />
+          <trigger-last-scene guid="93064440-1e32-4bfe-820f-37d405632463" />
+          <condition />
+          <navigate navigation-type="Ordered" guid="053cffe6-48f0-4c94-b025-f06279c7c605">
+            <step locks="False">GuadalmedinaMapa</step>
+          </navigate>
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
   </character>
   <character id="Toscano" behaviour="normal">
     <resources name="No name">
@@ -443,7 +529,7 @@
         <active flag="DescargadaApp" />
       </condition>
       <asset type="standup" uri="assets/special/EmptyAnimation" />
-      <asset type="standdown" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/ToscanoAnim.eaa.xml" />
       <asset type="standright" uri="assets/special/EmptyAnimation" />
       <asset type="standleft" uri="assets/special/EmptyAnimation" />
       <asset type="speakup" uri="assets/special/EmptyAnimation" />
@@ -473,14 +559,14 @@
     <actions>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
         <effect>
-          <trigger-conversation idTarget="Mercado1" guid="bf95cb0b-069a-471a-a808-e5ca55b790ca" />
+          <trigger-conversation idTarget="ConversacionSol" guid="bf95cb0b-069a-471a-a808-e5ca55b790ca" />
           <condition />
           <activate flag="HabladoMercadoInicio" guid="900e7957-267c-40e8-acc0-18866127a82a" />
           <condition />
           <trigger-last-scene guid="96ae9937-ddca-4e72-8f96-ba053cc3a366" />
           <condition />
-          <navigate navigation-type="Ordered" guid="ef6e4b93-e03b-44bf-829f-ca7b9a5be4c2">
-            <step locks="False">MercadoDeAbastos</step>
+          <navigate navigation-type="Ordered" guid="2ea2e139-9dde-40ec-80ee-abcd5c17b59a">
+            <step locks="False">I.Balboa</step>
           </navigate>
           <condition />
         </effect>
@@ -497,7 +583,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="I.Balboa" x="81" y="297" scale="0.3211807" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="I.Balboa" x="579" y="326" scale="0.8812739" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="PhoneScene" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -516,7 +602,7 @@
         </condition>
       </object-ref>
       <object-ref idTarget="BotonMovil" x="-248" y="124" scale="0.06196224" glow="no" layer="2" hasInfluenceArea="no" />
-      <object-ref idTarget="IconoDescargado" x="124" y="315" scale="0.0707721" glow="no" layer="0" hasInfluenceArea="no">
+      <object-ref idTarget="IconoDescargado" x="120" y="316" scale="0.0707721" glow="no" layer="0" hasInfluenceArea="no">
         <condition>
           <active flag="DescargadaApp" />
         </condition>
@@ -533,8 +619,21 @@
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="Toscano" x="213" y="516" scale="4.605206" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Toscano" x="863" y="560" scale="1.139527" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
+  </scene>
+  <scene id="MenuInicial" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/ETGEDGEGVDGDG.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <objects>
+      <object-ref idTarget="BotonJugar" x="263" y="208" scale="0.1160021" glow="no" layer="0" hasInfluenceArea="no" />
+    </objects>
   </scene>
   <scene id="TwitterScene" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -572,9 +671,268 @@
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="LaLebrijana" x="1048" y="981" scale="1.595091" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="LaLebrijana" x="238" y="972" scale="2.300024" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="I.Balboa" x="1062" y="955" scale="2.525454" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
+  <scene id="Mentidero" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/Convento-de-San-Felipe-el-Real.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <characters>
+      <character-ref idTarget="Quevedo" x="119" y="487" scale="1.452101" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="I.Balboa" x="584" y="484" scale="1.045091" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+    </characters>
+  </scene>
+  <scene id="Carcel" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/Antigua_Carcel_de_Corte.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <characters>
+      <character-ref idTarget="Saldaña" x="82" y="334" scale="0.6336567" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="I.Balboa" x="439" y="332" scale="0.7119772" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+    </characters>
+  </scene>
+  <scene id="Parroquia" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/San Ginés.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <characters>
+      <character-ref idTarget="Domine" x="130" y="628" scale="1.318438" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="I.Balboa" x="789" y="623" scale="1.254482" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+    </characters>
+  </scene>
+  <scene id="AlcazarReal" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/2020072114145610212.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <characters>
+      <character-ref idTarget="Guadalmedina" x="138" y="538" scale="1.195675" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="I.Balboa" x="647" y="515" scale="1.077071" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+    </characters>
+  </scene>
+  <scene id="CorralPrincipe" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/unnamed.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <characters>
+      <character-ref idTarget="Alatriste" x="99" y="328" scale="0.1836958" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="I.Balboa" x="420" y="343" scale="0.3783206" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+    </characters>
+  </scene>
+  <scene id="ColeccionPersonajesScene" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/special/EmptyBackground.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+  </scene>
+  <object id="ToscanoMapa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <condition>
+        <active flag="DescargadaApp" />
+      </condition>
+      <asset type="image" uri="assets/image/Sin título.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <condition>
+          <active flag="DescargadaApp" />
+          <inactive flag="HabladoMercadoInicio" />
+        </condition>
+        <effect>
+          <trigger-scene idTarget="Sol" x="513" y="433" transitionTime="67" transitionType="5" guid="ace7ee55-7e34-42a2-8545-35e3bd02d4bf" />
+          <condition />
+        </effect>
+      </examine>
+    </actions>
+  </object>
+  <object id="QuevedoMapa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <condition>
+        <active flag="HabladoLebrijana" />
+      </condition>
+      <asset type="image" uri="assets/image/quevedo_med.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <condition>
+        <active flag="DescargadaApp" />
+        <inactive flag="HabladoQuevedo" />
+      </condition>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <condition>
+          <active flag="DescargadaApp" />
+          <active flag="HabladoLebrijana" />
+        </condition>
+        <effect>
+          <trigger-scene idTarget="Mentidero" x="400" y="450" transitionTime="0" transitionType="0" guid="8ce17c68-15a1-47c9-98b0-92979c0ef4c0" />
+          <condition />
+        </effect>
+      </examine>
+    </actions>
+  </object>
+  <object id="SaldañaMapa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <condition>
+        <active flag="HabladoQuevedo" />
+      </condition>
+      <asset type="image" uri="assets/image/wsfsfsfso.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <condition>
+          <active flag="DescargadaApp" />
+          <active flag="HabladoQuevedo" />
+        </condition>
+        <effect>
+          <trigger-scene idTarget="Carcel" x="400" y="450" transitionTime="0" transitionType="0" guid="205dab4e-a733-45b0-ac63-8076587ca63b" />
+          <condition />
+        </effect>
+      </examine>
+    </actions>
+  </object>
+  <object id="DomineMapa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <condition>
+        <active flag="HabladoSaldaña" />
+      </condition>
+      <asset type="image" uri="assets/image/bocanegra2_med.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <condition>
+          <active flag="DescargadaApp" />
+          <active flag="HabladoSaldaña" />
+        </condition>
+        <effect>
+          <trigger-scene idTarget="Parroquia" x="400" y="450" transitionTime="0" transitionType="0" guid="941bb727-ad46-4201-bc26-3933d46a7a0f" />
+          <condition />
+        </effect>
+      </examine>
+    </actions>
+  </object>
+  <object id="GuadalmedinaMapa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <condition>
+        <active flag="HabladoDomine" />
+      </condition>
+      <asset type="image" uri="assets/image/Sin títergegegeulo.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <condition>
+          <active flag="DescargadaApp" />
+          <active flag="HabladoDomine" />
+        </condition>
+        <effect>
+          <trigger-scene idTarget="AlcazarReal" x="400" y="450" transitionTime="0" transitionType="0" guid="3b507ede-e7f6-4eba-90c7-9710e7c9d288" />
+          <condition />
+        </effect>
+      </examine>
+    </actions>
+  </object>
+  <object id="Alatriste1" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <condition>
+        <active flag="HabladoGuadalmedina" />
+      </condition>
+      <asset type="image" uri="assets/image/CapitanAlatriste.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <condition>
+          <active flag="DescargadaApp" />
+          <active flag="HabladoGuadalmedina" />
+        </condition>
+        <effect>
+          <trigger-scene idTarget="CorralPrincipe" x="256" y="258" transitionTime="0" transitionType="0" guid="b8c38962-45f1-488b-ad88-93b0eb2d1997" />
+          <condition />
+        </effect>
+      </examine>
+    </actions>
+  </object>
   <object id="Phone" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/phone.png" />
@@ -622,28 +980,6 @@
       </use>
     </actions>
   </object>
-  <object id="Prueba" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
-    <resources name="No name">
-      <asset type="image" uri="assets/image/CapitanAlatriste.png" />
-      <asset type="icon" uri="assets/special/EmptyIcon.png" />
-    </resources>
-    <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
-    </description>
-    <actions>
-      <examine needsGoTo="no" keepDistance="0" not-effects="no">
-        <effect>
-          <trigger-zoned-scene idTarget="MercadoMadrid" x="330" y="251" zoneId="MercadoDeAbastos" transitionTime="16" transitionType="0" guid="d874b3f5-2d63-4211-adc1-b2da67cd6703" />
-          <condition />
-        </effect>
-      </examine>
-    </actions>
-  </object>
   <object id="DescargaAplicacion" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
       <condition>
@@ -668,7 +1004,7 @@
           <activate flag="DescargadaApp" guid="d644a9b6-f0e8-401b-a1b5-b8e724d0cea6" />
           <condition />
           <navigate navigation-type="Ordered" guid="1de2b398-ea76-4bcc-868a-1ad391db48be">
-            <step locks="False">PuertaDeSol</step>
+            <step locks="False">ToscanoMapa</step>
           </navigate>
           <condition />
         </effect>
@@ -702,7 +1038,7 @@
       <condition>
         <active flag="HabladoMercadoInicio" />
       </condition>
-      <asset type="image" uri="assets/image/InigoBalboa.png" />
+      <asset type="image" uri="assets/image/iigobalboa_1_med.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -756,7 +1092,7 @@
       <condition>
         <active flag="Hablado1aVezBalboa" />
       </condition>
-      <asset type="image" uri="assets/image/lebrijana.png" />
+      <asset type="image" uri="assets/image/caridad_1_med.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -769,26 +1105,15 @@
     </description>
     <actions>
       <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <condition>
+          <inactive flag="HabladoLebrijana" />
+        </condition>
         <effect>
           <trigger-scene idTarget="Taberna" x="640" y="741" transitionTime="0" transitionType="0" guid="a175c9d8-a43e-422a-9f16-aba6f2bdb100" />
           <condition />
         </effect>
       </examine>
     </actions>
-  </object>
-  <object id="MalatestaMapa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
-    <resources name="No name">
-      <asset type="image" uri="assets/image/Malatesta.png" />
-      <asset type="icon" uri="assets/special/EmptyIcon.png" />
-    </resources>
-    <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
-    </description>
   </object>
   <object id="MariaDeCastroMapa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
@@ -818,48 +1143,6 @@
       </detailed>
     </description>
   </object>
-  <object id="QuevedoMapa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
-    <resources name="No name">
-      <asset type="image" uri="assets/image/quevedo.png" />
-      <asset type="icon" uri="assets/special/EmptyIcon.png" />
-    </resources>
-    <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
-    </description>
-  </object>
-  <object id="GuadalmedinaMapa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
-    <resources name="No name">
-      <asset type="image" uri="assets/image/guadalmedina.png" />
-      <asset type="icon" uri="assets/special/EmptyIcon.png" />
-    </resources>
-    <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
-    </description>
-  </object>
-  <object id="FelipeVIMapa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
-    <resources name="No name">
-      <asset type="image" uri="assets/image/guadalmedina.png" />
-      <asset type="icon" uri="assets/special/EmptyIcon.png" />
-    </resources>
-    <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
-    </description>
-  </object>
   <object id="BragadoMapa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/bragado.png" />
@@ -874,9 +1157,9 @@
       </detailed>
     </description>
   </object>
-  <object id="LopeBalboaMapa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+  <object id="FelipeVIMapa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
-      <asset type="image" uri="assets/image/balboa.png" />
+      <asset type="image" uri="assets/image/guadalmedina.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -931,12 +1214,9 @@ dirijase a la ubicacion marcada.</show-text>
       </use>
     </actions>
   </object>
-  <object id="ToscanoMapa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+  <object id="BotonJugar" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
-      <condition>
-        <active flag="DescargadaApp" />
-      </condition>
-      <asset type="image" uri="assets/special/EmptyImage.png" />
+      <asset type="image" uri="assets/image/boton.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -948,21 +1228,56 @@ dirijase a la ubicacion marcada.</show-text>
       </detailed>
     </description>
     <actions>
-      <examine needsGoTo="no" keepDistance="0" not-effects="no">
-        <condition>
-          <active flag="DescargadaApp" />
-          <inactive flag="HabladoMercadoInicio" />
-        </condition>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
         <effect>
-          <trigger-scene idTarget="Sol" x="513" y="433" transitionTime="0" transitionType="0" guid="7783e302-5f8d-44fc-a4d3-0d6c3ab42ec3" />
+          <trigger-scene idTarget="Principal" x="330" y="251" transitionTime="108" transitionType="0" guid="db3b51b0-bbe2-466d-bda7-3df731f9f97e" />
           <condition />
         </effect>
-      </examine>
+      </use>
     </actions>
   </object>
-  <map-scene id="Principal" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.406212083724 -3.71658656835326 0.0174073059629478 0.0230240821838374" center="(40.4167766746164, -3.70327208280144)" zoom="17" start="yes">
-    <map-element targetId="MercadoDeAbastos" layer="0">
-      <condition />
+  <map-scene id="Principal" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.406212083724 -3.71658656835326 0.0174073059629478 0.0230240821838374" center="(40.4181203602375, -3.71085468768483)" zoom="18" start="no">
+    <map-element targetId="MercadoDeAbastosPath" layer="0">
+      <condition>
+        <inactive flag="Hablado1aVezBalboa" />
+        <active flag="HabladoMercadoInicio" />
+      </condition>
+    </map-element>
+    <map-element targetId="TabernaDelTurcoPath" layer="0">
+      <condition>
+        <active flag="Hablado1aVezBalboa" />
+        <inactive flag="HabladoLebrijana" />
+      </condition>
+    </map-element>
+    <map-element targetId="MentideroPath" layer="0">
+      <condition>
+        <active flag="HabladoLebrijana" />
+        <inactive flag="HabladoQuevedo" />
+      </condition>
+    </map-element>
+    <map-element targetId="CarcelPath" layer="0">
+      <condition>
+        <active flag="HabladoQuevedo" />
+        <inactive flag="HabladoSaldaña" />
+      </condition>
+    </map-element>
+    <map-element targetId="ParroquiaPath" layer="0">
+      <condition>
+        <active flag="HabladoSaldaña" />
+        <inactive flag="HabladoDomine" />
+      </condition>
+    </map-element>
+    <map-element targetId="AlcarazPath" layer="0">
+      <condition>
+        <active flag="HabladoDomine" />
+        <inactive flag="HabladoGuadalmedina" />
+      </condition>
+    </map-element>
+    <map-element targetId="CorralPath" layer="0">
+      <condition>
+        <active flag="HabladoGuadalmedina" />
+        <inactive flag="HabladoAlatriste" />
+      </condition>
     </map-element>
     <map-element targetId="Phone" layer="0">
       <condition />
@@ -979,8 +1294,8 @@ dirijase a la ubicacion marcada.</show-text>
       <condition>
         <active flag="HabladoMercadoInicio" />
       </condition>
-      <ext-elem-ref scale="0.2257682" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4153747558594, -3.70723104476929)</param>
+      <ext-elem-ref scale="0.6636939" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4153594970703, -3.70710897445679)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">25.15</param>
         <param name="RevealOnlyOnRange">True</param>
@@ -993,8 +1308,8 @@ dirijase a la ubicacion marcada.</show-text>
       <condition>
         <active flag="Hablado1aVezBalboa" />
       </condition>
-      <ext-elem-ref scale="0.2758484" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4127655029297, -3.70782923698425)</param>
+      <ext-elem-ref scale="0.3760598" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4129028320313, -3.70788145065308)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">25</param>
         <param name="RevealOnlyOnRange">True</param>
@@ -1007,8 +1322,78 @@ dirijase a la ubicacion marcada.</show-text>
       <condition>
         <active flag="DescargadaApp" />
       </condition>
-      <ext-elem-ref scale="1.719825" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4167785644531, -3.70387148857117)</param>
+      <ext-elem-ref scale="0.4347486" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4168128967285, -3.70386219024658)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">25</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="Hint">False</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+        <actions />
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="QuevedoMapa" layer="0">
+      <condition>
+        <active flag="HabladoLebrijana" />
+      </condition>
+      <ext-elem-ref scale="0.8431122" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4161643981934, -3.70481157302856)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">25</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="Hint">False</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+        <actions />
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="SaldañaMapa" layer="0">
+      <condition>
+        <active flag="HabladoQuevedo" />
+      </condition>
+      <ext-elem-ref scale="0.3225453" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4145126342773, -3.70596098899841)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">25</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="Hint">False</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+        <actions />
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="DomineMapa" layer="0">
+      <condition>
+        <active flag="HabladoSaldaña" />
+      </condition>
+      <ext-elem-ref scale="0.3576195" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4170303344727, -3.7069628238678)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">25</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="Hint">False</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+        <actions />
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="Alatriste1" layer="0">
+      <condition>
+        <active flag="HabladoGuadalmedina" />
+      </condition>
+      <ext-elem-ref scale="0.1236455" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4147605895996, -3.70003199577332)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">25</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="Hint">False</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+        <actions />
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="GuadalmedinaMapa" layer="0">
+      <condition>
+        <active flag="HabladoDomine" />
+      </condition>
+      <ext-elem-ref scale="0.4290782" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4180564880371, -3.71320152282715)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">25</param>
         <param name="RevealOnlyOnRange">True</param>
@@ -1018,7 +1403,7 @@ dirijase a la ubicacion marcada.</show-text>
       </ext-elem-ref>
     </map-element>
   </map-scene>
-  <geo-element id="MercadoDeAbastos">
+  <geo-element id="MercadoDeAbastosPath">
     <description>
       <name>
       </name>
@@ -1028,20 +1413,17 @@ dirijase a la ubicacion marcada.</show-text>
       </detailed>
     </description>
     <geometries>
-      <geometry influence="5">
-        <Polygon>
-          <exterior>
-            <LinearRing>
-              <posList>40.4150644374653 -3.7066251039505 40.4149990887027 -3.7080466747284 40.4157465113867 -3.70810568332672 40.4158098172982 -3.70670288801194 40.4150685217608 -3.7066251039505</posList>
-            </LinearRing>
-          </exterior>
-        </Polygon>
+      <geometry influence="0.8">
+        <LineString>
+          <posList>40.4168914417569 -3.70394954092045 40.4165524526031 -3.70463618642826 40.416521821055 -3.70493391162891 40.4160051669677 -3.70566615468996 40.4157797970822 -3.70617771140822 40.4156960698563 -3.70666319123994 40.4156429744884 -3.70687240354311 40.4156245953127 -3.70711380235443</posList>
+        </LineString>
       </geometry>
     </geometries>
     <actions>
       <enter-action>
         <condition>
           <active flag="HabladoMercadoInicio" />
+          <inactive flag="Hablado1aVezBalboa" />
         </condition>
         <effect>
           <speak-char idTarget="Toscano" guid="5e671491-930a-47d0-94b4-cb87a7836422">
@@ -1051,6 +1433,114 @@ dirijase a la ubicacion marcada.</show-text>
         <only-from-outside>False</only-from-outside>
       </enter-action>
     </actions>
+  </geo-element>
+  <geo-element id="TabernaDelTurcoPath">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="1.57">
+        <LineString>
+          <posList>40.412891557154 -3.70785355568016 40.4128302907144 -3.70754778385247 40.413085567178 -3.70749413967216 40.4136287922696 -3.70740830898367 40.4147131871381 -3.70757997036064 40.415178797651 -3.70767652988516 40.4154810343296 -3.70738685131155</posList>
+        </LineString>
+      </geometry>
+    </geometries>
+    <actions />
+  </geo-element>
+  <geo-element id="MentideroPath">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="2.16">
+        <LineString>
+          <posList>40.4128793041539 -3.70792061082206 40.4127853622542 -3.70756119481406 40.4133367584871 -3.70744317761731 40.4136165392919 -3.70745390645332 40.4143108806893 -3.70749145732002 40.4150817955757 -3.70765238986091 40.4156934159293 -3.70683163390227 40.4157546797527 -3.70622813687394 40.4159915660119 -3.70574265704225 40.4163509780477 -3.70508283362446 40.4164898412981 -3.70503723615307 40.4165336414593 -3.70487020774213</posList>
+        </LineString>
+      </geometry>
+    </geometries>
+    <actions />
+  </geo-element>
+  <geo-element id="CarcelPath">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="0">
+        <LineString>
+          <posList>40.4147581146078 -3.70590627193466 40.415722005843 -3.70520889759081 40.4162100726219 -3.70510697364848 40.4164918836267 -3.70502114296003 40.4165408941158 -3.70485484600111</posList>
+        </LineString>
+      </geometry>
+    </geometries>
+    <actions />
+  </geo-element>
+  <geo-element id="ParroquiaPath">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="0">
+        <LineString>
+          <posList>40.4147581145936 -3.70597064495059 40.4149786671962 -3.70607793331119 40.4154912449894 -3.70766043662971 40.4157934802759 -3.70761752128567 40.4161692303215 -3.70766580104795 40.4162549990808 -3.70702743530241 40.4167573568546 -3.70696842670412 40.4168349563019 -3.70676994323704 40.4172515421966 -3.70663046836824 40.4172923838122 -3.70684504508944</posList>
+        </LineString>
+      </geometry>
+    </geometries>
+    <actions />
+  </geo-element>
+  <geo-element id="AlcarazPath">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="0">
+        <LineString>
+          <posList>40.4173352674819 -3.70690941810637 40.4176374944738 -3.70791792869595 40.4177967757205 -3.70855093002348 40.4178784582649 -3.70904445648221 40.4179111312549 -3.71009588241607 40.4178376170051 -3.71046066284207 40.4180499912848 -3.71126532554636 40.417935635987 -3.71158719062833 40.4179601407101 -3.71219873428374 40.4180173183623 -3.71319651603708</posList>
+        </LineString>
+      </geometry>
+    </geometries>
+    <actions />
+  </geo-element>
+  <geo-element id="CorralPath">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="0">
+        <LineString>
+          <posList>40.4147785358022 -3.70026290416652 40.414696850367 -3.70075643062525 40.4146335429117 -3.70128750801015 40.414200603418 -3.70142698287868 40.4146172056233 -3.70336353778743 40.4152829469303 -3.70322406291863 40.4166777148762 -3.70330452918938 40.4168084090733 -3.70463490486076 40.4178049439787 -3.70855093002251 40.4178784582642 -3.70940923690722 40.4178947947612 -3.71002078056259 40.4178457852584 -3.71043920516892 40.4180254865941 -3.71124386787347 40.4179274677432 -3.71153354644708 40.4179438042282 -3.71188759803704 40.4180499912845 -3.71321797370846</posList>
+        </LineString>
+      </geometry>
+    </geometries>
+    <actions />
   </geo-element>
   <geo-element id="PuertaDeSol">
     <description>
@@ -1118,8 +1608,48 @@ avanzando, puede ser importante.</speak-player>
       </exit-action>
     </actions>
   </geo-element>
+  <graph-conversation id="ConversacionSol">
+    <dialogue-node nodeindex="0" editor-x="149" editor-y="64">
+      <speak-player>
+        <resources name="No name" />
+        <text>Hola buenas. ¿No conocera por casualidad al capitan Alatriste?</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="Toscano">
+        <resources name="No name" />
+        <text>¿Quien pregunta?</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Un viejo amigo suyo. Lo estoy buscando para avisarle de un asunto urgente.</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="Toscano">
+        <resources name="No name" />
+        <text>Al capitan llevo sin verlo un par de dias. </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Toscano">
+        <resources name="No name" />
+        <text>No obstante, viniendo para aca me he cruzado con el golfillo que tiene por ahijado.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Toscano">
+        <resources name="No name" />
+        <text>Estaba en la plaza mayor haciendo recados puede que sigua ahi.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>De acuerdo muchas gracias.</text>
+      </speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
   <graph-conversation id="ConversacionBalboa">
-    <dialogue-node nodeindex="0" editor-x="207" editor-y="62" editor-collapsed="yes">
+    <dialogue-node nodeindex="0" editor-x="207" editor-y="62">
       <speak-player>
         <resources name="No name" />
         <text>Buenas me dijeron que podia encontrarte aqui. Estoy buscando al Capitan Alatriste.</text>
@@ -1137,139 +1667,260 @@ avanzando, puede ser importante.</speak-player>
       <condition />
       <speak-char idTarget="I.Balboa">
         <resources name="No name" />
-        <text>¿Como se que dices la verdad? No recuerdo que me haya halbado de ti en ningun momento.</text>
+        <text>¡Pardiez! , ¿ es eso cierto?</text>
       </speak-char>
       <condition />
       <speak-player>
         <resources name="No name" />
-        <text>¿Que puedo hacer para demostrarte que estoy de su parte?</text>
+        <text>Por Dios nuestro señor lo juro.</text>
       </speak-player>
       <condition />
       <speak-char idTarget="I.Balboa">
         <resources name="No name" />
-        <text>Ahora mismo estoy haciendo unos recados acompañame mientras los hago y asi podras demostrarme tus verdaderas intenciones.</text>
-      </speak-char>
-      <condition />
-      <speak-player>
-        <resources name="No name" />
-        <text>Vale que tenemos que hacer.</text>
-      </speak-player>
-      <condition />
-      <speak-char idTarget="I.Balboa">
-        <resources name="No name" />
-        <text>Primero vayamos a ver a una amiga del capitan.</text>
-      </speak-char>
-      <condition />
-      <end-conversation />
-    </dialogue-node>
-  </graph-conversation>
-  <graph-conversation id="Mercado1">
-    <dialogue-node nodeindex="0" editor-x="167" editor-y="84" editor-collapsed="yes">
-      <speak-player>
-        <resources name="No name" />
-        <text>Hola buenas. ¿No conocera por casualidad al capitan Alatriste?</text>
-      </speak-player>
-      <condition />
-      <child nodeindex="1" />
-    </dialogue-node>
-    <dialogue-node nodeindex="1" editor-x="434" editor-y="29" editor-collapsed="yes">
-      <speak-char idTarget="Toscano">
-        <resources name="No name" />
-        <text>¿Quien pregunta?</text>
-      </speak-char>
-      <condition />
-      <child nodeindex="2" />
-    </dialogue-node>
-    <option-node nodeindex="2" preListening="yes" editor-x="711" editor-y="41" editor-collapsed="yes" x="711" y="41">
-      <speak-player>
-        <text>No importa, es de vida o muerte.</text>
-        <resources name="No name" />
-      </speak-player>
-      <condition />
-      <child nodeindex="3" />
-      <speak-player>
-        <text>Un viejo amigo del capitan.</text>
-        <resources name="No name" />
-      </speak-player>
-      <condition />
-      <child nodeindex="4" />
-    </option-node>
-    <dialogue-node nodeindex="3" editor-x="982" editor-y="34" editor-collapsed="yes">
-      <speak-char idTarget="Toscano">
-        <resources name="No name" />
-        <text>Si es de vida o muerte tu deberias saber es menester de sacerdote.</text>
-      </speak-char>
-      <condition />
-      <child nodeindex="5" />
-    </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="619" editor-y="301" editor-collapsed="yes">
-      <speak-char idTarget="Toscano">
-        <resources name="No name" />
-        <text>¿Amigo de que?</text>
-      </speak-char>
-      <condition />
-      <child nodeindex="5" />
-    </dialogue-node>
-    <dialogue-node nodeindex="5" editor-x="1124" editor-y="295" editor-collapsed="yes">
-      <speak-player>
-        <resources name="No name" />
-        <text>Soy antiguo compañero de armas y jarras.</text>
-      </speak-player>
-      <condition />
-      <child nodeindex="6" />
-    </dialogue-node>
-    <dialogue-node nodeindex="6" editor-x="1539" editor-y="293" editor-collapsed="yes">
-      <speak-char idTarget="Toscano">
-        <resources name="No name" />
-        <text>Haberlo dicho antes. Llevo sin verlo varios dias, el muy rufian me debe el ultimo baño todavia.</text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="Toscano">
-        <resources name="No name" />
-        <text>Mas bien creo que puedas encontrar al zagal que el cuida a esta hora andara de recados en el Mercado de San Migel.</text>
+        <text>La ultima vez que lo vi estaba almorzando en la taberna del turco con la Lebrijana vamos alli.</text>
       </speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="TabernaDelTurco">
-    <dialogue-node nodeindex="0" editor-x="50" editor-y="50" editor-collapsed="yes">
-      <speak-player>
+    <dialogue-node nodeindex="0" editor-x="180" editor-y="53">
+      <speak-char idTarget="I.Balboa">
         <resources name="No name" />
-        <text>Hola buenas estamos buscando a la Lebrijana.</text>
-      </speak-player>
-      <condition />
-      <speak-char idTarget="LaLebrijana">
-        <resources name="No name" />
-        <text>¿Que menesteres requieres?</text>
+        <text>Aqui deberia estar.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="I.Balboa">
         <resources name="No name" />
-        <text>Hemos venido a traerte los sacos de harina que necesitabas.</text>
+        <text>...</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="I.Balboa">
+        <resources name="No name" />
+        <text>Pues parece que no se encuentra aqui.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="I.Balboa">
+        <resources name="No name" />
+        <text>Deberia preguntar a la Lebrijana.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="I.Balboa">
+        <resources name="No name" />
+        <text>Oiga Caridad, ¿dónde se encuentra el capitán?</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="I.Balboa">
+        <resources name="No name" />
+        <text>Tenemos un mesaje urgente para él.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="LaLebrijana">
+        <resources name="No name" />
+        <text>¿Uy, por Dios que me cuentas chiquillo!</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="LaLebrijana">
+        <resources name="No name" />
+        <text>Vino Don Quevedo, acabado el almurezo, y marcharo al mentidero.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="I.Balboa">
+        <resources name="No name" />
+        <text>De acuerdo iremos a ver.</text>
+      </speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="ConversacionMentidero">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="I.Balboa">
+        <resources name="No name" />
+        <text>Por Dios Cristo nuestro señor donde esta el capitan.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Quevedo">
+        <resources name="No name" />
+        <text>
+        </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Quevedo">
+        <resources name="No name" />
+        <text>Llego el alguacil Saldaña y se lo llevo arrestado a la carcel de la Corte.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Quevedo">
+        <resources name="No name" />
+        <text>No se que habra hecho ahora.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="I.Balboa">
+        <resources name="No name" />
+        <text>Esto no me gusta nada....</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="I.Balboa">
+        <resources name="No name" />
+        <text>Muchas gracias Don Quevedo vamos a ver que ha hecho ahora.</text>
+      </speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="ConversacioCarcel">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="I.Balboa">
+        <resources name="No name" />
+        <text>Saldaña por favor sea piadoso con mi amo no se que habra hecho esta vez.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="I.Balboa">
+        <resources name="No name" />
+        <text>Pero en honor a su vieja amistad tenga clemencia.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Saldaña">
+        <resources name="No name" />
+        <text>No pierdas los estribos Iñigo, tu amo consigio "zafarse" y acogerse a sagrado.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Saldaña">
+        <resources name="No name" />
+        <text>La ultima vez que lo vi estaba en la parroquia de san Gines.</text>
+      </speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="ConversacionParroquia">
+    <dialogue-node nodeindex="0" editor-x="32" editor-y="206">
+      <speak-char idTarget="I.Balboa">
+        <resources name="No name" />
+        <text>Perdone se encuentra todavia aqui resguardado mi señor</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Domine">
+        <resources name="No name" />
+        <text>Se fue hace rato</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="I.Balboa">
+        <resources name="No name" />
+        <text>Pero usted no pertenece a esta parroquia</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Domine">
+        <resources name="No name" />
+        <text>Me aviso un monaguillo de esta parroquia, y fui a avisar al conde Guadalmedina y a los ministros.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="I.Balboa">
+        <resources name="No name" />
+        <text>Sabes hacia donde se dirijieron</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Domine">
+        <resources name="No name" />
+        <text>Creo que fueron en direcion al alcazar real. </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="I.Balboa">
+        <resources name="No name" />
+        <text>Gracias iremos alli a preguntar.</text>
+      </speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="ConversacionAlcazarReal">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="60">
+      <speak-char idTarget="I.Balboa">
+        <resources name="No name" />
+        <text>Disculpe su merced, el Dómine me dijo que había usted guardado a mi amo.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Guadalmedina">
+        <resources name="No name" />
+        <text>Así es pequeño granuja, pero no debes preocuparte por tu amo, intercedí por él ante las autoridades y les expliqué que tu amo actuaba bajo mis órdenes. </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Guadalmedina">
+        <resources name="No name" />
+        <text> Órdenes que como grande de España velaban por el bien del imperio de nuestro buen señor Felipe IV</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="I.Balboa">
+        <resources name="No name" />
+        <text>Muchas gracias, su grandeza, tanto el Capitán como yo mismo estamos en deuda con su merced.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="I.Balboa">
+        <resources name="No name" />
+        <text>No obstante, tengo una nueva urgente que hacerle llegar, puesto que aquí no lo veo, ¿sabe usted dónde se encuentra?</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Guadalmedina">
+        <resources name="No name" />
+        <text>Sí, aparecieron unos rufianes que decían ser amigos del Capitán.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Guadalmedina">
+        <resources name="No name" />
+        <text>Si mal no recuerdo, me parece oírles decir que iban a ver una obra de teatro.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Guadalmedina">
+        <resources name="No name" />
+        <text>Así que supongo que están en el Corral del Príncipe.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="I.Balboa">
+        <resources name="No name" />
+        <text>Dios se lo pague, señor mío.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Guadalmedina">
+        <resources name="No name" />
+        <text>Con Dios vayan.</text>
+      </speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="ConversacionCorral">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="Alatriste">
+        <resources name="No name" />
+        <text>
+        </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="I.Balboa">
+        <resources name="No name" />
+        <text>
+        </text>
       </speak-char>
       <condition />
       <speak-player>
         <resources name="No name" />
-        <text>¿Por algun casual esta aqui Alatriste?</text>
-      </speak-player>
-      <condition />
-      <speak-player>
-        <resources name="No name" />
-        <text>Fin de la demostracion de concepto.</text>
+        <text>
+        </text>
       </speak-player>
       <condition />
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
-  <book id="Bestiario" xNextPage="704,5052" yNextPage="508,2474" xPreviousPage="18,75259" yPreviousPage="507">
-    <resources name="No name">
-      <asset type="background" uri="assets/special/DefaultBook.jpg" />
-      <asset type="arrowLeftNormal" uri="assets/special/DefaultLeftNormalArrow.png" />
-      <asset type="arrowLeftOver" uri="assets/special/DefaultLeftOverArrow.png" />
-      <asset type="arrowRightNormal" uri="assets/special/DefaultLeftNormalArrow.png" />
-      <asset type="arrowRightOver" uri="assets/special/DefaultLeftOverArrow.png" />
-    </resources>
-    <text />
-  </book>
+  <graph-conversation id="ConverPrueba">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name" />
+        <text>
+        </text>
+      </speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
 </eAdventure>
