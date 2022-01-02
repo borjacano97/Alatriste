@@ -741,8 +741,8 @@
     </name>
     <default-initial-position x="400" y="450" />
     <characters>
-      <character-ref idTarget="Alatriste" x="99" y="328" scale="0.1836958" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
-      <character-ref idTarget="I.Balboa" x="420" y="343" scale="0.3783206" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Alatriste" x="75" y="339" scale="0.7820568" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="I.Balboa" x="452" y="346" scale="0.6287975" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="ColeccionPersonajesScene" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -909,7 +909,7 @@
       <condition>
         <active flag="HabladoGuadalmedina" />
       </condition>
-      <asset type="image" uri="assets/image/CapitanAlatriste.png" />
+      <asset type="image" uri="assets/image/alatriste_med.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -1236,7 +1236,7 @@ dirijase a la ubicacion marcada.</show-text>
       </use>
     </actions>
   </object>
-  <map-scene id="Principal" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.406212083724 -3.71658656835326 0.0174073059629478 0.0230240821838374" center="(40.4181203602375, -3.71085468768483)" zoom="18" start="no">
+  <map-scene id="Principal" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.406212083724 -3.71658656835326 0.0174073059629478 0.0230240821838374" center="(40.4132396717042, -3.70824758052234)" zoom="19" start="no">
     <map-element targetId="MercadoDeAbastosPath" layer="0">
       <condition>
         <inactive flag="Hablado1aVezBalboa" />
@@ -1309,7 +1309,7 @@ dirijase a la ubicacion marcada.</show-text>
         <active flag="Hablado1aVezBalboa" />
       </condition>
       <ext-elem-ref scale="0.3760598" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4129028320313, -3.70788145065308)</param>
+        <param name="Position">(40.4128913879395, -3.70789217948914)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">25</param>
         <param name="RevealOnlyOnRange">True</param>
@@ -1336,8 +1336,8 @@ dirijase a la ubicacion marcada.</show-text>
       <condition>
         <active flag="HabladoLebrijana" />
       </condition>
-      <ext-elem-ref scale="0.8431122" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4161643981934, -3.70481157302856)</param>
+      <ext-elem-ref scale="0.6312967" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4162979125977, -3.70487070083618)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">25</param>
         <param name="RevealOnlyOnRange">True</param>
@@ -1351,7 +1351,7 @@ dirijase a la ubicacion marcada.</show-text>
         <active flag="HabladoQuevedo" />
       </condition>
       <ext-elem-ref scale="0.3225453" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4145126342773, -3.70596098899841)</param>
+        <param name="Position">(40.4145698547363, -3.70598101615906)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">25</param>
         <param name="RevealOnlyOnRange">True</param>
@@ -1365,7 +1365,7 @@ dirijase a la ubicacion marcada.</show-text>
         <active flag="HabladoSaldaña" />
       </condition>
       <ext-elem-ref scale="0.3576195" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4170303344727, -3.7069628238678)</param>
+        <param name="Position">(40.4170989990234, -3.7069628238678)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">25</param>
         <param name="RevealOnlyOnRange">True</param>
@@ -1378,8 +1378,8 @@ dirijase a la ubicacion marcada.</show-text>
       <condition>
         <active flag="HabladoGuadalmedina" />
       </condition>
-      <ext-elem-ref scale="0.1236455" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4147605895996, -3.70003199577332)</param>
+      <ext-elem-ref scale="0.3361959" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4147453308105, -3.70010304450989)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">25</param>
         <param name="RevealOnlyOnRange">True</param>
@@ -1393,7 +1393,7 @@ dirijase a la ubicacion marcada.</show-text>
         <active flag="HabladoDomine" />
       </condition>
       <ext-elem-ref scale="0.4290782" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4180564880371, -3.71320152282715)</param>
+        <param name="Position">(40.418025970459, -3.71317481994629)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">25</param>
         <param name="RevealOnlyOnRange">True</param>
