@@ -596,15 +596,21 @@
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="Twitter" x="54" y="397" scale="0.04319234" glow="no" layer="1" hasInfluenceArea="no">
+      <object-ref idTarget="Twitter" x="54" y="397" scale="0.04319234" glow="no" layer="2" hasInfluenceArea="no">
         <condition>
           <inactive flag="DescargadaApp" />
         </condition>
       </object-ref>
-      <object-ref idTarget="BotonMovil" x="-248" y="124" scale="0.06196224" glow="no" layer="2" hasInfluenceArea="no" />
+      <object-ref idTarget="BotonMovil" x="-248" y="124" scale="0.06196224" glow="no" layer="3" hasInfluenceArea="no" />
       <object-ref idTarget="IconoDescargado" x="120" y="316" scale="0.0707721" glow="no" layer="0" hasInfluenceArea="no">
         <condition>
           <active flag="DescargadaApp" />
+        </condition>
+      </object-ref>
+      <object-ref idTarget="Identificator" x="51" y="231" scale="0.09206152" glow="no" layer="1" hasInfluenceArea="no">
+        <condition>
+          <active flag="DescargadaApp" />
+          <active flag="UsadoApp" />
         </condition>
       </object-ref>
     </objects>
@@ -749,16 +755,133 @@
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/special/EmptyBackground.png" />
+      <asset type="background" uri="assets/background/phone.png" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <objects>
+      <object-ref idTarget="ToscanoBestiarioOculto" x="113" y="456" scale="1.002887" glow="no" layer="15" hasInfluenceArea="no">
+        <condition>
+          <active flag="DescargadaApp" />
+          <inactive flag="HabladoMercadoInicio" />
+          <equals var="PaginaBestiario" value="0" />
+        </condition>
+      </object-ref>
+      <object-ref idTarget="ToscanoBestiario" x="116" y="458" scale="0.999024" glow="no" layer="18" hasInfluenceArea="no">
+        <condition>
+          <active flag="DescargadaApp" />
+          <active flag="HabladoMercadoInicio" />
+          <equals var="PaginaBestiario" value="0" />
+        </condition>
+      </object-ref>
+      <object-ref idTarget="InigoBestiarioOculto" x="115" y="453" scale="0.97584" glow="no" layer="17" hasInfluenceArea="no">
+        <condition>
+          <active flag="DescargadaApp" />
+          <inactive flag="Hablado1aVezBalboa" />
+          <equals var="PaginaBestiario" value="1" />
+        </condition>
+      </object-ref>
+      <object-ref idTarget="InigoBestiario" x="115" y="460" scale="0.991807" glow="no" layer="16" hasInfluenceArea="no">
+        <condition>
+          <active flag="DescargadaApp" />
+          <active flag="Hablado1aVezBalboa" />
+          <equals var="PaginaBestiario" value="1" />
+        </condition>
+      </object-ref>
+      <object-ref idTarget="LaLebrijanaBestiarioOculto" x="116" y="455" scale="0.9912066" glow="no" layer="14" hasInfluenceArea="no">
+        <condition>
+          <active flag="DescargadaApp" />
+          <inactive flag="HabladoLebrijana" />
+          <equals var="PaginaBestiario" value="2" />
+        </condition>
+      </object-ref>
+      <object-ref idTarget="LaLebrijanaBestiario" x="115" y="459" scale="0.9988119" glow="no" layer="13" hasInfluenceArea="no">
+        <condition>
+          <active flag="DescargadaApp" />
+          <active flag="HabladoLebrijana" />
+          <equals var="PaginaBestiario" value="2" />
+        </condition>
+      </object-ref>
+      <object-ref idTarget="QuevedoBestiarioOculto" x="116" y="459" scale="0.9890116" glow="no" layer="12" hasInfluenceArea="no">
+        <condition>
+          <active flag="DescargadaApp" />
+          <inactive flag="HabladoQuevedo" />
+          <equals var="PaginaBestiario" value="3" />
+        </condition>
+      </object-ref>
+      <object-ref idTarget="QuevedoBestiario" x="114" y="461" scale="1.009492" glow="no" layer="11" hasInfluenceArea="no">
+        <condition>
+          <active flag="DescargadaApp" />
+          <active flag="HabladoQuevedo" />
+          <equals var="PaginaBestiario" value="3" />
+        </condition>
+      </object-ref>
+      <object-ref idTarget="SaldanaBestiarioOculto" x="113" y="458" scale="1.000148" glow="no" layer="10" hasInfluenceArea="no">
+        <condition>
+          <active flag="DescargadaApp" />
+          <inactive flag="HabladoSaldaña" />
+          <equals var="PaginaBestiario" value="4" />
+        </condition>
+      </object-ref>
+      <object-ref idTarget="SaldanaBestiario" x="113" y="457" scale="0.9969125" glow="no" layer="9" hasInfluenceArea="no">
+        <condition>
+          <active flag="DescargadaApp" />
+          <active flag="HabladoSaldaña" />
+          <equals var="PaginaBestiario" value="4" />
+        </condition>
+      </object-ref>
+      <object-ref idTarget="DomineBestiarioOculto" x="114" y="456" scale="0.9898062" glow="no" layer="8" hasInfluenceArea="no">
+        <condition>
+          <active flag="DescargadaApp" />
+          <inactive flag="HabladoDomine" />
+          <equals var="PaginaBestiario" value="5" />
+        </condition>
+      </object-ref>
+      <object-ref idTarget="DomineBestiaro" x="115" y="456" scale="0.9895216" glow="no" layer="7" hasInfluenceArea="no">
+        <condition>
+          <active flag="DescargadaApp" />
+          <active flag="HabladoDomine" />
+          <equals var="PaginaBestiario" value="5" />
+        </condition>
+      </object-ref>
+      <object-ref idTarget="GuadalmedinaBestiarioOculto" x="115" y="460" scale="1.008713" glow="no" layer="6" hasInfluenceArea="no">
+        <condition>
+          <active flag="DescargadaApp" />
+          <inactive flag="HabladoGuadalmedina" />
+          <equals var="PaginaBestiario" value="6" />
+        </condition>
+      </object-ref>
+      <object-ref idTarget="GuadalmedinaBestiario" x="115" y="455" scale="0.9907644" glow="no" layer="5" hasInfluenceArea="no">
+        <condition>
+          <active flag="DescargadaApp" />
+          <active flag="HabladoGuadalmedina" />
+          <equals var="PaginaBestiario" value="6" />
+        </condition>
+      </object-ref>
+      <object-ref idTarget="AlatristeBestiarioOculto" x="114" y="458" scale="1.001504" glow="no" layer="4" hasInfluenceArea="no">
+        <condition>
+          <active flag="DescargadaApp" />
+          <inactive flag="HabladoAlatriste" />
+          <equals var="PaginaBestiario" value="7" />
+        </condition>
+      </object-ref>
+      <object-ref idTarget="AlatristeBestiario" x="115" y="458" scale="1.001368" glow="no" layer="3" hasInfluenceArea="no">
+        <condition>
+          <active flag="DescargadaApp" />
+          <active flag="HabladoAlatriste" />
+          <equals var="PaginaBestiario" value="7" />
+        </condition>
+      </object-ref>
+      <object-ref idTarget="FlechaIzq" x="-94" y="438" scale="0.2243742" glow="no" layer="2" hasInfluenceArea="no" />
+      <object-ref idTarget="FlechaDer" x="317" y="430" scale="0.2062358" glow="no" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="AtrasId" x="-162" y="129" scale="0.1086122" glow="no" layer="0" hasInfluenceArea="no" />
+    </objects>
   </scene>
   <object id="ToscanoMapa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
       <condition>
-        <active flag="DescargadaApp" />
+        <active flag="UsadoApp" />
       </condition>
       <asset type="image" uri="assets/image/Sin título.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
@@ -774,7 +897,7 @@
     <actions>
       <examine needsGoTo="no" keepDistance="0" not-effects="no">
         <condition>
-          <active flag="DescargadaApp" />
+          <active flag="UsadoApp" />
           <inactive flag="HabladoMercadoInicio" />
         </condition>
         <effect>
@@ -794,7 +917,7 @@
     </resources>
     <description>
       <condition>
-        <active flag="DescargadaApp" />
+        <active flag="UsadoApp" />
         <inactive flag="HabladoQuevedo" />
       </condition>
       <name>
@@ -807,8 +930,9 @@
     <actions>
       <examine needsGoTo="no" keepDistance="0" not-effects="no">
         <condition>
-          <active flag="DescargadaApp" />
+          <active flag="UsadoApp" />
           <active flag="HabladoLebrijana" />
+          <inactive flag="HabladoQuevedo" />
         </condition>
         <effect>
           <trigger-scene idTarget="Mentidero" x="400" y="450" transitionTime="0" transitionType="0" guid="8ce17c68-15a1-47c9-98b0-92979c0ef4c0" />
@@ -836,8 +960,9 @@
     <actions>
       <examine needsGoTo="no" keepDistance="0" not-effects="no">
         <condition>
-          <active flag="DescargadaApp" />
+          <active flag="UsadoApp" />
           <active flag="HabladoQuevedo" />
+          <inactive flag="HabladoSaldaña" />
         </condition>
         <effect>
           <trigger-scene idTarget="Carcel" x="400" y="450" transitionTime="0" transitionType="0" guid="205dab4e-a733-45b0-ac63-8076587ca63b" />
@@ -867,6 +992,7 @@
         <condition>
           <active flag="DescargadaApp" />
           <active flag="HabladoSaldaña" />
+          <inactive flag="HabladoDomine" />
         </condition>
         <effect>
           <trigger-scene idTarget="Parroquia" x="400" y="450" transitionTime="0" transitionType="0" guid="941bb727-ad46-4201-bc26-3933d46a7a0f" />
@@ -1013,7 +1139,7 @@
   </object>
   <object id="BotonMovil" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
-      <asset type="image" uri="assets/image/BotonMovil.png" />
+      <asset type="image" uri="assets/image/Atras.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -1052,7 +1178,7 @@
     <actions>
       <examine needsGoTo="no" keepDistance="0" not-effects="no">
         <condition>
-          <active flag="DescargadaApp" />
+          <active flag="UsadoApp" />
           <inactive flag="Hablado1aVezBalboa" />
         </condition>
         <effect>
@@ -1204,11 +1330,14 @@ linkado de libros.</show-text>
           <condition />
           <show-text x="250" y="300" frontColor="#FFFFFFFF" borderColor="#000000FF" uri="" guid="23033e67-ae93-49c0-9e4f-6d42fa3ffd11">...</show-text>
           <condition />
-          <show-text x="250" y="300" frontColor="#FFFFFFFF" borderColor="#000000FF" uri="" guid="d94f49e0-2db3-4504-8c6d-83b19edee916">Sincronizacion completada.</show-text>
+          <show-text x="250" y="300" frontColor="#FFFFFFFF" borderColor="#000000FF" uri="" guid="d94f49e0-2db3-4504-8c6d-83b19edee916">Sincronizacion completada. 
+Descargando App de Identificacion.</show-text>
           <condition />
           <show-text x="250" y="300" frontColor="#FFFFFFFF" borderColor="#000000FF" uri="" guid="334fbcb3-8af7-4aa1-a81c-7affc5e1581c">El punto más cercano respecto a tu ubicacion
 con el libro introducido a sido marcado, por favor
 dirijase a la ubicacion marcada.</show-text>
+          <condition />
+          <activate flag="UsadoApp" guid="4d0ffd8f-9457-455d-a828-2c0c51eab857" />
           <condition />
         </effect>
       </use>
@@ -1236,7 +1365,328 @@ dirijase a la ubicacion marcada.</show-text>
       </use>
     </actions>
   </object>
-  <map-scene id="Principal" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.406212083724 -3.71658656835326 0.0174073059629478 0.0230240821838374" center="(40.4132396717042, -3.70824758052234)" zoom="19" start="no">
+  <object id="AlatristeBestiario" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/AlatrisiteMovil.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="LaLebrijanaBestiario" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/LaLebrijanaMovil.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="InigoBestiario" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/InigoMovil.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="SaldanaBestiario" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/SaldanaMovil.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="DomineBestiaro" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/DomineMovil.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="QuevedoBestiario" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/QuevedoMovil.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="GuadalmedinaBestiario" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/GuadalMedinaMovil.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="ToscanoBestiario" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/TMovil.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="AlatristeBestiarioOculto" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/AlatrisiteMovilNo.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="LaLebrijanaBestiarioOculto" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/LaLebrijanaMovilNo.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="InigoBestiarioOculto" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/InigoMovilNo.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <condition>
+        <active flag="DescargadaApp" />
+      </condition>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="SaldanaBestiarioOculto" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/SaldanaMovilNo.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="DomineBestiarioOculto" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/DomineMovilNo.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="QuevedoBestiarioOculto" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/QuevedoMovilNo.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="GuadalmedinaBestiarioOculto" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/GuadalMedinaMovilNo.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="ToscanoBestiarioOculto" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/TMovilNo.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="FlechaIzq" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/flechaizq.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <greater-than var="PaginaBestiario" value="0" />
+        </condition>
+        <effect>
+          <decrement var="PaginaBestiario" value="1" guid="464b1a13-2aef-4f9f-a05f-3e4ab20480da" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <object id="FlechaDer" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/flechader.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <less-than var="PaginaBestiario" value="7" />
+        </condition>
+        <effect>
+          <increment var="PaginaBestiario" value="1" guid="05ca9f04-6c15-475b-9769-fe0578881124" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <object id="Identificator" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/recognicer.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-scene idTarget="ColeccionPersonajesScene" x="113" y="357" transitionTime="73" transitionType="0" guid="9a965ec4-a8a3-42c4-b4d0-66364ef75278" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <object id="AtrasId" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/Atras.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-scene idTarget="PhoneScene" x="113" y="357" transitionTime="54" transitionType="0" guid="80c7658e-1d82-41f7-896a-dd12edf67529" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <map-scene id="Principal" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.406212083724 -3.71658656835326 0.0174073059629478 0.0230240821838374" center="(40.4168256848931, -3.70391044854506)" zoom="18" start="no">
     <map-element targetId="MercadoDeAbastosPath" layer="0">
       <condition>
         <inactive flag="Hablado1aVezBalboa" />
@@ -1292,7 +1742,7 @@ dirijase a la ubicacion marcada.</show-text>
     </map-element>
     <map-element targetId="IBalboaMapa" layer="0">
       <condition>
-        <active flag="HabladoMercadoInicio" />
+        <active flag="UsadoApp" />
       </condition>
       <ext-elem-ref scale="0.6636939" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
         <param name="Position">(40.4153594970703, -3.70710897445679)</param>
@@ -1306,7 +1756,7 @@ dirijase a la ubicacion marcada.</show-text>
     </map-element>
     <map-element targetId="LaLebrijanaMapa" layer="0">
       <condition>
-        <active flag="Hablado1aVezBalboa" />
+        <active flag="UsadoApp" />
       </condition>
       <ext-elem-ref scale="0.3760598" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
         <param name="Position">(40.4128913879395, -3.70789217948914)</param>
@@ -1320,7 +1770,7 @@ dirijase a la ubicacion marcada.</show-text>
     </map-element>
     <map-element targetId="ToscanoMapa" layer="0">
       <condition>
-        <active flag="DescargadaApp" />
+        <active flag="UsadoApp" />
       </condition>
       <ext-elem-ref scale="0.4347486" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
         <param name="Position">(40.4168128967285, -3.70386219024658)</param>
@@ -1334,7 +1784,7 @@ dirijase a la ubicacion marcada.</show-text>
     </map-element>
     <map-element targetId="QuevedoMapa" layer="0">
       <condition>
-        <active flag="HabladoLebrijana" />
+        <active flag="UsadoApp" />
       </condition>
       <ext-elem-ref scale="0.6312967" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
         <param name="Position">(40.4162979125977, -3.70487070083618)</param>
