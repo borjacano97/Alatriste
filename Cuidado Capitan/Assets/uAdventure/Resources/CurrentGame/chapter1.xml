@@ -2340,23 +2340,50 @@ avanzando, puede ser importante.</speak-player>
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="ConversacionCorral">
-    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+    <dialogue-node nodeindex="0" editor-x="355" editor-y="160">
       <speak-char idTarget="Alatriste">
         <resources name="No name" />
-        <text>
-        </text>
+        <text>Iñigo ¿Qué haces por aquí?</text>
       </speak-char>
       <condition />
       <speak-char idTarget="I.Balboa">
         <resources name="No name" />
-        <text>
-        </text>
+        <text>Te veniamos buscando mi señor, esta conocido suyo tiene algo que contarle.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Alatriste">
+        <resources name="No name" />
+        <text>¿Conocido? No recuerdo conocer a esta persona.</text>
       </speak-char>
       <condition />
       <speak-player>
         <resources name="No name" />
-        <text>
-        </text>
+        <text>Capitan tiene que escucharme, a la salida del teatro le tenderan una emboscada.</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="Alatriste">
+        <resources name="No name" />
+        <text>Iñigo ¿puedo confiar en esta persona?</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="I.Balboa">
+        <resources name="No name" />
+        <text>Si señor, me ha ayudado a buscarle creo que dice la verdad.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Alatriste">
+        <resources name="No name" />
+        <text>Entonces Iñigo ve a buscar a Quevedo y Saldaña vamos a enfrentarnos a esos cobardes.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Alatriste">
+        <resources name="No name" />
+        <text>Y a ti gracias por avisar, te invitare a un trago en la taberna del Turco despues.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Con esto el manuscrito deberia arreglarse.</text>
       </speak-player>
       <condition />
       <end-conversation />
