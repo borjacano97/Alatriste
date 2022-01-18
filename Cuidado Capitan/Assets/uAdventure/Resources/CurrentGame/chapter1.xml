@@ -31,7 +31,7 @@
     </description>
     <voice name="" synthesizeAlways="no" />
   </player>
-  <character id="Alatriste" behaviour="normal">
+  <character id="Alatriste" behaviour="first-action">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
       <asset type="standdown" uri="assets/animation/Capitan.eaa.xml" />
@@ -71,7 +71,7 @@
       </talk-to>
     </actions>
   </character>
-  <character id="I.Balboa" behaviour="normal">
+  <character id="I.Balboa" behaviour="first-action">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
       <asset type="standdown" uri="assets/animation/BalboaTalk.eaa.xml" />
@@ -121,7 +121,7 @@
       </talk-to>
     </actions>
   </character>
-  <character id="LuisAlquezar" behaviour="normal">
+  <character id="LuisAlquezar" behaviour="first-action">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
       <asset type="standdown" uri="assets/animation/LuisA.eaa.xml" />
@@ -160,7 +160,7 @@
       </talk-to>
     </actions>
   </character>
-  <character id="LaLebrijana" behaviour="normal">
+  <character id="LaLebrijana" behaviour="first-action">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
       <asset type="standdown" uri="assets/animation/LebrijanaAnim.eaa.xml" />
@@ -207,7 +207,7 @@
       </talk-to>
     </actions>
   </character>
-  <character id="Saldaña" behaviour="normal">
+  <character id="Saldaña" behaviour="first-action">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
       <asset type="standdown" uri="assets/animation/MalatestaAnim.eaa.xml" />
@@ -255,7 +255,7 @@
       </talk-to>
     </actions>
   </character>
-  <character id="MariaDeCastro" behaviour="normal">
+  <character id="MariaDeCastro" behaviour="first-action">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
       <asset type="standdown" uri="assets/animation/MariaDeCastroAnim.eaa.xml" />
@@ -286,7 +286,7 @@
     </description>
     <voice name="" synthesizeAlways="no" />
   </character>
-  <character id="MariaMalatesta" behaviour="normal">
+  <character id="MariaMalatesta" behaviour="first-action">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
       <asset type="standdown" uri="assets/animation/MariaMalatestaAnim.eaa.xml" />
@@ -317,7 +317,7 @@
     </description>
     <voice name="" synthesizeAlways="no" />
   </character>
-  <character id="Quevedo" behaviour="normal">
+  <character id="Quevedo" behaviour="first-action">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
       <asset type="standdown" uri="assets/animation/QuevedoAnim.eaa.xml" />
@@ -365,7 +365,7 @@
       </talk-to>
     </actions>
   </character>
-  <character id="Guadalmedina" behaviour="normal">
+  <character id="Guadalmedina" behaviour="first-action">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
       <asset type="standdown" uri="assets/animation/GuadalmedinaAnim.eaa.xml" />
@@ -413,7 +413,7 @@
       </talk-to>
     </actions>
   </character>
-  <character id="FelipeVI" behaviour="normal">
+  <character id="FelipeVI" behaviour="first-action">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
       <asset type="standdown" uri="assets/animation/FelipeVIAnim.eaa.xml" />
@@ -444,7 +444,7 @@
     </description>
     <voice name="" synthesizeAlways="no" />
   </character>
-  <character id="Bragado" behaviour="normal">
+  <character id="Bragado" behaviour="first-action">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
       <asset type="standdown" uri="assets/animation/BragadoAnim.eaa.xml" />
@@ -475,7 +475,7 @@
     </description>
     <voice name="" synthesizeAlways="no" />
   </character>
-  <character id="Domine" behaviour="normal">
+  <character id="Domine" behaviour="first-action">
     <resources name="No name">
       <asset type="standup" uri="assets/special/EmptyAnimation" />
       <asset type="standdown" uri="assets/animation/LopeBalboaAnim.eaa.xml" />
@@ -523,7 +523,7 @@
       </talk-to>
     </actions>
   </character>
-  <character id="Toscano" behaviour="normal">
+  <character id="Toscano" behaviour="first-action">
     <resources name="No name">
       <condition>
         <active flag="DescargadaApp" />
@@ -878,7 +878,7 @@
       <object-ref idTarget="AtrasId" x="-162" y="129" scale="0.1086122" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
-  <object id="ToscanoMapa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+  <object id="ToscanoMapa" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
       <condition>
         <active flag="UsadoApp" />
@@ -907,7 +907,7 @@
       </examine>
     </actions>
   </object>
-  <object id="QuevedoMapa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+  <object id="QuevedoMapa" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
       <condition>
         <active flag="HabladoLebrijana" />
@@ -941,7 +941,7 @@
       </examine>
     </actions>
   </object>
-  <object id="SaldañaMapa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+  <object id="SaldañaMapa" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
       <condition>
         <active flag="HabladoQuevedo" />
@@ -971,7 +971,7 @@
       </examine>
     </actions>
   </object>
-  <object id="DomineMapa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+  <object id="DomineMapa" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
       <condition>
         <active flag="HabladoSaldaña" />
@@ -1001,7 +1001,7 @@
       </examine>
     </actions>
   </object>
-  <object id="GuadalmedinaMapa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+  <object id="GuadalmedinaMapa" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
       <condition>
         <active flag="HabladoDomine" />
@@ -1030,7 +1030,7 @@
       </examine>
     </actions>
   </object>
-  <object id="Alatriste1" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+  <object id="Alatriste1" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
       <condition>
         <active flag="HabladoGuadalmedina" />
@@ -1059,7 +1059,7 @@
       </examine>
     </actions>
   </object>
-  <object id="Phone" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+  <object id="Phone" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/phone.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
@@ -1081,12 +1081,12 @@
       </use>
     </actions>
   </object>
-  <object id="Twitter" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+  <object id="Twitter" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
       <condition>
         <inactive flag="fwfsfwsf" />
       </condition>
-      <asset type="image" uri="assets/image/580b57fcd9996e24bc43c53e.png" />
+      <asset type="image" uri="assets/image/580b57fcd9996e24bc43c53e2.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -1106,7 +1106,7 @@
       </use>
     </actions>
   </object>
-  <object id="DescargaAplicacion" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+  <object id="DescargaAplicacion" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
       <condition>
         <inactive flag="DescargadaApp" />
@@ -1137,7 +1137,7 @@
       </use>
     </actions>
   </object>
-  <object id="BotonMovil" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+  <object id="BotonMovil" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/Atras.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
@@ -1159,7 +1159,7 @@
       </use>
     </actions>
   </object>
-  <object id="IBalboaMapa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+  <object id="IBalboaMapa" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
       <condition>
         <active flag="HabladoMercadoInicio" />
@@ -1188,7 +1188,7 @@
       </examine>
     </actions>
   </object>
-  <object id="LuisAlquezarMapa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+  <object id="LuisAlquezarMapa" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/LuisDeAlquezar.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
@@ -1213,7 +1213,7 @@
       </examine>
     </actions>
   </object>
-  <object id="LaLebrijanaMapa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+  <object id="LaLebrijanaMapa" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
       <condition>
         <active flag="Hablado1aVezBalboa" />
@@ -1241,7 +1241,7 @@
       </examine>
     </actions>
   </object>
-  <object id="MariaDeCastroMapa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+  <object id="MariaDeCastroMapa" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/castro.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
@@ -1255,7 +1255,7 @@
       </detailed>
     </description>
   </object>
-  <object id="MariaMalatestaMapa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+  <object id="MariaMalatestaMapa" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/maria.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
@@ -1269,7 +1269,7 @@
       </detailed>
     </description>
   </object>
-  <object id="BragadoMapa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+  <object id="BragadoMapa" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/bragado.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
@@ -1283,7 +1283,7 @@
       </detailed>
     </description>
   </object>
-  <object id="FelipeVIMapa" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+  <object id="FelipeVIMapa" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/guadalmedina.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
@@ -1297,7 +1297,7 @@
       </detailed>
     </description>
   </object>
-  <object id="IconoDescargado" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+  <object id="IconoDescargado" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
       <condition>
         <active flag="DescargadaApp" />
@@ -1343,7 +1343,7 @@ dirijase a la ubicacion marcada.</show-text>
       </use>
     </actions>
   </object>
-  <object id="BotonJugar" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+  <object id="BotonJugar" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/boton.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
@@ -1365,7 +1365,7 @@ dirijase a la ubicacion marcada.</show-text>
       </use>
     </actions>
   </object>
-  <object id="AlatristeBestiario" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+  <object id="AlatristeBestiario" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/AlatrisiteMovil.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
@@ -1379,7 +1379,7 @@ dirijase a la ubicacion marcada.</show-text>
       </detailed>
     </description>
   </object>
-  <object id="LaLebrijanaBestiario" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+  <object id="LaLebrijanaBestiario" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/LaLebrijanaMovil.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
@@ -1393,7 +1393,7 @@ dirijase a la ubicacion marcada.</show-text>
       </detailed>
     </description>
   </object>
-  <object id="InigoBestiario" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+  <object id="InigoBestiario" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/InigoMovil.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
@@ -1407,7 +1407,7 @@ dirijase a la ubicacion marcada.</show-text>
       </detailed>
     </description>
   </object>
-  <object id="SaldanaBestiario" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+  <object id="SaldanaBestiario" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/SaldanaMovil.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
@@ -1421,7 +1421,7 @@ dirijase a la ubicacion marcada.</show-text>
       </detailed>
     </description>
   </object>
-  <object id="DomineBestiaro" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+  <object id="DomineBestiaro" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/DomineMovil.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
@@ -1435,7 +1435,7 @@ dirijase a la ubicacion marcada.</show-text>
       </detailed>
     </description>
   </object>
-  <object id="QuevedoBestiario" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+  <object id="QuevedoBestiario" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/QuevedoMovil.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
@@ -1449,7 +1449,7 @@ dirijase a la ubicacion marcada.</show-text>
       </detailed>
     </description>
   </object>
-  <object id="GuadalmedinaBestiario" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+  <object id="GuadalmedinaBestiario" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/GuadalMedinaMovil.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
@@ -1463,7 +1463,7 @@ dirijase a la ubicacion marcada.</show-text>
       </detailed>
     </description>
   </object>
-  <object id="ToscanoBestiario" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+  <object id="ToscanoBestiario" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/TMovil.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
@@ -1477,7 +1477,7 @@ dirijase a la ubicacion marcada.</show-text>
       </detailed>
     </description>
   </object>
-  <object id="AlatristeBestiarioOculto" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+  <object id="AlatristeBestiarioOculto" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/AlatrisiteMovilNo.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
@@ -1491,7 +1491,7 @@ dirijase a la ubicacion marcada.</show-text>
       </detailed>
     </description>
   </object>
-  <object id="LaLebrijanaBestiarioOculto" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+  <object id="LaLebrijanaBestiarioOculto" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/LaLebrijanaMovilNo.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
@@ -1505,7 +1505,7 @@ dirijase a la ubicacion marcada.</show-text>
       </detailed>
     </description>
   </object>
-  <object id="InigoBestiarioOculto" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+  <object id="InigoBestiarioOculto" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/InigoMovilNo.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
@@ -1522,7 +1522,7 @@ dirijase a la ubicacion marcada.</show-text>
       </detailed>
     </description>
   </object>
-  <object id="SaldanaBestiarioOculto" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+  <object id="SaldanaBestiarioOculto" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/SaldanaMovilNo.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
@@ -1536,7 +1536,7 @@ dirijase a la ubicacion marcada.</show-text>
       </detailed>
     </description>
   </object>
-  <object id="DomineBestiarioOculto" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+  <object id="DomineBestiarioOculto" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/DomineMovilNo.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
@@ -1550,7 +1550,7 @@ dirijase a la ubicacion marcada.</show-text>
       </detailed>
     </description>
   </object>
-  <object id="QuevedoBestiarioOculto" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+  <object id="QuevedoBestiarioOculto" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/QuevedoMovilNo.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
@@ -1564,7 +1564,7 @@ dirijase a la ubicacion marcada.</show-text>
       </detailed>
     </description>
   </object>
-  <object id="GuadalmedinaBestiarioOculto" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+  <object id="GuadalmedinaBestiarioOculto" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/GuadalMedinaMovilNo.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
@@ -1578,7 +1578,7 @@ dirijase a la ubicacion marcada.</show-text>
       </detailed>
     </description>
   </object>
-  <object id="ToscanoBestiarioOculto" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+  <object id="ToscanoBestiarioOculto" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/TMovilNo.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
@@ -1592,7 +1592,7 @@ dirijase a la ubicacion marcada.</show-text>
       </detailed>
     </description>
   </object>
-  <object id="FlechaIzq" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+  <object id="FlechaIzq" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/flechaizq.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
@@ -1617,7 +1617,7 @@ dirijase a la ubicacion marcada.</show-text>
       </use>
     </actions>
   </object>
-  <object id="FlechaDer" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+  <object id="FlechaDer" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/flechader.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
@@ -1642,29 +1642,7 @@ dirijase a la ubicacion marcada.</show-text>
       </use>
     </actions>
   </object>
-  <object id="Identificator" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
-    <resources name="No name">
-      <asset type="image" uri="assets/image/recognicer.png" />
-      <asset type="icon" uri="assets/special/EmptyIcon.png" />
-    </resources>
-    <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
-    </description>
-    <actions>
-      <use needsGoTo="yes" keepDistance="35" not-effects="no">
-        <effect>
-          <trigger-scene idTarget="ColeccionPersonajesScene" x="113" y="357" transitionTime="73" transitionType="0" guid="9a965ec4-a8a3-42c4-b4d0-66364ef75278" />
-          <condition />
-        </effect>
-      </use>
-    </actions>
-  </object>
-  <object id="AtrasId" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+  <object id="AtrasId" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/Atras.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
@@ -1686,7 +1664,29 @@ dirijase a la ubicacion marcada.</show-text>
       </use>
     </actions>
   </object>
-  <map-scene id="Principal" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.406212083724 -3.71658656835326 0.0174073059629478 0.0230240821838374" center="(40.4168256848931, -3.70391044854506)" zoom="18" start="no">
+  <object id="Identificator" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/recognicer.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-scene idTarget="ColeccionPersonajesScene" x="113" y="357" transitionTime="73" transitionType="0" guid="9a965ec4-a8a3-42c4-b4d0-66364ef75278" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <map-scene id="Principal" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.406212083724 -3.71658656835326 0.0174073059629478 0.0230240821838374" center="(40.4165438752856, -3.70240572928755)" zoom="17" start="no">
     <map-element targetId="MercadoDeAbastosPath" layer="0">
       <condition>
         <inactive flag="Hablado1aVezBalboa" />
@@ -1745,9 +1745,9 @@ dirijase a la ubicacion marcada.</show-text>
         <active flag="UsadoApp" />
       </condition>
       <ext-elem-ref scale="0.6636939" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4153594970703, -3.70710897445679)</param>
+        <param name="Position">(40.415454864502, -3.70725774765015)</param>
         <param name="Rotation">0</param>
-        <param name="InteractionRange">25.15</param>
+        <param name="InteractionRange">25.64</param>
         <param name="RevealOnlyOnRange">True</param>
         <param name="Hint">False</param>
         <param name="RevealParticleTexture">leaf_particle.png</param>
@@ -1775,7 +1775,7 @@ dirijase a la ubicacion marcada.</show-text>
       <ext-elem-ref scale="0.4347486" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
         <param name="Position">(40.4168128967285, -3.70386219024658)</param>
         <param name="Rotation">0</param>
-        <param name="InteractionRange">25</param>
+        <param name="InteractionRange">27.9</param>
         <param name="RevealOnlyOnRange">True</param>
         <param name="Hint">False</param>
         <param name="RevealParticleTexture">leaf_particle.png</param>
@@ -1784,12 +1784,12 @@ dirijase a la ubicacion marcada.</show-text>
     </map-element>
     <map-element targetId="QuevedoMapa" layer="0">
       <condition>
-        <active flag="UsadoApp" />
+        <active flag="HabladoLebrijana" />
       </condition>
       <ext-elem-ref scale="0.6312967" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4162979125977, -3.70487070083618)</param>
+        <param name="Position">(40.4164352416992, -3.70484113693237)</param>
         <param name="Rotation">0</param>
-        <param name="InteractionRange">25</param>
+        <param name="InteractionRange">26.7</param>
         <param name="RevealOnlyOnRange">True</param>
         <param name="Hint">False</param>
         <param name="RevealParticleTexture">leaf_particle.png</param>
@@ -1801,9 +1801,9 @@ dirijase a la ubicacion marcada.</show-text>
         <active flag="HabladoQuevedo" />
       </condition>
       <ext-elem-ref scale="0.3225453" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4145698547363, -3.70598101615906)</param>
+        <param name="Position">(40.4147300720215, -3.70598649978638)</param>
         <param name="Rotation">0</param>
-        <param name="InteractionRange">25</param>
+        <param name="InteractionRange">27.3</param>
         <param name="RevealOnlyOnRange">True</param>
         <param name="Hint">False</param>
         <param name="RevealParticleTexture">leaf_particle.png</param>
@@ -1815,9 +1815,9 @@ dirijase a la ubicacion marcada.</show-text>
         <active flag="HabladoSaldaña" />
       </condition>
       <ext-elem-ref scale="0.3576195" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4170989990234, -3.7069628238678)</param>
+        <param name="Position">(40.4172210693359, -3.70691180229187)</param>
         <param name="Rotation">0</param>
-        <param name="InteractionRange">25</param>
+        <param name="InteractionRange">25.6</param>
         <param name="RevealOnlyOnRange">True</param>
         <param name="Hint">False</param>
         <param name="RevealParticleTexture">leaf_particle.png</param>
@@ -1829,7 +1829,7 @@ dirijase a la ubicacion marcada.</show-text>
         <active flag="HabladoGuadalmedina" />
       </condition>
       <ext-elem-ref scale="0.3361959" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4147453308105, -3.70010304450989)</param>
+        <param name="Position">(40.4147071838379, -3.70034575462341)</param>
         <param name="Rotation">0</param>
         <param name="InteractionRange">25</param>
         <param name="RevealOnlyOnRange">True</param>
