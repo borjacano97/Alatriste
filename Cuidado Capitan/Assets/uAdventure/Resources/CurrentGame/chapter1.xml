@@ -575,6 +575,48 @@
       </talk-to>
     </actions>
   </character>
+  <character id="IBalboaMap" behaviour="normal">
+    <resources name="No name">
+      <condition>
+        <active flag="Hablado1aVezBalboa" />
+      </condition>
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/BalboaMapa.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-conversation idTarget="BalboaMenu" guid="befc9c04-9e73-4778-b31d-a0ad628e8f21" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
   <scene id="MercadoMadrid" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
@@ -598,12 +640,12 @@
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="Twitter" x="54" y="397" scale="0.04319234" glow="no" layer="2" hasInfluenceArea="no">
+      <object-ref idTarget="Twitter" x="54" y="397" scale="0.04319234" glow="no" layer="3" hasInfluenceArea="no">
         <condition>
           <inactive flag="DescargadaApp" />
         </condition>
       </object-ref>
-      <object-ref idTarget="BotonMovil" x="-162" y="129" scale="0.1086122" glow="no" layer="3" hasInfluenceArea="no" />
+      <object-ref idTarget="BotonMovil" x="-162" y="129" scale="0.1086122" glow="no" layer="2" hasInfluenceArea="no" />
       <object-ref idTarget="IconoDescargado" x="120" y="316" scale="0.0707721" glow="no" layer="0" hasInfluenceArea="no">
         <condition>
           <active flag="DescargadaApp" />
@@ -780,7 +822,8 @@
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="DescargaAplicacion" x="372" y="349" scale="1" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="DescargaAplicacion" x="377" y="349" scale="1" glow="no" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="twitterVentana" x="456" y="592" scale="1" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="MapaDibujado" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -890,13 +933,14 @@
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="Titulos" x="270" y="235" scale="0.3472222" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="Titulos" x="275" y="234" scale="0.3472222" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <object id="ToscanoMapa" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
       <condition>
         <active flag="UsadoApp" />
+        <inactive flag="HabladoMercadoInicio" />
       </condition>
       <asset type="image" uri="assets/image/Sin título.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
@@ -926,6 +970,7 @@
     <resources name="No name">
       <condition>
         <active flag="HabladoLebrijana" />
+        <inactive flag="HabladoQuevedo" />
       </condition>
       <asset type="image" uri="assets/image/quevedo_med.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
@@ -960,6 +1005,7 @@
     <resources name="No name">
       <condition>
         <active flag="HabladoQuevedo" />
+        <inactive flag="HabladoSaldaña" />
       </condition>
       <asset type="image" uri="assets/image/wsfsfsfso.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
@@ -990,6 +1036,7 @@
     <resources name="No name">
       <condition>
         <active flag="HabladoSaldaña" />
+        <inactive flag="HabladoDomine" />
       </condition>
       <asset type="image" uri="assets/image/bocanegra2_med.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
@@ -1020,6 +1067,7 @@
     <resources name="No name">
       <condition>
         <active flag="HabladoDomine" />
+        <inactive flag="HabladoGuadalmedina" />
       </condition>
       <asset type="image" uri="assets/image/Sin títergegegeulo.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
@@ -1049,6 +1097,7 @@
     <resources name="No name">
       <condition>
         <active flag="HabladoGuadalmedina" />
+        <inactive flag="HabladoAlatriste" />
       </condition>
       <asset type="image" uri="assets/image/alatriste_med.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
@@ -1167,6 +1216,27 @@
     </description>
     <actions>
       <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <inactive flag="DescargadaApp" />
+        </condition>
+        <effect>
+          <speak-player guid="c732ec1c-815a-4968-acd5-0c56fcea22d1">Deberia mirar twitter debe ser importante.</speak-player>
+          <condition />
+        </effect>
+      </use>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <inactive flag="UsadoApp" />
+        </condition>
+        <effect>
+          <speak-player guid="bbfe1487-df58-48d1-9a7c-432bdac51df2">Deberia utilizar la aplicacion que me he descargado.</speak-player>
+          <condition />
+        </effect>
+      </use>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="UsadoApp" />
+        </condition>
         <effect>
           <trigger-scene idTarget="Principal" x="330" y="251" transitionTime="56" transitionType="5" guid="d7a86ffb-e1d3-45ac-8491-bc0dd569ac22" />
           <condition />
@@ -1178,6 +1248,7 @@
     <resources name="No name">
       <condition>
         <active flag="HabladoMercadoInicio" />
+        <inactive flag="Hablado1aVezBalboa" />
       </condition>
       <asset type="image" uri="assets/image/iigobalboa_1_med.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
@@ -1232,6 +1303,7 @@
     <resources name="No name">
       <condition>
         <active flag="Hablado1aVezBalboa" />
+        <inactive flag="HabladoLebrijana" />
       </condition>
       <asset type="image" uri="assets/image/caridad_1_med.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
@@ -1715,7 +1787,29 @@ dirijase a la ubicacion marcada.</show-text>
       </detailed>
     </description>
   </object>
-  <map-scene id="Principal" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.406212083724 -3.71658656835326 0.0174073059629478 0.0230240821838374" center="(40.4178712290614, -3.71039871215153)" zoom="18" start="no">
+  <object id="twitterVentana" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/TwitterPerez.PNG" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <speak-player guid="47c64098-5ff4-4803-aae3-5161bf80a033">Deberia darle click en el enlace para descargar la aplicacion.</speak-player>
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <map-scene id="Principal" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.406212083724 -3.71658656835326 0.0174073059629478 0.0230240821838374" center="(40.4170094731299, -3.70303336619587)" zoom="18" start="no">
     <map-element targetId="MercadoDeAbastosPath" layer="0">
       <condition>
         <inactive flag="Hablado1aVezBalboa" />
@@ -1772,6 +1866,7 @@ dirijase a la ubicacion marcada.</show-text>
     <map-element targetId="IBalboaMapa" layer="0">
       <condition>
         <active flag="UsadoApp" />
+        <inactive flag="Hablado1aVezBalboa" />
       </condition>
       <ext-elem-ref scale="0.6636939" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
         <param name="Position">(40.4153671264648, -3.70721769332886)</param>
@@ -1786,6 +1881,7 @@ dirijase a la ubicacion marcada.</show-text>
     <map-element targetId="LaLebrijanaMapa" layer="0">
       <condition>
         <active flag="UsadoApp" />
+        <inactive flag="HabladoLebrijana" />
       </condition>
       <ext-elem-ref scale="0.3760598" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
         <param name="Position">(40.4128913879395, -3.70789217948914)</param>
@@ -1800,6 +1896,7 @@ dirijase a la ubicacion marcada.</show-text>
     <map-element targetId="ToscanoMapa" layer="0">
       <condition>
         <active flag="UsadoApp" />
+        <inactive flag="HabladoMercadoInicio" />
       </condition>
       <ext-elem-ref scale="0.4347486" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
         <param name="Position">(40.4168128967285, -3.70386219024658)</param>
@@ -1814,6 +1911,7 @@ dirijase a la ubicacion marcada.</show-text>
     <map-element targetId="QuevedoMapa" layer="0">
       <condition>
         <active flag="HabladoLebrijana" />
+        <inactive flag="HabladoQuevedo" />
       </condition>
       <ext-elem-ref scale="0.6312967" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
         <param name="Position">(40.4164352416992, -3.70484113693237)</param>
@@ -1828,6 +1926,7 @@ dirijase a la ubicacion marcada.</show-text>
     <map-element targetId="SaldañaMapa" layer="0">
       <condition>
         <active flag="HabladoQuevedo" />
+        <inactive flag="HabladoSaldaña" />
       </condition>
       <ext-elem-ref scale="0.3225453" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
         <param name="Position">(40.4147300720215, -3.70598649978638)</param>
@@ -1839,8 +1938,24 @@ dirijase a la ubicacion marcada.</show-text>
         <actions />
       </ext-elem-ref>
     </map-element>
+    <map-element targetId="Alatriste1" layer="0">
+      <condition>
+        <active flag="HabladoGuadalmedina" />
+        <inactive flag="HabladoAlatriste" />
+      </condition>
+      <ext-elem-ref scale="0.3361959" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4147071838379, -3.70034575462341)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">25</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="Hint">False</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+        <actions />
+      </ext-elem-ref>
+    </map-element>
     <map-element targetId="DomineMapa" layer="0">
       <condition>
+        <inactive flag="HabladoDomine" />
         <active flag="HabladoSaldaña" />
       </condition>
       <ext-elem-ref scale="0.3576195" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
@@ -1853,23 +1968,10 @@ dirijase a la ubicacion marcada.</show-text>
         <actions />
       </ext-elem-ref>
     </map-element>
-    <map-element targetId="Alatriste1" layer="0">
-      <condition>
-        <active flag="HabladoGuadalmedina" />
-      </condition>
-      <ext-elem-ref scale="0.3361959" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
-        <param name="Position">(40.4147071838379, -3.70034575462341)</param>
-        <param name="Rotation">0</param>
-        <param name="InteractionRange">25</param>
-        <param name="RevealOnlyOnRange">True</param>
-        <param name="Hint">False</param>
-        <param name="RevealParticleTexture">leaf_particle.png</param>
-        <actions />
-      </ext-elem-ref>
-    </map-element>
     <map-element targetId="GuadalmedinaMapa" layer="0">
       <condition>
         <active flag="HabladoDomine" />
+        <inactive flag="HabladoGuadalmedina" />
       </condition>
       <ext-elem-ref scale="0.4290782" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
         <param name="Position">(40.4180335998535, -3.71304869651794)</param>
@@ -1878,6 +1980,16 @@ dirijase a la ubicacion marcada.</show-text>
         <param name="RevealOnlyOnRange">True</param>
         <param name="Hint">False</param>
         <param name="RevealParticleTexture">leaf_particle.png</param>
+        <actions />
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="IBalboaMap" layer="0">
+      <condition>
+        <active flag="Hablado1aVezBalboa" />
+      </condition>
+      <ext-elem-ref scale="0.7226308" orientation="2" transformManager="uAdventure.Geo.ScreenDescriptor">
+        <param name="Position">(26.10351, 580.2656)</param>
+        <param name="Rotation">0</param>
         <actions />
       </ext-elem-ref>
     </map-element>
@@ -1894,7 +2006,7 @@ dirijase a la ubicacion marcada.</show-text>
     <geometries>
       <geometry influence="0.8">
         <LineString>
-          <posList>40.4168914417569 -3.70394954092045 40.4165524526031 -3.70463618642826 40.416521821055 -3.70493391162891 40.4160051669677 -3.70566615468996 40.4157797970822 -3.70617771140822 40.4156960698563 -3.70666319123994 40.4156429744884 -3.70687240354311 40.4156245953127 -3.70711380235443</posList>
+          <posList>40.4168914417569 -3.70394954092045 40.4165524526031 -3.70463618642826 40.416521821055 -3.70493391162891 40.4163972526943 -3.70582708723088 40.4163189161952 -3.70642447463762 40.4162433580938 -3.70699578515779 40.4156674800462 -3.7067973016907 40.4156245953127 -3.70711380235443</posList>
         </LineString>
       </geometry>
     </geometries>
@@ -1925,7 +2037,7 @@ dirijase a la ubicacion marcada.</show-text>
     <geometries>
       <geometry influence="1.57">
         <LineString>
-          <posList>40.412891557154 -3.70785355568016 40.4128302907144 -3.70754778385247 40.413085567178 -3.70749413967216 40.4136287922696 -3.70740830898367 40.4147131871381 -3.70757997036064 40.415178797651 -3.70767652988516 40.4154810343296 -3.70738685131155</posList>
+          <posList>40.4128302920227 -3.70784819126182 40.413005922334 -3.70852947235186 40.4136778056541 -3.70820760727006 40.4144905920609 -3.70802521705705 40.4152114712663 -3.70837926864695 40.41552595948 -3.70877623558119 40.4158159422245 -3.70880305767139 40.4157555469497 -3.70852410793386 40.415457395776 -3.7072581052788</posList>
         </LineString>
       </geometry>
     </geometries>
@@ -1985,36 +2097,6 @@ dirijase a la ubicacion marcada.</show-text>
     </geometries>
     <actions />
   </geo-element>
-  <geo-element id="PuertaDeSol">
-    <description>
-      <name>
-      </name>
-      <brief>
-      </brief>
-      <detailed>
-      </detailed>
-    </description>
-    <geometries>
-      <geometry influence="5">
-        <Polygon>
-          <exterior>
-            <LinearRing>
-              <posList>40.4169819868852 -3.70379537329461 40.4168267879293 -3.70377659783149 40.4168145354248 -3.70391070844596 40.4169636081076 -3.70392411949104</posList>
-            </LinearRing>
-          </exterior>
-        </Polygon>
-      </geometry>
-    </geometries>
-    <actions>
-      <enter-action>
-        <effect>
-          <trigger-zoned-scene idTarget="Sol" x="400" y="450" zoneId="MercadoDeAbastos" transitionTime="256" transitionType="5" guid="0ed02eab-3ef7-41c6-8115-f5428a6b3d23" />
-          <condition />
-        </effect>
-        <only-from-outside>True</only-from-outside>
-      </enter-action>
-    </actions>
-  </geo-element>
   <geo-element id="AlcarazPath">
     <description>
       <name>
@@ -2045,11 +2127,41 @@ dirijase a la ubicacion marcada.</show-text>
     <geometries>
       <geometry influence="0">
         <LineString>
-          <posList>40.4147785358022 -3.70026290416652 40.414696850367 -3.70075643062525 40.4146335429117 -3.70128750801015 40.414200603418 -3.70142698287868 40.4146172056233 -3.70336353778743 40.4152829469303 -3.70322406291863 40.4166777148762 -3.70330452918938 40.4168084090733 -3.70463490486076 40.4178049439787 -3.70855093002251 40.4178784582642 -3.70940923690722 40.4178947947612 -3.71002078056259 40.4178457852584 -3.71043920516892 40.4180254865941 -3.71124386787347 40.4179274677432 -3.71153354644708 40.4179438042282 -3.71188759803704 40.4180499912845 -3.71321797370846</posList>
+          <posList>40.4147785358022 -3.70026290416652 40.414696850367 -3.70075643062525 40.4146335430207 -3.7013411521902 40.4150501425455 -3.70133042335416 40.4151154912565 -3.70229065418149 40.4166389149719 -3.7023657560339 40.4166777148762 -3.70330452918938 40.4165919466556 -3.70445787906559 40.4161549356576 -3.70781600475205 40.415787354011 -3.7093985080708 40.4161345143832 -3.70961308479217 40.416440830981 -3.71036410331635 40.4166532096702 -3.71107220649628 40.4172535842614 -3.71183931827453 40.4179438042282 -3.71188759803704 40.4180499912845 -3.71321797370846</posList>
         </LineString>
       </geometry>
     </geometries>
     <actions />
+  </geo-element>
+  <geo-element id="PuertaDeSol">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="5">
+        <Polygon>
+          <exterior>
+            <LinearRing>
+              <posList>40.4169819868852 -3.70379537329461 40.4168267879293 -3.70377659783149 40.4168145354248 -3.70391070844596 40.4169636081076 -3.70392411949104</posList>
+            </LinearRing>
+          </exterior>
+        </Polygon>
+      </geometry>
+    </geometries>
+    <actions>
+      <enter-action>
+        <effect>
+          <trigger-zoned-scene idTarget="Sol" x="400" y="450" zoneId="MercadoDeAbastos" transitionTime="256" transitionType="5" guid="0ed02eab-3ef7-41c6-8115-f5428a6b3d23" />
+          <condition />
+        </effect>
+        <only-from-outside>True</only-from-outside>
+      </enter-action>
+    </actions>
   </geo-element>
   <geo-element id="TextoInicio">
     <description>
@@ -2425,6 +2537,237 @@ avanzando, puede ser importante.</speak-player>
         <text>
         </text>
       </speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="BalboaMenu">
+    <option-node nodeindex="0" preListening="yes" editor-x="103" editor-y="185" x="103" y="185">
+      <speak-player>
+        <text>
+        </text>
+      </speak-player>
+      <condition>
+        <active flag="Hablado1aVezBalboa" />
+        <inactive flag="HabladoLebrijana" />
+      </condition>
+      <child nodeindex="1" />
+      <speak-player>
+        <text>
+        </text>
+        <resources name="No name" />
+      </speak-player>
+      <condition>
+        <active flag="Hablado1aVezBalboa" />
+        <inactive flag="HabladoLebrijana" />
+      </condition>
+      <child nodeindex="2" />
+      <speak-player>
+        <text>
+        </text>
+        <resources name="No name" />
+      </speak-player>
+      <condition>
+        <active flag="HabladoLebrijana" />
+        <inactive flag="HabladoQuevedo" />
+      </condition>
+      <child nodeindex="3" />
+      <speak-player>
+        <text>
+        </text>
+        <resources name="No name" />
+      </speak-player>
+      <condition>
+        <active flag="HabladoLebrijana" />
+        <inactive flag="HabladoQuevedo" />
+      </condition>
+      <child nodeindex="4" />
+      <speak-player>
+        <text>
+        </text>
+        <resources name="No name" />
+      </speak-player>
+      <condition>
+        <active flag="HabladoQuevedo" />
+        <inactive flag="HabladoSaldaña" />
+      </condition>
+      <child nodeindex="5" />
+      <speak-player>
+        <text>
+        </text>
+        <resources name="No name" />
+      </speak-player>
+      <condition>
+        <active flag="HabladoQuevedo" />
+        <inactive flag="HabladoSaldaña" />
+      </condition>
+      <child nodeindex="6" />
+      <speak-player>
+        <text>
+        </text>
+        <resources name="No name" />
+      </speak-player>
+      <condition>
+        <active flag="HabladoSaldaña" />
+        <inactive flag="HabladoDomine" />
+      </condition>
+      <child nodeindex="7" />
+      <speak-player>
+        <text>
+        </text>
+        <resources name="No name" />
+      </speak-player>
+      <condition>
+        <active flag="HabladoSaldaña" />
+        <inactive flag="HabladoDomine" />
+      </condition>
+      <child nodeindex="8" />
+      <speak-player>
+        <text>
+        </text>
+        <resources name="No name" />
+      </speak-player>
+      <condition>
+        <active flag="HabladoDomine" />
+        <inactive flag="HabladoGuadalmedina" />
+      </condition>
+      <child nodeindex="9" />
+      <speak-player>
+        <text>
+        </text>
+        <resources name="No name" />
+      </speak-player>
+      <condition>
+        <active flag="HabladoDomine" />
+        <inactive flag="HabladoGuadalmedina" />
+      </condition>
+      <child nodeindex="10" />
+      <speak-player>
+        <text>
+        </text>
+        <resources name="No name" />
+      </speak-player>
+      <condition>
+        <active flag="HabladoGuadalmedina" />
+        <inactive flag="HabladoAlatriste" />
+      </condition>
+      <child nodeindex="11" />
+      <speak-player>
+        <text>
+        </text>
+        <resources name="No name" />
+      </speak-player>
+      <condition>
+        <active flag="HabladoGuadalmedina" />
+        <inactive flag="HabladoAlatriste" />
+      </condition>
+      <child nodeindex="12" />
+    </option-node>
+    <dialogue-node nodeindex="1" editor-x="888" editor-y="16">
+      <speak-char idTarget="IBalboaMap">
+        <resources name="No name" />
+        <text>
+        </text>
+      </speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+    <dialogue-node nodeindex="2" editor-x="882" editor-y="201">
+      <speak-char idTarget="IBalboaMap">
+        <resources name="No name" />
+        <text>
+        </text>
+      </speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="876" editor-y="386">
+      <speak-char idTarget="IBalboaMap">
+        <resources name="No name" />
+        <text>
+        </text>
+      </speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="880" editor-y="571">
+      <speak-char idTarget="IBalboaMap">
+        <resources name="No name" />
+        <text>
+        </text>
+      </speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+    <dialogue-node nodeindex="5" editor-x="959" editor-y="765">
+      <speak-char idTarget="IBalboaMap">
+        <resources name="No name" />
+        <text>
+        </text>
+      </speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+    <dialogue-node nodeindex="6" editor-x="952" editor-y="946">
+      <speak-char idTarget="IBalboaMap">
+        <resources name="No name" />
+        <text>
+        </text>
+      </speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+    <dialogue-node nodeindex="7" editor-x="945" editor-y="1130">
+      <speak-char idTarget="IBalboaMap">
+        <resources name="No name" />
+        <text>
+        </text>
+      </speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+    <dialogue-node nodeindex="8" editor-x="940" editor-y="1315">
+      <speak-char idTarget="IBalboaMap">
+        <resources name="No name" />
+        <text>
+        </text>
+      </speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+    <dialogue-node nodeindex="9" editor-x="921" editor-y="1502">
+      <speak-char idTarget="IBalboaMap">
+        <resources name="No name" />
+        <text>
+        </text>
+      </speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+    <dialogue-node nodeindex="10" editor-x="922" editor-y="1701">
+      <speak-char idTarget="IBalboaMap">
+        <resources name="No name" />
+        <text>
+        </text>
+      </speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+    <dialogue-node nodeindex="11" editor-x="933" editor-y="1900">
+      <speak-char idTarget="IBalboaMap">
+        <resources name="No name" />
+        <text>
+        </text>
+      </speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+    <dialogue-node nodeindex="12" editor-x="919" editor-y="2096">
+      <speak-char idTarget="IBalboaMap">
+        <resources name="No name" />
+        <text>
+        </text>
+      </speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
