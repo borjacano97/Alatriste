@@ -575,7 +575,7 @@
       </talk-to>
     </actions>
   </character>
-  <character id="IBalboaMap" behaviour="normal">
+  <character id="IBalboaMap" behaviour="first-action">
     <resources name="No name">
       <condition>
         <active flag="Hablado1aVezBalboa" />
@@ -1404,6 +1404,7 @@
       <use needsGoTo="yes" keepDistance="35" not-effects="no">
         <condition>
           <active flag="DescargadaApp" />
+          <inactive flag="UsadoApp" />
         </condition>
         <effect>
           <show-text x="250" y="300" frontColor="#FFFFFFFF" borderColor="#000000FF" uri="" guid="8438bb19-9de9-47f2-b3b0-30a92723bef9">Bienvenido a la aplicacion de 
@@ -1809,7 +1810,7 @@ dirijase a la ubicacion marcada.</show-text>
       </use>
     </actions>
   </object>
-  <map-scene id="Principal" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.406212083724 -3.71658656835326 0.0174073059629478 0.0230240821838374" center="(40.4170094731299, -3.70303336619587)" zoom="18" start="no">
+  <map-scene id="Principal" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.406212083724 -3.71658656835326 0.0174073059629478 0.0230240821838374" center="(40.4159210310249, -3.70539907454736)" zoom="17" start="no">
     <map-element targetId="MercadoDeAbastosPath" layer="0">
       <condition>
         <inactive flag="Hablado1aVezBalboa" />
@@ -1992,6 +1993,9 @@ dirijase a la ubicacion marcada.</show-text>
         <param name="Rotation">0</param>
         <actions />
       </ext-elem-ref>
+    </map-element>
+    <map-element targetId="AreaDeJuego" layer="0">
+      <condition />
     </map-element>
   </map-scene>
   <geo-element id="MercadoDeAbastosPath">
@@ -2199,26 +2203,56 @@ avanzando, puede ser importante.</speak-player>
       </exit-action>
     </actions>
   </geo-element>
+  <geo-element id="AreaDeJuego">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="0">
+        <Polygon>
+          <exterior>
+            <LinearRing>
+              <posList>40.4095913077153 -3.69444251060579 40.4092645357042 -3.71608257293796 40.4154156690233 -3.71617913246252 40.4156362263114 -3.71373295784099 40.4114333828087 -3.71364712715241 40.4116294253281 -3.69703888893223 40.4206841979419 -3.69723200798124 40.4205535053619 -3.71375441551317 40.4155055391429 -3.71375441551311 40.415342167004 -3.71611475944616 40.4229711851305 -3.7162649631509 40.4227588147949 -3.69495749473657</posList>
+            </LinearRing>
+          </exterior>
+        </Polygon>
+      </geometry>
+    </geometries>
+    <actions>
+      <enter-action>
+        <effect>
+          <show-text x="300" y="300" frontColor="#FFFFFFFF" borderColor="#000000FF" uri="" guid="a6f19e44-a136-4d3d-80ea-8a5a91f7a954">AQUI NO HAY NADA VUELVE A LA ZONA DE JUEGO</show-text>
+          <condition />
+        </effect>
+        <only-from-outside>True</only-from-outside>
+      </enter-action>
+    </actions>
+  </geo-element>
   <graph-conversation id="ConversacionSol">
     <dialogue-node nodeindex="0" editor-x="149" editor-y="64">
       <speak-player>
         <resources name="No name" />
-        <text>Hola buenas. ¿No conocera por casualidad al capitan Alatriste?</text>
+        <text>A los buenos días. ¿No conocerá su merced al Capitán Alatriste?</text>
       </speak-player>
       <condition />
       <speak-char idTarget="Toscano">
         <resources name="No name" />
-        <text>¿Quien pregunta?</text>
+        <text>¿Y quién pregunta?</text>
       </speak-char>
       <condition />
       <speak-player>
         <resources name="No name" />
-        <text>Un viejo amigo suyo. Lo estoy buscando para avisarle de un asunto urgente.</text>
+        <text>Un viejo amigo suyo. Lo estoy buscando para avisarle de una nueva urgente. </text>
       </speak-player>
       <condition />
       <speak-char idTarget="Toscano">
         <resources name="No name" />
-        <text>Al capitan llevo sin verlo un par de dias. </text>
+        <text>Al capitán llevo días sin verlo.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="Toscano">
@@ -2233,7 +2267,7 @@ avanzando, puede ser importante.</speak-player>
       <condition />
       <speak-player>
         <resources name="No name" />
-        <text>De acuerdo muchas gracias.</text>
+        <text>De acuerdo, mil gracias, vaya con Dios.</text>
       </speak-player>
       <condition />
       <end-conversation />
@@ -2243,12 +2277,12 @@ avanzando, puede ser importante.</speak-player>
     <dialogue-node nodeindex="0" editor-x="207" editor-y="62">
       <speak-player>
         <resources name="No name" />
-        <text>Buenas me dijeron que podia encontrarte aqui. Estoy buscando al Capitan Alatriste.</text>
+        <text>A la buena de Dios, me contaron que podía encontrarte aquí. Estoy buscando al Capitán Alatriste </text>
       </speak-player>
       <condition />
       <speak-char idTarget="I.Balboa">
         <resources name="No name" />
-        <text>¿Qué asuntos tienes con el?</text>
+        <text>¿Qué menesteres traes para con él?</text>
       </speak-char>
       <condition />
       <speak-player>
@@ -2268,7 +2302,7 @@ avanzando, puede ser importante.</speak-player>
       <condition />
       <speak-char idTarget="I.Balboa">
         <resources name="No name" />
-        <text>La ultima vez que lo vi estaba almorzando en la taberna del turco con la Lebrijana vamos alli.</text>
+        <text>Siendo así, la última vez que lo vi estaba almorzando en la taberna del turco con la Lebrijana. Vayamos ahí.</text>
       </speak-char>
       <condition />
       <end-conversation />
@@ -2313,12 +2347,12 @@ avanzando, puede ser importante.</speak-player>
       <condition />
       <speak-char idTarget="LaLebrijana">
         <resources name="No name" />
-        <text>Vino Don Quevedo, acabado el almurezo, y marcharo al mentidero.</text>
+        <text>Vino Don Quevedo, una vez acabado el almuerzo, y marcharon al mentidero de San Felipe.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="I.Balboa">
         <resources name="No name" />
-        <text>De acuerdo iremos a ver.</text>
+        <text>Entendido, muchas gracias, Caridad, nos vamos.</text>
       </speak-char>
       <condition />
       <end-conversation />
@@ -2328,18 +2362,12 @@ avanzando, puede ser importante.</speak-player>
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
       <speak-char idTarget="I.Balboa">
         <resources name="No name" />
-        <text>Por Dios Cristo nuestro señor donde esta el capitan.</text>
+        <text>Por Dios Cristo nuestro señor, Don Quevedo, ¿dónde se encuentra mi señor?</text>
       </speak-char>
       <condition />
       <speak-char idTarget="Quevedo">
         <resources name="No name" />
-        <text>
-        </text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="Quevedo">
-        <resources name="No name" />
-        <text>Llego el alguacil Saldaña y se lo llevo arrestado a la carcel de la Corte.</text>
+        <text>Llegó el malnacido de Saldaña y se lo llevó arrestado a la cárcel de la Corte. </text>
       </speak-char>
       <condition />
       <speak-char idTarget="Quevedo">
@@ -2354,7 +2382,7 @@ avanzando, puede ser importante.</speak-player>
       <condition />
       <speak-char idTarget="I.Balboa">
         <resources name="No name" />
-        <text>Muchas gracias Don Quevedo vamos a ver que ha hecho ahora.</text>
+        <text>Muchas gracias, Don Quevedo, marchamos en su búsqueda</text>
       </speak-char>
       <condition />
       <end-conversation />
@@ -2364,17 +2392,12 @@ avanzando, puede ser importante.</speak-player>
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
       <speak-char idTarget="I.Balboa">
         <resources name="No name" />
-        <text>Saldaña por favor sea piadoso con mi amo no se que habra hecho esta vez.</text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="I.Balboa">
-        <resources name="No name" />
-        <text>Pero en honor a su vieja amistad tenga clemencia.</text>
+        <text>Saldaña, por cristo nuestro señor, no sé qué habrá hecho mi señor, pero sea piadoso con él, al menos en honor a su vieja amistad.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="Saldaña">
         <resources name="No name" />
-        <text>No pierdas los estribos Iñigo, tu amo consigio "zafarse" y acogerse a sagrado.</text>
+        <text>No pierdas los estribos Íñigo, tu amo consiguió zafarse de alguna forma y acogerse a sagrado. </text>
       </speak-char>
       <condition />
       <speak-char idTarget="Saldaña">
@@ -2382,44 +2405,49 @@ avanzando, puede ser importante.</speak-player>
         <text>La ultima vez que lo vi estaba en la parroquia de san Gines.</text>
       </speak-char>
       <condition />
+      <speak-char idTarget="I.Balboa">
+        <resources name="No name" />
+        <text>Dios se lo pague don Saldaña.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Saldaña">
+        <resources name="No name" />
+        <text>Sí, aunque antes de que me pague él, no rechazaría un vino de parte de tu amo. </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="I.Balboa">
+        <resources name="No name" />
+        <text>Se lo haré saber.</text>
+      </speak-char>
+      <condition />
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="ConversacionParroquia">
-    <dialogue-node nodeindex="0" editor-x="32" editor-y="206">
+    <dialogue-node nodeindex="0" editor-x="220" editor-y="251">
       <speak-char idTarget="I.Balboa">
         <resources name="No name" />
-        <text>Perdone se encuentra todavia aqui resguardado mi señor</text>
+        <text>Padre ¿qué hace aquí? Esta no es su parroquia. vengo buscando a mi amo, me dijeron que estaba aquí.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="Domine">
         <resources name="No name" />
-        <text>Se fue hace rato</text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="I.Balboa">
-        <resources name="No name" />
-        <text>Pero usted no pertenece a esta parroquia</text>
+        <text>Un monaguillo de esta parroquia mandado por tu amo me aviso. Así que yo mandé avisar al Conde de Guadalmedina, el cual ha acudido en su ayuda.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="Domine">
         <resources name="No name" />
-        <text>Me aviso un monaguillo de esta parroquia, y fui a avisar al conde Guadalmedina y a los ministros.</text>
+        <text>Marcharon al Alcázar Real.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="I.Balboa">
         <resources name="No name" />
-        <text>Sabes hacia donde se dirijieron</text>
+        <text>Muchas gracias Dómine, Dios se lo pague. </text>
       </speak-char>
       <condition />
       <speak-char idTarget="Domine">
         <resources name="No name" />
-        <text>Creo que fueron en direcion al alcazar real. </text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="I.Balboa">
-        <resources name="No name" />
-        <text>Gracias iremos alli a preguntar.</text>
+        <text>Ir con Dios.</text>
       </speak-char>
       <condition />
       <end-conversation />
@@ -2429,42 +2457,42 @@ avanzando, puede ser importante.</speak-player>
     <dialogue-node nodeindex="0" editor-x="50" editor-y="60">
       <speak-char idTarget="I.Balboa">
         <resources name="No name" />
-        <text>Disculpe su merced, el Dómine me dijo que había usted guardado a mi amo.</text>
+        <text>Disculpe buen señor, el Dómine Pérez me dijo que su merced guardó a mi amo, el Capitán.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="Guadalmedina">
         <resources name="No name" />
-        <text>Así es pequeño granuja, pero no debes preocuparte por tu amo, intercedí por él ante las autoridades y les expliqué que tu amo actuaba bajo mis órdenes. </text>
+        <text> Entiendo que tú eres el golfillo que Diego tiene por ahijado. </text>
       </speak-char>
       <condition />
       <speak-char idTarget="Guadalmedina">
         <resources name="No name" />
-        <text> Órdenes que como grande de España velaban por el bien del imperio de nuestro buen señor Felipe IV</text>
+        <text>No te preocupes joven, intercedí por tu amo ante las autoridades y les expliqué que Diego estaba trabajando bajo mis órdenes. Órdenes que como grande de España velaban por el bien del imperio de nuestro buen rey Felipe IV. </text>
       </speak-char>
       <condition />
       <speak-char idTarget="I.Balboa">
         <resources name="No name" />
-        <text>Muchas gracias, su grandeza, tanto el Capitán como yo mismo estamos en deuda con su merced.</text>
+        <text>Mil gracias, mi señor, tanto el Capitán como yo mismo estamos en deuda con su merced. </text>
       </speak-char>
       <condition />
       <speak-char idTarget="I.Balboa">
         <resources name="No name" />
-        <text>No obstante, tengo una nueva urgente que hacerle llegar, puesto que aquí no lo veo, ¿sabe usted dónde se encuentra?</text>
+        <text>No obstante, vengo en búsqueda de mi señor por un tema de extrema urgencia. </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="I.Balboa">
+        <resources name="No name" />
+        <text>No lo encuentro por aquí, ¿sabría usted decirme dónde se encuentra? </text>
       </speak-char>
       <condition />
       <speak-char idTarget="Guadalmedina">
         <resources name="No name" />
-        <text>Sí, aparecieron unos rufianes que decían ser amigos del Capitán.</text>
+        <text>Cuando salimos de palacio nos encontramos con unos hombres que decían ser amigos de tu amo, un tal Licenciado Calzas y un tal Fadrique. </text>
       </speak-char>
       <condition />
       <speak-char idTarget="Guadalmedina">
         <resources name="No name" />
-        <text>Si mal no recuerdo, me parece oírles decir que iban a ver una obra de teatro.</text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="Guadalmedina">
-        <resources name="No name" />
-        <text>Así que supongo que están en el Corral del Príncipe.</text>
+        <text>Hablaron de que iban a ver una representación, creo que dijeron que en el Corral del Príncipe. </text>
       </speak-char>
       <condition />
       <speak-char idTarget="I.Balboa">
@@ -2472,16 +2500,11 @@ avanzando, puede ser importante.</speak-player>
         <text>Dios se lo pague, señor mío.</text>
       </speak-char>
       <condition />
-      <speak-char idTarget="Guadalmedina">
-        <resources name="No name" />
-        <text>Con Dios vayan.</text>
-      </speak-char>
-      <condition />
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="ConversacionCorral">
-    <dialogue-node nodeindex="0" editor-x="355" editor-y="160">
+    <dialogue-node nodeindex="0" editor-x="307" editor-y="169">
       <speak-char idTarget="Alatriste">
         <resources name="No name" />
         <text>Iñigo ¿Qué haces por aquí?</text>
@@ -2494,32 +2517,27 @@ avanzando, puede ser importante.</speak-player>
       <condition />
       <speak-char idTarget="Alatriste">
         <resources name="No name" />
-        <text>¿Conocido? No recuerdo conocer a esta persona.</text>
+        <text>¿Conocido? No recuerdo su cara</text>
       </speak-char>
       <condition />
       <speak-player>
         <resources name="No name" />
-        <text>Capitan tiene que escucharme, a la salida del teatro le tenderan una emboscada.</text>
+        <text>Créame Don Diego, tengo información certera que un contrario suyo, alto de la iglesia, creo que sepa a quién me refiero, le ha tendido una cobarde emboscada. </text>
       </speak-player>
       <condition />
       <speak-char idTarget="Alatriste">
         <resources name="No name" />
-        <text>Iñigo ¿puedo confiar en esta persona?</text>
-      </speak-char>
-      <condition />
-      <speak-char idTarget="I.Balboa">
-        <resources name="No name" />
-        <text>Si señor, me ha ayudado a buscarle creo que dice la verdad.</text>
+        <text>hmmm ...</text>
       </speak-char>
       <condition />
       <speak-char idTarget="Alatriste">
         <resources name="No name" />
-        <text>Entonces Iñigo ve a buscar a Quevedo y Saldaña vamos a enfrentarnos a esos cobardes.</text>
+        <text> Íñigo, ve a dar aviso a Don Quevedo, que debería de estar de camino aquí. Además, ve a buscar a Saldaña, es posible que necesitemos la autoridad por una vez. </text>
       </speak-char>
       <condition />
       <speak-char idTarget="Alatriste">
         <resources name="No name" />
-        <text>Y a ti gracias por avisar, te invitare a un trago en la taberna del Turco despues.</text>
+        <text> Y a ti, date por invitado a compartir unos tragos en la Taberna del Turco. </text>
       </speak-char>
       <condition />
       <speak-player>
@@ -2542,10 +2560,9 @@ avanzando, puede ser importante.</speak-player>
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="BalboaMenu">
-    <option-node nodeindex="0" preListening="yes" editor-x="103" editor-y="185" x="103" y="185">
+    <option-node nodeindex="0" preListening="yes" editor-x="55" editor-y="261" x="55" y="261">
       <speak-player>
-        <text>
-        </text>
+        <text>¿A donde ibamos?</text>
       </speak-player>
       <condition>
         <active flag="Hablado1aVezBalboa" />
@@ -2553,8 +2570,7 @@ avanzando, puede ser importante.</speak-player>
       </condition>
       <child nodeindex="1" />
       <speak-player>
-        <text>
-        </text>
+        <text>¿A quien estabamos buscando?</text>
         <resources name="No name" />
       </speak-player>
       <condition>
@@ -2563,8 +2579,7 @@ avanzando, puede ser importante.</speak-player>
       </condition>
       <child nodeindex="2" />
       <speak-player>
-        <text>
-        </text>
+        <text>¿A donde ibamos?</text>
         <resources name="No name" />
       </speak-player>
       <condition>
@@ -2573,8 +2588,7 @@ avanzando, puede ser importante.</speak-player>
       </condition>
       <child nodeindex="3" />
       <speak-player>
-        <text>
-        </text>
+        <text>¿A quien estabamos buscando?</text>
         <resources name="No name" />
       </speak-player>
       <condition>
@@ -2583,8 +2597,7 @@ avanzando, puede ser importante.</speak-player>
       </condition>
       <child nodeindex="4" />
       <speak-player>
-        <text>
-        </text>
+        <text>¿A donde ibamos?</text>
         <resources name="No name" />
       </speak-player>
       <condition>
@@ -2593,8 +2606,7 @@ avanzando, puede ser importante.</speak-player>
       </condition>
       <child nodeindex="5" />
       <speak-player>
-        <text>
-        </text>
+        <text>¿A quien estabamos buscando?</text>
         <resources name="No name" />
       </speak-player>
       <condition>
@@ -2603,8 +2615,7 @@ avanzando, puede ser importante.</speak-player>
       </condition>
       <child nodeindex="6" />
       <speak-player>
-        <text>
-        </text>
+        <text>¿A donde ibamos?</text>
         <resources name="No name" />
       </speak-player>
       <condition>
@@ -2613,8 +2624,7 @@ avanzando, puede ser importante.</speak-player>
       </condition>
       <child nodeindex="7" />
       <speak-player>
-        <text>
-        </text>
+        <text>¿A quien estabamos buscando?</text>
         <resources name="No name" />
       </speak-player>
       <condition>
@@ -2623,8 +2633,7 @@ avanzando, puede ser importante.</speak-player>
       </condition>
       <child nodeindex="8" />
       <speak-player>
-        <text>
-        </text>
+        <text>¿A donde ibamos?</text>
         <resources name="No name" />
       </speak-player>
       <condition>
@@ -2633,8 +2642,7 @@ avanzando, puede ser importante.</speak-player>
       </condition>
       <child nodeindex="9" />
       <speak-player>
-        <text>
-        </text>
+        <text>¿A quien estabamos buscando?</text>
         <resources name="No name" />
       </speak-player>
       <condition>
@@ -2643,8 +2651,7 @@ avanzando, puede ser importante.</speak-player>
       </condition>
       <child nodeindex="10" />
       <speak-player>
-        <text>
-        </text>
+        <text>¿A donde ibamos?</text>
         <resources name="No name" />
       </speak-player>
       <condition>
@@ -2653,8 +2660,7 @@ avanzando, puede ser importante.</speak-player>
       </condition>
       <child nodeindex="11" />
       <speak-player>
-        <text>
-        </text>
+        <text>¿A quien estabamos buscando?</text>
         <resources name="No name" />
       </speak-player>
       <condition>
@@ -2663,110 +2669,98 @@ avanzando, puede ser importante.</speak-player>
       </condition>
       <child nodeindex="12" />
     </option-node>
-    <dialogue-node nodeindex="1" editor-x="888" editor-y="16">
+    <dialogue-node nodeindex="1" editor-x="893" editor-y="12" editor-collapsed="yes">
       <speak-char idTarget="IBalboaMap">
         <resources name="No name" />
-        <text>
-        </text>
+        <text>A la taberna del Turco, quizas encontremos ahi al capitan tomando un trago.</text>
       </speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
-    <dialogue-node nodeindex="2" editor-x="882" editor-y="201">
+    <dialogue-node nodeindex="2" editor-x="896" editor-y="77" editor-collapsed="yes">
       <speak-char idTarget="IBalboaMap">
         <resources name="No name" />
-        <text>
-        </text>
+        <text>A la Lebrijana, estara en la taberna del Turco quizas tambien este ahi el capitan o sepa algo sobre él.</text>
       </speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="876" editor-y="386">
+    <dialogue-node nodeindex="3" editor-x="891" editor-y="154" editor-collapsed="yes">
       <speak-char idTarget="IBalboaMap">
         <resources name="No name" />
-        <text>
-        </text>
+        <text>Al mentidero, esta cerca de Sol, seguramente encontremos ahi a Quevedo.</text>
       </speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="880" editor-y="571">
+    <dialogue-node nodeindex="4" editor-x="891" editor-y="215" editor-collapsed="yes">
       <speak-char idTarget="IBalboaMap">
         <resources name="No name" />
-        <text>
-        </text>
+        <text>A Quevedo, es un gran amigo del capitan seguramente sepa donde esta.</text>
       </speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
-    <dialogue-node nodeindex="5" editor-x="959" editor-y="765">
+    <dialogue-node nodeindex="5" editor-x="896" editor-y="284" editor-collapsed="yes">
       <speak-char idTarget="IBalboaMap">
         <resources name="No name" />
-        <text>
-        </text>
+        <text>A la carcel, a prisa, si se lo ha llevado Saldaña algo malo tiene que a ver pasado.</text>
       </speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
-    <dialogue-node nodeindex="6" editor-x="952" editor-y="946">
+    <dialogue-node nodeindex="6" editor-x="899" editor-y="350" editor-collapsed="yes">
       <speak-char idTarget="IBalboaMap">
         <resources name="No name" />
-        <text>
-        </text>
+        <text>A Saldaña, se ha llevado al capitan a la carcel debemos darnos prisa.</text>
       </speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
-    <dialogue-node nodeindex="7" editor-x="945" editor-y="1130">
+    <dialogue-node nodeindex="7" editor-x="897" editor-y="415" editor-collapsed="yes">
       <speak-char idTarget="IBalboaMap">
         <resources name="No name" />
-        <text>
-        </text>
+        <text>A la parroquia de san Gines, si se acogio a sagrado alguien debe sarber algo ahi.</text>
       </speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
-    <dialogue-node nodeindex="8" editor-x="940" editor-y="1315">
+    <dialogue-node nodeindex="8" editor-x="896" editor-y="483" editor-collapsed="yes">
       <speak-char idTarget="IBalboaMap">
         <resources name="No name" />
-        <text>
-        </text>
+        <text>A Domine, posiblemente este en la parroquia de san Gines era amigo del capitan.</text>
       </speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
-    <dialogue-node nodeindex="9" editor-x="921" editor-y="1502">
+    <dialogue-node nodeindex="9" editor-x="898" editor-y="547" editor-collapsed="yes">
       <speak-char idTarget="IBalboaMap">
         <resources name="No name" />
-        <text>
-        </text>
+        <text>Al alcazar real, quizas el conde este junto con el capitan.</text>
       </speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
-    <dialogue-node nodeindex="10" editor-x="922" editor-y="1701">
+    <dialogue-node nodeindex="10" editor-x="898" editor-y="616" editor-collapsed="yes">
       <speak-char idTarget="IBalboaMap">
         <resources name="No name" />
-        <text>
-        </text>
+        <text>Al conde Guadalmedina, deberia saber algo del capitan ya que son amigos.</text>
       </speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
-    <dialogue-node nodeindex="11" editor-x="933" editor-y="1900">
+    <dialogue-node nodeindex="11" editor-x="893" editor-y="682" editor-collapsed="yes">
       <speak-char idTarget="IBalboaMap">
         <resources name="No name" />
-        <text>
-        </text>
+        <text>Al teatro real, el capitan debe estar por ahi .</text>
       </speak-char>
       <condition />
       <end-conversation />
     </dialogue-node>
-    <dialogue-node nodeindex="12" editor-x="919" editor-y="2096">
+    <dialogue-node nodeindex="12" editor-x="889" editor-y="757" editor-collapsed="yes">
       <speak-char idTarget="IBalboaMap">
         <resources name="No name" />
-        <text>
-        </text>
+        <text>Al capitan, hay que ir rapido a avisarle de la emboscada.</text>
       </speak-char>
       <condition />
       <end-conversation />
