@@ -783,7 +783,7 @@
       </object-ref>
       <object-ref idTarget="FlechaIzq" x="-100" y="439" scale="0.2243742" glow="no" layer="2" hasInfluenceArea="no" />
       <object-ref idTarget="FlechaDer" x="317" y="430" scale="0.2062358" glow="no" layer="1" hasInfluenceArea="no" />
-      <object-ref idTarget="AtrasId" x="-162" y="129" scale="0.1086122" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="AtrasMenu" x="-162" y="129" scale="0.1" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <scene id="Sol" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -934,6 +934,34 @@
     <default-initial-position x="400" y="450" />
     <objects>
       <object-ref idTarget="Titulos" x="275" y="234" scale="0.3472222" glow="no" layer="0" hasInfluenceArea="no" />
+    </objects>
+  </scene>
+  <scene id="MenuIdentificator" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/phone.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <objects>
+      <object-ref idTarget="BotonPersonajes" x="111" y="209" scale="0.2" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="BotonLugares" x="108" y="377" scale="0.2" glow="no" layer="2" hasInfluenceArea="no" />
+      <object-ref idTarget="AtrasId" x="-162" y="129" scale="0.1086122" glow="no" layer="1" hasInfluenceArea="no" />
+    </objects>
+  </scene>
+  <scene id="BestiarioLugares" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/phone.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <objects>
+      <object-ref idTarget="AtrasMenu" x="-244" y="165" scale="0.2372488" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
   <object id="ToscanoMapa" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
@@ -1768,7 +1796,7 @@ dirijase a la ubicacion marcada.</show-text>
     <actions>
       <use needsGoTo="yes" keepDistance="35" not-effects="no">
         <effect>
-          <trigger-scene idTarget="ColeccionPersonajesScene" x="113" y="357" transitionTime="73" transitionType="0" guid="9a965ec4-a8a3-42c4-b4d0-66364ef75278" />
+          <trigger-scene idTarget="MenuIdentificator" x="113" y="357" transitionTime="73" transitionType="0" guid="9a965ec4-a8a3-42c4-b4d0-66364ef75278" />
           <condition />
         </effect>
       </use>
@@ -1810,7 +1838,73 @@ dirijase a la ubicacion marcada.</show-text>
       </use>
     </actions>
   </object>
-  <map-scene id="Principal" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.406212083724 -3.71658656835326 0.0174073059629478 0.0230240821838374" center="(40.4159210310249, -3.70539907454736)" zoom="17" start="no">
+  <object id="BotonPersonajes" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/personajes.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-scene idTarget="ColeccionPersonajesScene" x="113" y="357" transitionTime="0" transitionType="0" guid="96e92a79-cbb5-4563-8084-1905de911823" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <object id="BotonLugares" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/lugares.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-scene idTarget="BestiarioLugares" x="113" y="357" transitionTime="0" transitionType="0" guid="8abe312a-995b-482f-a6e1-9842f4e4ff8b" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <object id="AtrasMenu" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/Atras.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-scene idTarget="MenuIdentificator" x="113" y="357" transitionTime="0" transitionType="0" guid="99a2479c-5bca-4d8c-8073-6dc4b29ca07c" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <map-scene id="Principal" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.406212083724 -3.71658656835326 0.0174073059629478 0.0230240821838374" center="(40.4169625050716, -3.702818789475)" zoom="19" start="no">
     <map-element targetId="MercadoDeAbastosPath" layer="0">
       <condition>
         <inactive flag="Hablado1aVezBalboa" />

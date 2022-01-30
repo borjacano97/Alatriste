@@ -27,9 +27,13 @@
 <entry key="Chapter0.CorralPrincipe.Y">543</entry>
 <entry key="Chapter0.MenuInicial.X">-233</entry>
 <entry key="Chapter0.MenuInicial.Y">128</entry>
-<entry key="Chapter0.ColeccionPersonajesScene.X">415</entry>
-<entry key="Chapter0.ColeccionPersonajesScene.Y">162</entry>
+<entry key="Chapter0.ColeccionPersonajesScene.X">572</entry>
+<entry key="Chapter0.ColeccionPersonajesScene.Y">123</entry>
 <entry key="Chapter0.Final.X">411</entry>
 <entry key="Chapter0.Final.Y">271</entry>
+<entry key="Chapter0.MenuIdentificator.X">752</entry>
+<entry key="Chapter0.MenuIdentificator.Y">61</entry>
+<entry key="Chapter0.BestiarioLugares.X">869</entry>
+<entry key="Chapter0.BestiarioLugares.Y">49</entry>
 </properties>
 
