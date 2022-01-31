@@ -205,6 +205,8 @@
             <step locks="False">QuevedoMapa</step>
           </navigate>
           <condition />
+          <activate flag="VisitadoTurco" guid="94fab742-5d64-4b53-bd58-8b3331c0160c" />
+          <condition />
         </effect>
       </talk-to>
     </actions>
@@ -252,6 +254,8 @@
           <navigate navigation-type="Ordered" guid="7d2b0989-3783-4ebb-b099-26c84d3987f8">
             <step locks="False">LopeBalboaMapa</step>
           </navigate>
+          <condition />
+          <activate flag="VisitadoCarcel" guid="60767e7c-f49c-40a7-b228-0d5d4f27d5a8" />
           <condition />
         </effect>
       </talk-to>
@@ -363,6 +367,8 @@
             <step locks="False">MalatestaMapa</step>
           </navigate>
           <condition />
+          <activate flag="VisitadoMentidero" guid="58fc07cd-fda5-459d-bbf4-8cfe3247769a" />
+          <condition />
         </effect>
       </talk-to>
     </actions>
@@ -410,6 +416,8 @@
           <navigate navigation-type="Ordered" guid="dc6e7e94-77dc-487a-9530-e840a8fe7ebc">
             <step locks="False">Alatriste1</step>
           </navigate>
+          <condition />
+          <activate flag="ViaitadoAlcazar" guid="de783f86-3980-49cd-b2d7-8e573e95d1e2" />
           <condition />
         </effect>
       </talk-to>
@@ -521,6 +529,8 @@
             <step locks="False">GuadalmedinaMapa</step>
           </navigate>
           <condition />
+          <activate flag="VisitadoSanGines" guid="48b88c0c-3bc2-407f-a646-6de2a86e297d" />
+          <condition />
         </effect>
       </talk-to>
     </actions>
@@ -565,10 +575,12 @@
           <condition />
           <activate flag="HabladoMercadoInicio" guid="900e7957-267c-40e8-acc0-18866127a82a" />
           <condition />
-          <trigger-last-scene guid="96ae9937-ddca-4e72-8f96-ba053cc3a366" />
+          <activate flag="VisitadoSol" guid="c72063d9-1947-4c95-8d03-3c833e59b2e1" />
           <condition />
-          <navigate navigation-type="Ordered" guid="2ea2e139-9dde-40ec-80ee-abcd5c17b59a">
-            <step locks="False">I.Balboa</step>
+          <trigger-last-scene guid="73c0ad23-e789-42c1-9fe1-84e065118d60" />
+          <condition />
+          <navigate navigation-type="Ordered" guid="94b8f668-a9fc-4c16-8aac-4838bc6b1cff">
+            <step locks="False">IBalboaMapa</step>
           </navigate>
           <condition />
         </effect>
@@ -634,7 +646,7 @@
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/background/phoneappspng.png" />
+      <asset type="background" uri="assets/background/phoneahfhf.png" />
     </resources>
     <name>
     </name>
@@ -646,12 +658,12 @@
         </condition>
       </object-ref>
       <object-ref idTarget="BotonMovil" x="-162" y="129" scale="0.1086122" glow="no" layer="2" hasInfluenceArea="no" />
-      <object-ref idTarget="IconoDescargado" x="120" y="316" scale="0.0707721" glow="no" layer="0" hasInfluenceArea="no">
+      <object-ref idTarget="IconoDescargado" x="132" y="396" scale="0.07676582" glow="no" layer="0" hasInfluenceArea="no">
         <condition>
           <active flag="DescargadaApp" />
         </condition>
       </object-ref>
-      <object-ref idTarget="Identificator" x="51" y="231" scale="0.09206152" glow="no" layer="1" hasInfluenceArea="no">
+      <object-ref idTarget="Identificator" x="53" y="312" scale="0.09206152" glow="no" layer="1" hasInfluenceArea="no">
         <condition>
           <active flag="DescargadaApp" />
           <active flag="UsadoApp" />
@@ -826,19 +838,6 @@
       <object-ref idTarget="twitterVentana" x="456" y="592" scale="1" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
   </scene>
-  <scene id="MapaDibujado" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="background" uri="assets/background/mapaDibuajdo.png" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
-    <objects>
-      <object-ref idTarget="BotonMovil" x="98" y="132" scale="0.141208" glow="no" layer="0" hasInfluenceArea="no" />
-    </objects>
-  </scene>
   <scene id="Taberna" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
@@ -865,6 +864,20 @@
     <characters>
       <character-ref idTarget="Quevedo" x="119" y="487" scale="1.452101" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
       <character-ref idTarget="I.Balboa" x="584" y="484" scale="1.045091" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+    </characters>
+  </scene>
+  <scene id="AlcazarReal" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/2020072114145610212.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <characters>
+      <character-ref idTarget="Guadalmedina" x="138" y="538" scale="1.195675" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="I.Balboa" x="647" y="515" scale="1.077071" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="Carcel" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -895,33 +908,28 @@
       <character-ref idTarget="I.Balboa" x="789" y="623" scale="1.254482" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
-  <scene id="AlcazarReal" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="BestiarioLugares" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/background/2020072114145610212.jpg" />
+      <asset type="background" uri="assets/background/phone.png" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
-    <characters>
-      <character-ref idTarget="Guadalmedina" x="138" y="538" scale="1.195675" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
-      <character-ref idTarget="I.Balboa" x="647" y="515" scale="1.077071" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
-    </characters>
-  </scene>
-  <scene id="CorralPrincipe" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="background" uri="assets/background/unnamed.jpg" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
-    <characters>
-      <character-ref idTarget="Alatriste" x="75" y="339" scale="0.7820568" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
-      <character-ref idTarget="I.Balboa" x="452" y="346" scale="0.6287975" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
-    </characters>
+    <objects>
+      <object-ref idTarget="AtrasMenu" x="-162" y="129" scale="0.1" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="AlcazarRealBloq" x="64" y="117" scale="0.1" glow="no" layer="8" hasInfluenceArea="no" />
+      <object-ref idTarget="MentideroBloq" x="158" y="118" scale="0.1" glow="no" layer="5" hasInfluenceArea="no" />
+      <object-ref idTarget="SanIsidroBloq" x="61" y="195" scale="0.1" glow="no" layer="4" hasInfluenceArea="no" />
+      <object-ref idTarget="SanMigelBloq" x="156" y="193" scale="0.1" glow="no" layer="2" hasInfluenceArea="no" />
+      <object-ref idTarget="SanGinesBloq" x="64" y="273" scale="0.09387685" glow="no" layer="7" hasInfluenceArea="no" />
+      <object-ref idTarget="TurcoBloq" x="162" y="273" scale="0.07061356" glow="no" layer="3" hasInfluenceArea="no" />
+      <object-ref idTarget="CorralBloq" x="58" y="340" scale="0.127577" glow="no" layer="10" hasInfluenceArea="no" />
+      <object-ref idTarget="CarcelBloq" x="163" y="338" scale="0.135186" glow="no" layer="6" hasInfluenceArea="no" />
+      <object-ref idTarget="SolBloq" x="65" y="428" scale="0.1047906" glow="no" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="PlzVillaBloq" x="159" y="426" scale="0.1" glow="no" layer="9" hasInfluenceArea="no" />
+    </objects>
   </scene>
   <scene id="Final" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -951,18 +959,33 @@
       <object-ref idTarget="AtrasId" x="-162" y="129" scale="0.1086122" glow="no" layer="1" hasInfluenceArea="no" />
     </objects>
   </scene>
-  <scene id="BestiarioLugares" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="BestiarioLugaresAbierto" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/background/phone.png" />
+      <asset type="background" uri="assets/background/lugaresBloqueado.png" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="AtrasMenu" x="-244" y="165" scale="0.2372488" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="BestLugares" x="401" y="600" scale="1" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="AtrasLugarBest" x="52" y="65" scale="0.09709521" glow="no" layer="1" hasInfluenceArea="no" />
     </objects>
+  </scene>
+  <scene id="CorralPrincipe" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/unnamed.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <characters>
+      <character-ref idTarget="Alatriste" x="75" y="339" scale="0.7820568" orientation="2" glow="no" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="I.Balboa" x="452" y="346" scale="0.6287975" orientation="2" glow="no" layer="0" hasInfluenceArea="no" />
+    </characters>
   </scene>
   <object id="ToscanoMapa" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
     <resources name="No name">
@@ -1904,7 +1927,583 @@ dirijase a la ubicacion marcada.</show-text>
       </use>
     </actions>
   </object>
-  <map-scene id="Principal" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.406212083724 -3.71658656835326 0.0174073059629478 0.0230240821838374" center="(40.4169625050716, -3.702818789475)" zoom="19" start="no">
+  <object id="AlcazarRealBloq" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
+    <resources name="No name">
+      <condition>
+        <inactive flag="ViaitadoAlcazar" />
+      </condition>
+      <asset type="image" uri="assets/image/lugaresBloqueado.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <resources name="No name">
+      <condition>
+        <active flag="ViaitadoAlcazar" />
+      </condition>
+      <asset type="image" uri="assets/image/2020072114145610212.jpg" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="ViaitadoAlcazar" />
+        </condition>
+        <effect>
+          <trigger-scene idTarget="BestiarioLugaresAbierto" x="400" y="450" transitionTime="0" transitionType="0" guid="76eb8b01-bbb4-4e4d-91ca-caf126a446d2" />
+          <condition />
+          <set-value var="Lugar" value="8" guid="dbecd15c-5e5f-497e-92d0-3c55ab348369" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <object id="MentideroBloq" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
+    <resources name="No name">
+      <condition>
+        <inactive flag="VisitadoMentidero" />
+      </condition>
+      <asset type="image" uri="assets/image/lugaresBloqueado.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <resources name="No name">
+      <condition>
+        <active flag="VisitadoMentidero" />
+      </condition>
+      <asset type="image" uri="assets/image/Convento-de-San-Felipe-el-Real.jpg" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="VisitadoMentidero" />
+        </condition>
+        <effect>
+          <trigger-scene idTarget="BestiarioLugaresAbierto" x="400" y="450" transitionTime="0" transitionType="0" guid="f7141bda-80b6-446d-95df-a0e3f74a41a5" />
+          <condition />
+          <set-value var="Lugar" value="5" guid="fabd9501-9507-4b52-bfa9-e58b286539dd" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <object id="SanIsidroBloq" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
+    <resources name="No name">
+      <condition>
+        <inactive flag="VisitadoSanIsidro" />
+      </condition>
+      <asset type="image" uri="assets/image/lugaresBloqueado.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <resources name="No name">
+      <condition>
+        <active flag="VisitadoSanIsidro" />
+      </condition>
+      <asset type="image" uri="assets/image/sanisidro.PNG" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="VisitadoSanIsidro" />
+        </condition>
+        <effect>
+          <trigger-scene idTarget="BestiarioLugaresAbierto" x="400" y="450" transitionTime="0" transitionType="0" guid="ff76e3a5-79bf-4fa9-8bcb-d4cfeb6a4398" />
+          <condition />
+          <set-value var="Lugar" value="4" guid="4138ac24-2d15-4ddd-acb9-5732e8d0d845" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <object id="SanMigelBloq" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
+    <resources name="No name">
+      <condition>
+        <inactive flag="VisitadoMercado" />
+      </condition>
+      <asset type="image" uri="assets/image/lugaresBloqueado.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <resources name="No name">
+      <condition>
+        <active flag="VisitadoMercado" />
+      </condition>
+      <asset type="image" uri="assets/image/13717176.jpg" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="VisitadoMercado" />
+        </condition>
+        <effect>
+          <trigger-scene idTarget="BestiarioLugaresAbierto" x="400" y="450" transitionTime="0" transitionType="0" guid="213cb842-3a23-41e4-a573-4457e2671543" />
+          <condition />
+          <set-value var="Lugar" value="2" guid="7141bf1c-0cbe-4c45-98da-846ace5f589a" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <object id="SanGinesBloq" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
+    <resources name="No name">
+      <condition>
+        <inactive flag="VisitadoSanGines" />
+      </condition>
+      <asset type="image" uri="assets/image/lugaresBloqueado.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <resources name="No name">
+      <condition>
+        <active flag="VisitadoSanGines" />
+      </condition>
+      <asset type="image" uri="assets/image/San Ginés.jpg" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="VisitadoSanGines" />
+        </condition>
+        <effect>
+          <trigger-scene idTarget="BestiarioLugaresAbierto" x="400" y="450" transitionTime="0" transitionType="0" guid="570c8ce8-40f3-4926-913d-6081e4955fc5" />
+          <condition />
+          <set-value var="Lugar" value="7" guid="f3af86d3-f588-4cd8-94b9-62739518ec8e" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <object id="TurcoBloq" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
+    <resources name="No name">
+      <condition>
+        <inactive flag="VisitadoTurco" />
+      </condition>
+      <asset type="image" uri="assets/image/lugaresBloqueado.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <resources name="No name">
+      <condition>
+        <active flag="VisitadoTurco" />
+      </condition>
+      <asset type="image" uri="assets/image/Wilhelm_Gail_Picadores_in_einer_spanischen_Taverne_1842.jpg" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="VisitadoTurco" />
+        </condition>
+        <effect>
+          <trigger-scene idTarget="BestiarioLugaresAbierto" x="400" y="450" transitionTime="0" transitionType="0" guid="43bc891a-9144-4754-926c-43a6a956dd4b" />
+          <condition />
+          <set-value var="Lugar" value="3" guid="91d317af-b24e-4594-8258-094586df2245" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <object id="CorralBloq" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
+    <resources name="No name">
+      <condition>
+        <inactive flag="VisitadoCorral" />
+      </condition>
+      <asset type="image" uri="assets/image/lugaresBloqueado.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <resources name="No name">
+      <condition>
+        <active flag="VisitadoCorral" />
+      </condition>
+      <asset type="image" uri="assets/image/unnamed.jpg" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="VisitadoCorral" />
+        </condition>
+        <effect>
+          <trigger-scene idTarget="BestiarioLugaresAbierto" x="400" y="450" transitionTime="0" transitionType="0" guid="f1ad5dcb-75d2-48fc-985b-be33c28544e0" />
+          <condition />
+          <set-value var="Lugar" value="10" guid="dbbc5f75-38e3-4d70-9b9a-4b01d1e87d09" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <object id="CarcelBloq" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
+    <resources name="No name">
+      <condition>
+        <inactive flag="VisitadoCarcel" />
+      </condition>
+      <asset type="image" uri="assets/image/lugaresBloqueado.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <resources name="No name">
+      <condition>
+        <active flag="VisitadoCarcel" />
+      </condition>
+      <asset type="image" uri="assets/image/Antigua_Carcel_de_Corte.jpg" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="VisitadoCarcel" />
+        </condition>
+        <effect>
+          <trigger-scene idTarget="BestiarioLugaresAbierto" x="400" y="450" transitionTime="0" transitionType="0" guid="a72cb8b6-5f46-44f3-b7d6-6a81ca44f827" />
+          <condition />
+          <set-value var="Lugar" value="6" guid="279e1335-6bc3-46df-81af-1af981a83384" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <object id="AtrasLugarBest" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/Atras.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-scene idTarget="BestiarioLugares" x="113" y="357" transitionTime="0" transitionType="0" guid="e607b58f-fde6-447e-a595-4e0a26cf096d" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <object id="SolBloq" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
+    <resources name="No name">
+      <condition>
+        <inactive flag="VisitadoSol" />
+      </condition>
+      <asset type="image" uri="assets/image/lugaresBloqueado.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <resources name="No name">
+      <condition>
+        <active flag="VisitadoSol" />
+      </condition>
+      <asset type="image" uri="assets/image/Puerta del Sol.jpg" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="VisitadoSol" />
+        </condition>
+        <effect>
+          <trigger-scene idTarget="BestiarioLugaresAbierto" x="400" y="450" transitionTime="0" transitionType="0" guid="bfca5044-cea7-4ee6-9ef4-c536a29e7a64" />
+          <condition />
+          <set-value var="Lugar" value="1" guid="74e8a710-655a-4aa3-a5a3-5856b087440d" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <object id="PlzVillaBloq" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
+    <resources name="No name">
+      <condition>
+        <inactive flag="VisitadoPlzVilla" />
+      </condition>
+      <asset type="image" uri="assets/image/lugaresBloqueado.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <resources name="No name">
+      <condition>
+        <active flag="VisitadoPlzVilla" />
+      </condition>
+      <asset type="image" uri="assets/image/madrid1.jpg" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="VisitadoPlzVilla" />
+        </condition>
+        <effect>
+          <trigger-scene idTarget="BestiarioLugaresAbierto" x="400" y="450" transitionTime="0" transitionType="0" guid="e3da9758-60bb-45a0-a0fa-25e785d30f5e" />
+          <condition />
+          <set-value var="Lugar" value="9" guid="740e6f4a-29fb-4131-ae45-41c52b823794" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <object id="PlzVillaMapa" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/madrid1.jpg" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-scene idTarget="BestiarioLugaresAbierto" x="400" y="450" transitionTime="0" transitionType="0" guid="bae7999c-6244-4a76-a226-f3d1ad82bad1" />
+          <condition />
+          <activate flag="VisitadoPlzVilla" guid="2f9f3ffd-6bba-4062-a6f9-47be86fba395" />
+          <condition />
+          <set-value var="Lugar" value="8" guid="a6768a50-8899-463a-a2dc-5438e4df401d" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <object id="SanIsidroMapa" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/sanisidro.PNG" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-scene idTarget="BestiarioLugaresAbierto" x="400" y="450" transitionTime="0" transitionType="0" guid="b79fa830-dc61-45dc-8457-5c0f286861db" />
+          <condition />
+          <activate flag="VisitadoSanIsidro" guid="5b6781fc-3d1a-4c89-90bc-4cc258d7c02b" />
+          <condition />
+          <set-value var="Lugar" value="4" guid="c9a7b933-d86c-4c07-9b13-3755bd750822" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <object id="MercadoSanMigelMapa" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/13717176.jpg" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-scene idTarget="BestiarioLugaresAbierto" x="400" y="450" transitionTime="0" transitionType="0" guid="83fa70c8-4913-4ca6-b4e6-7b6e809f507b" />
+          <condition />
+          <activate flag="VisitadoMercado" guid="08f84990-46a0-40a3-b096-ab45a94e6cae" />
+          <condition />
+          <set-value var="Lugar" value="2" guid="3849d529-07d2-4f0c-bd13-dcda2fb3dc2d" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <object id="AntiguoCorralMapa" returnsWhenDragged="yes" behaviour="first-action" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/Corral_de_la_Cruz_Madrid.jpg" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <trigger-scene idTarget="BestiarioLugaresAbierto" x="400" y="450" transitionTime="0" transitionType="0" guid="09ffbab3-73bc-4cc2-80ff-a8c0d4f6ea5b" />
+          <condition />
+          <activate flag="VisitadoCorral" guid="038601a2-cd7b-4822-bf1d-78c274e1cb98" />
+          <condition />
+          <set-value var="Lugar" value="10" guid="d9565cc1-1e59-4576-93ff-3ee1ad24e56b" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
+  </object>
+  <object id="BestLugares" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <condition>
+        <equals var="Lugar" value="1" />
+      </condition>
+      <asset type="image" uri="assets/image/PuertaDelSolBestiario.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <resources name="No name">
+      <condition>
+        <equals var="Lugar" value="2" />
+      </condition>
+      <asset type="image" uri="assets/image/SanMiguelBestiario.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <resources name="No name">
+      <condition>
+        <equals var="Lugar" value="3" />
+      </condition>
+      <asset type="image" uri="assets/image/TabernaDelTurcoBestiario.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <resources name="No name">
+      <condition>
+        <equals var="Lugar" value="4" />
+      </condition>
+      <asset type="image" uri="assets/image/SanIsidroBestiario.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <resources name="No name">
+      <condition>
+        <equals var="Lugar" value="5" />
+      </condition>
+      <asset type="image" uri="assets/image/MentideroBestiario.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <resources name="No name">
+      <condition>
+        <equals var="Lugar" value="6" />
+      </condition>
+      <asset type="image" uri="assets/image/CarcelBestiario.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <resources name="No name">
+      <condition>
+        <equals var="Lugar" value="7" />
+      </condition>
+      <asset type="image" uri="assets/image/SanGinesBestiario.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <resources name="No name">
+      <condition>
+        <equals var="Lugar" value="8" />
+      </condition>
+      <asset type="image" uri="assets/image/AlcazarBestiario.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <resources name="No name">
+      <condition>
+        <equals var="Lugar" value="9" />
+      </condition>
+      <asset type="image" uri="assets/image/PlazaDeLaVillaBestiario.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <resources name="No name">
+      <condition>
+        <equals var="Lugar" value="10" />
+      </condition>
+      <asset type="image" uri="assets/image/CorralDeLaCruzBestiario.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <map-scene id="Principal" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.406212083724 -3.71658656835326 0.0174073059629478 0.0230240821838374" center="(40.4154492992393, -3.70556268929718)" zoom="19" start="no">
     <map-element targetId="MercadoDeAbastosPath" layer="0">
       <condition>
         <inactive flag="Hablado1aVezBalboa" />
@@ -2078,6 +2677,66 @@ dirijase a la ubicacion marcada.</show-text>
         <actions />
       </ext-elem-ref>
     </map-element>
+    <map-element targetId="PlzVillaMapa" layer="0">
+      <condition>
+        <active flag="UsadoApp" />
+        <inactive flag="VisitadoPlzVilla" />
+      </condition>
+      <ext-elem-ref scale="0.1223523" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4153327941895, -3.71040534973145)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">25</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="Hint">False</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+        <actions />
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="SanIsidroMapa" layer="0">
+      <condition>
+        <active flag="UsadoApp" />
+        <inactive flag="VisitadoSanIsidro" />
+      </condition>
+      <ext-elem-ref scale="0.1038874" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4128761291504, -3.70738530158997)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">36.9</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="Hint">False</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+        <actions />
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="MercadoSanMigelMapa" layer="0">
+      <condition>
+        <active flag="UsadoApp" />
+        <inactive flag="VisitadoMercado" />
+      </condition>
+      <ext-elem-ref scale="0.0728961" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4156188964844, -3.70888471603394)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">26.8</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="Hint">False</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+        <actions />
+      </ext-elem-ref>
+    </map-element>
+    <map-element targetId="AntiguoCorralMapa" layer="0">
+      <condition>
+        <active flag="UsadoApp" />
+        <inactive flag="VisitadoCorral" />
+      </condition>
+      <ext-elem-ref scale="0.1601597" orientation="2" transformManager="uAdventure.Geo.GeopositionedDescriptor">
+        <param name="Position">(40.4150695800781, -3.70227837562561)</param>
+        <param name="Rotation">0</param>
+        <param name="InteractionRange">31</param>
+        <param name="RevealOnlyOnRange">True</param>
+        <param name="Hint">False</param>
+        <param name="RevealParticleTexture">leaf_particle.png</param>
+        <actions />
+      </ext-elem-ref>
+    </map-element>
     <map-element targetId="IBalboaMap" layer="0">
       <condition>
         <active flag="Hablado1aVezBalboa" />
@@ -2089,6 +2748,9 @@ dirijase a la ubicacion marcada.</show-text>
       </ext-elem-ref>
     </map-element>
     <map-element targetId="AreaDeJuego" layer="0">
+      <condition />
+    </map-element>
+    <map-element targetId="TextoDeAyuda" layer="0">
       <condition />
     </map-element>
   </map-scene>
@@ -2225,7 +2887,7 @@ dirijase a la ubicacion marcada.</show-text>
     <geometries>
       <geometry influence="0">
         <LineString>
-          <posList>40.4147785358022 -3.70026290416652 40.414696850367 -3.70075643062525 40.4146335430207 -3.7013411521902 40.4150501425455 -3.70133042335416 40.4151154912565 -3.70229065418149 40.4166389149719 -3.7023657560339 40.4166777148762 -3.70330452918938 40.4165919466556 -3.70445787906559 40.4161549356576 -3.70781600475205 40.415787354011 -3.7093985080708 40.4161345143832 -3.70961308479217 40.416440830981 -3.71036410331635 40.4166532096702 -3.71107220649628 40.4172535842614 -3.71183931827453 40.4179438042282 -3.71188759803704 40.4180499912845 -3.71321797370846</posList>
+          <posList>40.4147785358022 -3.70026290416652 40.414696850367 -3.70075643062525 40.4146335430207 -3.7013411521902 40.4150501425455 -3.70133042335416 40.4151154912565 -3.70229065418149 40.4166389149719 -3.7023657560339 40.4166777148762 -3.70330452918938 40.4165919466556 -3.70445787906559 40.4161549356576 -3.70781600475205 40.415787354011 -3.7093985080708 40.4155341298179 -3.71046602725884 40.4160405770254 -3.71064841747191 40.416518430976 -3.71110975742248 40.4166287044827 -3.71102929115204 40.4171433117906 -3.71183395385649 40.4177477661414 -3.71178030967621 40.4178575188914 -3.71307011693623</posList>
         </LineString>
       </geometry>
     </geometries>
@@ -2311,7 +2973,7 @@ avanzando, puede ser importante.</speak-player>
         <Polygon>
           <exterior>
             <LinearRing>
-              <posList>40.4095913077153 -3.69444251060579 40.4092645357042 -3.71608257293796 40.4154156690233 -3.71617913246252 40.4156362263114 -3.71373295784099 40.4114333828087 -3.71364712715241 40.4116294253281 -3.69703888893223 40.4206841979419 -3.69723200798124 40.4205535053619 -3.71375441551317 40.4155055391429 -3.71375441551311 40.415342167004 -3.71611475944616 40.4229711851305 -3.7162649631509 40.4227588147949 -3.69495749473657</posList>
+              <posList>40.4098200460199 -3.69693159882517 40.4092645357042 -3.71608257293796 40.4154156690233 -3.71617913246252 40.4156362263114 -3.71373295784099 40.4114333828087 -3.71364712715241 40.4117437908834 -3.69897008029581 40.4198510661199 -3.69931340304973 40.4196713636778 -3.71366858569742 40.4155055391429 -3.71375441551311 40.415342167004 -3.71611475944616 40.4211742821904 -3.71596455661418 40.4212559491681 -3.69748949830026</posList>
             </LinearRing>
           </exterior>
         </Polygon>
@@ -2325,6 +2987,40 @@ avanzando, puede ser importante.</speak-player>
         </effect>
         <only-from-outside>True</only-from-outside>
       </enter-action>
+    </actions>
+  </geo-element>
+  <geo-element id="TextoDeAyuda">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="0">
+        <Point>
+          <pos>-3.68885514314703 -10.9423828125</pos>
+        </Point>
+      </geometry>
+    </geometries>
+    <actions>
+      <exit-action>
+        <condition>
+          <inactive flag="TextoAyudaDone" />
+          <active flag="HabladoMercadoInicio" />
+        </condition>
+        <effect>
+          <speak-player guid="f118c3d2-7e69-41d9-b2a6-c1d18be728f8">Deberia dirigirme a la plaza Mayor para
+tratar de encontrar a Iñigo, marcare la
+ruta en mi mapa.</speak-player>
+          <condition />
+          <activate flag="TextoAyudaDone" guid="ae52e31f-a035-4bee-8743-943cc1f8b150" />
+          <condition />
+        </effect>
+        <only-from-inside>False</only-from-inside>
+      </exit-action>
     </actions>
   </geo-element>
   <graph-conversation id="ConversacionSol">
@@ -2654,7 +3350,7 @@ avanzando, puede ser importante.</speak-player>
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="BalboaMenu">
-    <option-node nodeindex="0" preListening="yes" editor-x="55" editor-y="261" x="55" y="261">
+    <option-node nodeindex="0" preListening="yes" editor-x="112" editor-y="328" x="112" y="328">
       <speak-player>
         <text>¿A donde ibamos?</text>
       </speak-player>
