@@ -2503,7 +2503,7 @@ dirijase a la ubicacion marcada.</show-text>
       </detailed>
     </description>
   </object>
-  <map-scene id="Principal" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.406212083724 -3.71658656835326 0.0174073059629478 0.0230240821838374" center="(40.4154492992393, -3.70556268929718)" zoom="19" start="no">
+  <map-scene id="Principal" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.406212083724 -3.71658656835326 0.0174073059629478 0.0230240821838374" center="(40.416870610951, -3.70279464959371)" zoom="19" start="no">
     <map-element targetId="MercadoDeAbastosPath" layer="0">
       <condition>
         <inactive flag="Hablado1aVezBalboa" />
@@ -3350,7 +3350,7 @@ ruta en mi mapa.</speak-player>
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="BalboaMenu">
-    <option-node nodeindex="0" preListening="yes" editor-x="112" editor-y="328" x="112" y="328">
+    <option-node nodeindex="0" preListening="yes" editor-x="84" editor-y="333" x="84" y="333">
       <speak-player>
         <text>¿A donde ibamos?</text>
       </speak-player>
@@ -3523,7 +3523,7 @@ ruta en mi mapa.</speak-player>
       <condition />
       <end-conversation />
     </dialogue-node>
-    <dialogue-node nodeindex="9" editor-x="898" editor-y="547" editor-collapsed="yes">
+    <dialogue-node nodeindex="9" editor-x="893" editor-y="552" editor-collapsed="yes">
       <speak-char idTarget="IBalboaMap">
         <resources name="No name" />
         <text>Al alcazar real, quizas el conde este junto con el capitan.</text>
