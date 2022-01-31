@@ -252,7 +252,7 @@
           <trigger-last-scene guid="df20ab0d-bbd8-4428-b56d-83a54fa8038b" />
           <condition />
           <navigate navigation-type="Ordered" guid="7d2b0989-3783-4ebb-b099-26c84d3987f8">
-            <step locks="False">LopeBalboaMapa</step>
+            <step locks="False">DomineMapa</step>
           </navigate>
           <condition />
           <activate flag="VisitadoCarcel" guid="60767e7c-f49c-40a7-b228-0d5d4f27d5a8" />
@@ -2503,7 +2503,7 @@ dirijase a la ubicacion marcada.</show-text>
       </detailed>
     </description>
   </object>
-  <map-scene id="Principal" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.406212083724 -3.71658656835326 0.0174073059629478 0.0230240821838374" center="(40.416870610951, -3.70279464959371)" zoom="19" start="no">
+  <map-scene id="Principal" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="40.406212083724 -3.71658656835326 0.0174073059629478 0.0230240821838374" center="(40.4161334113544, -3.7064692759437)" zoom="19" start="no">
     <map-element targetId="MercadoDeAbastosPath" layer="0">
       <condition>
         <inactive flag="Hablado1aVezBalboa" />
