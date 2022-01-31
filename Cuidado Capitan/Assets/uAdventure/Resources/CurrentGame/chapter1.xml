@@ -3414,16 +3414,16 @@ ruta en mi mapa.</speak-player>
       </condition>
       <child nodeindex="7" />
       <speak-player>
-        <text>¿A quien estabamos buscando?</text>
+        <text>¿A donde ibamos?</text>
         <resources name="No name" />
       </speak-player>
       <condition>
-        <active flag="HabladoSaldaña" />
-        <inactive flag="HabladoDomine" />
+        <active flag="HabladoDomine" />
+        <inactive flag="HabladoGuadalmedina" />
       </condition>
       <child nodeindex="8" />
       <speak-player>
-        <text>¿A donde ibamos?</text>
+        <text>¿A quien estabamos buscando?</text>
         <resources name="No name" />
       </speak-player>
       <condition>
@@ -3432,15 +3432,6 @@ ruta en mi mapa.</speak-player>
       </condition>
       <child nodeindex="9" />
       <speak-player>
-        <text>¿A quien estabamos buscando?</text>
-        <resources name="No name" />
-      </speak-player>
-      <condition>
-        <active flag="HabladoDomine" />
-        <inactive flag="HabladoGuadalmedina" />
-      </condition>
-      <child nodeindex="10" />
-      <speak-player>
         <text>¿A donde ibamos?</text>
         <resources name="No name" />
       </speak-player>
@@ -3448,7 +3439,7 @@ ruta en mi mapa.</speak-player>
         <active flag="HabladoGuadalmedina" />
         <inactive flag="HabladoAlatriste" />
       </condition>
-      <child nodeindex="11" />
+      <child nodeindex="10" />
       <speak-player>
         <text>¿A quien estabamos buscando?</text>
         <resources name="No name" />
@@ -3457,7 +3448,7 @@ ruta en mi mapa.</speak-player>
         <active flag="HabladoGuadalmedina" />
         <inactive flag="HabladoAlatriste" />
       </condition>
-      <child nodeindex="12" />
+      <child nodeindex="11" />
     </option-node>
     <dialogue-node nodeindex="1" editor-x="893" editor-y="12" editor-collapsed="yes">
       <speak-char idTarget="IBalboaMap">
@@ -3515,15 +3506,7 @@ ruta en mi mapa.</speak-player>
       <condition />
       <end-conversation />
     </dialogue-node>
-    <dialogue-node nodeindex="8" editor-x="896" editor-y="483" editor-collapsed="yes">
-      <speak-char idTarget="IBalboaMap">
-        <resources name="No name" />
-        <text>A Domine, posiblemente este en la parroquia de san Gines era amigo del capitan.</text>
-      </speak-char>
-      <condition />
-      <end-conversation />
-    </dialogue-node>
-    <dialogue-node nodeindex="9" editor-x="893" editor-y="552" editor-collapsed="yes">
+    <dialogue-node nodeindex="8" editor-x="893" editor-y="552" editor-collapsed="yes">
       <speak-char idTarget="IBalboaMap">
         <resources name="No name" />
         <text>Al alcazar real, quizas el conde este junto con el capitan.</text>
@@ -3531,7 +3514,7 @@ ruta en mi mapa.</speak-player>
       <condition />
       <end-conversation />
     </dialogue-node>
-    <dialogue-node nodeindex="10" editor-x="898" editor-y="616" editor-collapsed="yes">
+    <dialogue-node nodeindex="9" editor-x="898" editor-y="616" editor-collapsed="yes">
       <speak-char idTarget="IBalboaMap">
         <resources name="No name" />
         <text>Al conde Guadalmedina, deberia saber algo del capitan ya que son amigos.</text>
@@ -3539,7 +3522,7 @@ ruta en mi mapa.</speak-player>
       <condition />
       <end-conversation />
     </dialogue-node>
-    <dialogue-node nodeindex="11" editor-x="893" editor-y="682" editor-collapsed="yes">
+    <dialogue-node nodeindex="10" editor-x="893" editor-y="682" editor-collapsed="yes">
       <speak-char idTarget="IBalboaMap">
         <resources name="No name" />
         <text>Al teatro real, el capitan debe estar por ahi .</text>
@@ -3547,7 +3530,7 @@ ruta en mi mapa.</speak-player>
       <condition />
       <end-conversation />
     </dialogue-node>
-    <dialogue-node nodeindex="12" editor-x="889" editor-y="757" editor-collapsed="yes">
+    <dialogue-node nodeindex="11" editor-x="889" editor-y="757" editor-collapsed="yes">
       <speak-char idTarget="IBalboaMap">
         <resources name="No name" />
         <text>Al capitan, hay que ir rapido a avisarle de la emboscada.</text>
