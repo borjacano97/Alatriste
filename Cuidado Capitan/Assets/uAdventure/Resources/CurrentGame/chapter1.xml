@@ -2339,7 +2339,7 @@ dirijase a la ubicacion marcada.</show-text>
           <condition />
           <activate flag="VisitadoPlzVilla" guid="2f9f3ffd-6bba-4062-a6f9-47be86fba395" />
           <condition />
-          <set-value var="Lugar" value="8" guid="a6768a50-8899-463a-a2dc-5438e4df401d" />
+          <set-value var="Lugar" value="9" guid="a6768a50-8899-463a-a2dc-5438e4df401d" />
           <condition />
         </effect>
       </use>
