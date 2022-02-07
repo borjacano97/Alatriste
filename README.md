@@ -5,3 +5,5 @@ La aplicación desarrollada se trata de un juego geoposicionado para Android, cu
 
 Para más información le sugerimos que visite nuestro 
 [GDD](https://github.com/borjacano97/Alatriste/wiki/GDD)
+
+Para descargar la APK visita las [_Releases_](https://github.com/borjacano97/Alatriste/releases)
