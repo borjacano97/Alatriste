@@ -7,3 +7,5 @@ Para más información le sugerimos que visite nuestro
 [GDD](https://github.com/borjacano97/Alatriste/wiki/GDD)
 
 Para descargar la APK visita las [_Releases_](https://github.com/borjacano97/Alatriste/releases)
+
+Aquí un vídeo del gameplay [link](https://drive.google.com/file/d/1Frvj4j2qVBEcqfaswx7dmHUSPCbARdOy/view?usp=sharing)
