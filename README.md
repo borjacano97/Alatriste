@@ -9,3 +9,10 @@ Para más información le sugerimos que visite nuestro
 Para descargar la APK visita las [_Releases_](https://github.com/borjacano97/Alatriste/releases)
 
 Aquí un vídeo del gameplay [link](https://drive.google.com/file/d/1Frvj4j2qVBEcqfaswx7dmHUSPCbARdOy/view?usp=sharing)
+
+## Instalación
+Descarga la APK e instalalo en tu dispositivo Android
+> Nota: La aplicación no está firmada como desarrolladores certificados por Google, por lo que la aplicación será mostrada como potencialmente peligrosa para tu sistema. Si quieres instalar la aplicación debes ignorar todas las advertencias.
+
+## Ejecución
+La aplicación está diseñada para ser ejecutada por primera vez en la Puerta del Sol de Madrid.
